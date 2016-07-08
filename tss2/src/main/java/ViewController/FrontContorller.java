@@ -12,7 +12,7 @@ public class FrontContorller {
     public ModelAndView index(){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("message", "Hello World!");
-		modelAndView.setViewName("index");
+		modelAndView.setViewName("documents");
         return modelAndView;
     }
 	@RequestMapping("/hello2")

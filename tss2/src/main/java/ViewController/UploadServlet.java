@@ -34,7 +34,7 @@ public class UploadServlet {
 		  
 		               }  
 		  
-		    mav.setViewName("upload2");  
+		    mav.setViewName("upload");  
 		    return mav;  
 		  
 		}  
