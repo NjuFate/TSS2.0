@@ -1,8 +1,11 @@
 package com.example.administrator.android_tdy;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutCompat;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,7 +15,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewTreeObserver;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import view.BoxView;
 
@@ -44,16 +50,37 @@ public class CourseActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        TableLayout tableLayout = (TableLayout)findViewById(R.id.courseTableLayout);
-//        for (int i=0;i<6;i++){
-//            for(int j=0;j<12;j++){
-//                float padding  = 2;
-//                BoxView view  = new BoxView(CourseActivity.this,i*50,j*50,50,50,"#000000");
-//                tableLayout.addView(view);
-//            }
-//        }
+    //    initCourseBox();
     }
+    void initCourseBox(){
+        int width1 = 0;
+        int width2 = 0;
+        int height1 = 0;
+        int height2 = 0;
+        TextView temp1  = (TextView)findViewById(R.id.temp1);
+        TextView temp2  = (TextView)findViewById(R.id.temp2);
+        TextView temp3  = (TextView)findViewById(R.id.temp3);
+        height1 = temp1.getHeight();
+        height2 = temp3.getHeight();
+        width1 = temp1.getWidth();
+        width2 = temp2.getWidth();
 
+
+
+        TextView weeks = (TextView)findViewById(R.id.weeks);
+        weeks.setText("安卓真难");//待修改
+
+        LinearLayout monday = (LinearLayout)findViewById(R.id.course1);
+        TextView course = new TextView(this);
+        course.setText(width1+"\n"+width2+"\n"+height1+"\n"+height2);
+        course.setWidth(width2);
+        course.setHeight(height2*2);
+        course.setX(width1);
+        course.setY(height1+2*height2);
+        course.setBackgroundColor(0x000000);
+        course.setSingleLine(false);
+        monday.addView(course);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -82,7 +109,7 @@ public class CourseActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
+        initCourseBox();
         return super.onOptionsItemSelected(item);
     }
 
@@ -110,4 +137,5 @@ public class CourseActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
