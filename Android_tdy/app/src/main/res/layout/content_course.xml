@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/courseTableLayout"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:gravity="fill"
+    >
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text=""/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text=""/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text=""/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text=""/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow0"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    >
+
+    <TextView/>
+    <TextView
+        android:text2w=""/>
+    <TextView/>
+</TableRow>
+
+    <View
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_width="fill_parent">
+    </View>
+
+    <TableRow android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="1 "/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="2 "/>
+        <TextView/>
+    </TableRow>
+
+    <View
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_width="fill_parent">
+    </View>
+
+    <TableRow android:id="@+id/tableRow3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="3 "
+            />
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="4 "/>
+        <TextView/>
+    </TableRow>
+
+    <View
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_width="fill_parent">
+    </View>
+
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="5 "/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow6"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="6 "/>
+        <TextView/>
+    </TableRow>
+
+    <View
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_width="fill_parent">
+    </View>
+
+    <TableRow android:id="@+id/tableRow7"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="7 "/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow8"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="8 "/>
+        <TextView/>
+
+    </TableRow>
+
+    <View
+        android:layout_height="1px"
+        android:background="#000000"
+        android:layout_width="fill_parent">
+    </View>
+
+    <TableRow android:id="@+id/tableRow9"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_column="7">
+        <TextView/>
+        <TextView
+            android:text="9 "/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow10"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="10 "/>
+        <TextView/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow11"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <TextView/>
+        <TextView
+            android:text="11 "/>
+        <TextView/>
+    </TableRow>
+
+
+</TableLayout>
