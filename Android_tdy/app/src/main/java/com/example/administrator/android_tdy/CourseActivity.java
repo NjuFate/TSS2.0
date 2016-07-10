@@ -1,11 +1,9 @@
 package com.example.administrator.android_tdy;
 
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutCompat;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,12 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewTreeObserver;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
-
-import view.BoxView;
 
 public class CourseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,34 +48,22 @@ public class CourseActivity extends AppCompatActivity
     //    initCourseBox();
     }
     void initCourseBox(){
-        int width1 = 0;
-        int width2 = 0;
-        int height1 = 0;
-        int height2 = 0;
-        TextView temp1  = (TextView)findViewById(R.id.temp1);
-        TextView temp2  = (TextView)findViewById(R.id.temp2);
-        TextView temp3  = (TextView)findViewById(R.id.temp3);
-        height1 = temp1.getHeight();
-        height2 = temp3.getHeight();
-        width1 = temp1.getWidth();
-        width2 = temp2.getWidth();
-
-
-
-        TextView weeks = (TextView)findViewById(R.id.weeks);
-        weeks.setText("安卓真难");//待修改
-
-        LinearLayout monday = (LinearLayout)findViewById(R.id.course1);
-        TextView course = new TextView(this);
-        course.setText(width1+"\n"+width2+"\n"+height1+"\n"+height2);
-        course.setWidth(width2);
-        course.setHeight(height2*2);
-        course.setX(width1);
-        course.setY(height1+2*height2);
-        course.setBackgroundColor(0x000000);
-        course.setSingleLine(false);
-        monday.addView(course);
+        LinearLayout course1 = (LinearLayout)findViewById(R.id.course1);
+        int x = course1.getChildCount();
+        TextView temp = (TextView) course1.getChildAt(2);
+        course1.removeViewAt(3);
+        int y = course1.getChildCount();
+        temp.setBackgroundColor(Color.RED);
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                0, 0.1802f);
+        temp.setLayoutParams(param);
+        temp.setText(x+"  "+y);
+//        temp.set
+        temp.setTextSize(12);
+        temp.setSingleLine(false);
     }
+    void shareCourseBox(){}
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -106,10 +89,14 @@ public class CourseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.import_course) {
+            initCourseBox();
             return true;
         }
-        initCourseBox();
+        if(id == R.id.share){
+            shareCourseBox();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

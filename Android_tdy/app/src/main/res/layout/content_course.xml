@@ -2,6 +2,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="1"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +18,8 @@
     <TextView
         android:id="@+id/weeks"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
         android:text="第一周"
         android:textSize="50px"
         android:layout_gravity="center"/>
@@ -25,7 +27,8 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.95"
         android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -36,14 +39,13 @@
         <!--android:layout_alignParentStart="true">-->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="#BDC3C7"
             android:weightSum="1"
             android:layout_weight="0.055">
             <TextView
                 android:text=""
-                android:id="@+id/temp1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -56,7 +58,7 @@
                 />
             <TextView
                 android:text="1"
-                android:id="@+id/temp3"
+                android:id="@+id/course01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -176,152 +178,703 @@
         <LinearLayout
             android:id="@+id/course1"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期一"
-                android:id="@+id/temp2"
+                android:text="周一"
+                android:id="@+id/course10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
-                android:background="#BDC3C7"/>
+                android:background="#BDC3C7"
+                android:layout_weight="0.005" />
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
+            <TextView
+                android:text=""
+                android:id="@+id/course11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course15"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course16"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course17"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course18"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course19"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course110"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course111"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
             <!--添加课程-->
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/course2"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期二"
+                android:text="周二"
+                android:id="@+id/course20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course210"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course211"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/course3"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期三"
+                android:text="周三"
+                android:id="@+id/course30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course310"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course311"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+
 
         </LinearLayout>
-
         <LinearLayout
+            android:id="@+id/course4"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期四"
+                android:text="周四"
+                android:id="@+id/course40"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course410"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course411"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/course5"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期五"
+                android:text="周五"
+                android:id="@+id/course50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course59"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course510"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course511"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/course6"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期六"
+                android:text="周六"
+                android:id="@+id/course60"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course64"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course65"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course66"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course67"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course68"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course69"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course610"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course611"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/course7"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:weightSum="1"
             android:layout_weight="0.135">
             <TextView
-                android:text="星期日"
+                android:text="周日"
+                android:id="@+id/course70"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="0.005"
+                android:layout_weight="0.008"
                 android:background="#BDC3C7"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:background="#ffffff"
                 />
-            <!--添加课程-->
+            <TextView
+                android:text=""
+                android:id="@+id/course71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course73"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course74"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course76"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course77"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course78"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course79"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course710"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
+            <TextView
+                android:text=""
+                android:id="@+id/course711"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0.0901"/>
 
         </LinearLayout>
     </LinearLayout>
+    <!--<GridView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="0.9">-->
+
+    <!--</GridView>-->
 </LinearLayout>
