@@ -1,6 +1,6 @@
 package datalayer;
 
-/*
+/**
  * @author: xuan
  * @date: 2016/07/08
  * 
@@ -16,59 +16,64 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 
 public class JDBCHelper {  
-	public static String url = "jdbc:mysql://localhost:3306/tss2.0?characterEncoding=UTF-8";  
+	public static String url = "jdbc:mysql://localhost:3306/tss2.0?characterEncoding=UTF-8&useOldAliasMetadataBehavior=true";  
 	public static final String driver = "com.mysql.jdbc.Driver";  
 	public static final String user = "root";  
 	public static final String password = "xuan";  
 	public static final String characterEncoding = "utf-8";
-	private static JDBCHelper helper ;
-	private Connection conn = null;
 
 
-	private JDBCHelper() {  
-		try {  
 
-			Class.forName(driver);
-
+	/**
+	 * 取得数据库链接
+	 * @return Connection
+	 */
+	public Connection getConnection(){
+		Connection conn =null;
+		try {
+			Class.forName(driver).newInstance();
 			conn = DriverManager.getConnection(url, user, password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+	}
 
-			System.out.println("数据库连接成功！！！");
+	/**
+	 * 释放数据库链接
+	 */
+	public void releaseConnection(ResultSet rs,Statement stat,Connection conn){
 
-		} catch (Exception e) {  
-			e.printStackTrace();  
-		}  
-	}  
-
-	public static JDBCHelper create(){
-		if(helper == null){
-			synchronized(JDBCHelper.class){
-
-				if(helper == null)
-					helper = new JDBCHelper();
+		if (rs != null) {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
 		}
 
-		return helper;
-	}
+		if (stat != null) {
+			try {
+				stat.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 
+		if (conn != null) {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}	
 
-	public void close() {  
-		try {  
-			conn.close();  
-			System.out.println("数据库连接关闭！！！");
-		} catch (SQLException e) {  
-			e.printStackTrace();  
-		}  
-	}
-
-
-	public Connection getConnection(){
-		return conn;
-	}
 
 
 }  

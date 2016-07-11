@@ -9,7 +9,7 @@ import org.junit.Test;
 import datalayer.JDBCHelper;
 
 public class JDBCHelperTest {
-	JDBCHelper helper = JDBCHelper.create();
+	JDBCHelper helper = new JDBCHelper();
 
 	@Test
 	public void testCreate() {
