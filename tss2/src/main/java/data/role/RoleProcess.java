@@ -1,18 +1,16 @@
-package datalayer;
+package data.role;
 
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 
-import PO.Authority;
-import PO.ModuleAuthority;
-import PO.RoleAuthority;
+import data.base.JDBCHelper;
+import po.Authority;
+import po.ModuleAuthority;
+import po.RoleAuthority;
 
 public class RoleProcess {
 	JDBCHelper helper;
@@ -22,6 +20,9 @@ public class RoleProcess {
 		// TODO Auto-generated constructor stub
 		helper = new JDBCHelper();
 	}
+	
+	
+	
 
 	public RoleAuthority getRolePrivilege(String RCode){
 		RoleAuthority roleAuthority = new RoleAuthority();

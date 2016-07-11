@@ -1,4 +1,4 @@
-package datalayertest;
+package data.test;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import org.junit.Test;
 
-import datalayer.JDBCHelper;
+import data.base.JDBCHelper;
 
 public class JDBCHelperTest {
 	JDBCHelper helper = new JDBCHelper();

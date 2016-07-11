@@ -1,4 +1,4 @@
-package datalayer;
+package data.base;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

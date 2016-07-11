@@ -1,6 +1,6 @@
-package PO;
+package po;
 
-public class File{
+public class File implements BaseId{
 	
 	private Integer id;
 	private String fileName;

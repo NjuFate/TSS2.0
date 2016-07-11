@@ -1,6 +1,6 @@
 package logic.login;
 
-import dataservice.LoginService;
+import data.service.LoginService;
 import model.User;
 
 public class RoleIdentifier {

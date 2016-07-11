@@ -1,4 +1,4 @@
-package dataservice;
+package data.service;
 
 import java.lang.reflect.Method;
 import java.sql.Connection;
@@ -11,9 +11,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import PO.File;
-import datalayer.JDBCHelper;
-import datalayer.StandardSQL;
+import data.base.JDBCHelper;
+import data.base.StandardSQL;
+import po.BaseId;
+import po.File;
 
 /**
  * @author: xuan
@@ -31,6 +32,12 @@ public abstract class ManageService <T>{
 	protected JDBCHelper helper;
 	protected String tableName;
 	protected StandardSQL standardSQL;
+	
+	
+    public ManageService(){
+    	helper = new JDBCHelper();
+    	standardSQL = new StandardSQL();
+    }
 
 
 
@@ -41,8 +48,10 @@ public abstract class ManageService <T>{
 	 * @return
 	 * @throws Exception
 	 */
-	public int add(T t){
+	public int add(Object t){
 		String sql;
+		((BaseId) t).setId(implementation());;
+		
 		try {
 			sql = standardSQL.add(t);
 			return executeUpdate(sql);

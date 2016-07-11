@@ -1,4 +1,4 @@
-package datalayer;
+package data.base;
 
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
@@ -10,7 +10,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import dataservice.LoopOperate;
+
+import data.service.LoopOperate;
 
 /**
  * SQL语句解析类
@@ -203,7 +204,8 @@ public class StandardSQL{
 				if(i!=0){
 					sb.append(" and ");
 				}
-				sb.append(field+" like '%"+ss[i]+"%'");
+				//sb.append(field+" like '%"+ss[i]+"%'");
+				sb.append(field+" = '"+ss[i]+"'");
 			}
 			return sb.toString();
 		}else if(o instanceof Number){

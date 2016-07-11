@@ -1,4 +1,4 @@
-package dataservice;
+package data.service;
 
 import java.lang.reflect.Method;
 

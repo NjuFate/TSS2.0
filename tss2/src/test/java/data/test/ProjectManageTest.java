@@ -1,16 +1,11 @@
-package datalayertest;
+package data.test;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-
 import org.junit.Test;
-
-import PO.File;
-import PO.Project;
-import datalayer.FileManage;
-import datalayer.ProjectManage;
-import datalayer.StandardSQL;
+import data.base.StandardSQL;
+import data.manage.ProjectManage;
+import po.Project;
 
 public class ProjectManageTest {
 	ProjectManage dao = new ProjectManage();

@@ -1,9 +1,9 @@
-package dataServiceStub;
+package data.stub;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dataservice.ProjectService;
+import data.service.ProjectService;
 import model.Project;
 
 public class ProjectServiceStub implements ProjectService{

@@ -1,12 +1,13 @@
-package datalayertest;
+package data.test;
 
 
 
 import java.util.ArrayList;
 
 import org.junit.Test;
-import PO.File;
-import datalayer.FileManage;
+
+import data.manage.FileManage;
+import po.File;
 
 /**
  * 单元测试类
