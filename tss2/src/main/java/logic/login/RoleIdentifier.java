@@ -1,6 +1,7 @@
 package logic.login;
 
 import dataservice.LoginService;
+import model.User;
 
 public class RoleIdentifier {
 	private LoginService loginService;
@@ -17,5 +18,10 @@ public class RoleIdentifier {
 		boolean legality = false;
 		legality = loginService.testLegality(account, psw);
 		return legality;
+	}
+	
+	public User identifyRole(String account){
+		User user = loginService.roleIdentifier(account);
+		return user;
 	}
 }

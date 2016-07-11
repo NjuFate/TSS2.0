@@ -3,18 +3,35 @@ package model;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import general.Role;
+
 public class User {
 
-
-	private int id;//编号
-	private String account;//账号
-	private String name; //名字
-	private int age; //年龄
-	private ArrayList<String> major; //主修方向
-
+	private int id;// 编号
+	private String account;// 账号
+	private String name; // 名字
+	private int age; // 年龄
+	private ArrayList<String> major; // 主修方向
+	private Role role;//角色分类
 	
-	
-		public String getName() {
+
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public String getName() {
 		return name;
 	}
 
@@ -30,7 +47,7 @@ public class User {
 		this.age = age;
 	}
 
-		public int getId() {
+	public int getId() {
 		return id;
 	}
 

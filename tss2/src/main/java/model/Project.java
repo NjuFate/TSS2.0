@@ -7,52 +7,53 @@ import java.util.List;
  * 
  * @author WangHuan
  *
+ *
+ *例：
+ *	courseno c1092(教务网的课程编号)
+ *  coursename SEI 
+ *  instrutor 刘钦
+ *  semester 2016fall
+ *	teaching_assistants 无
+ *
+ *
  */
 public class Project {
-	private int pid;// 课程编号
-	private int grade;// 年级
-	private String startTime;// 课程开始时间
-	private String endTime;// 课程结束时间
-	private String pname;// 课程名称
-
-	public int getPid() {
-		return pid;
+	private String courseno ;//课程编号
+	private String coursename;//课程名称
+	private String instrutor;//教师
+	private String semester;//学期
+	private String teaching_assistants;//助教
+	
+	public String getCourseno() {
+		return courseno;
 	}
-
-	public void setPid(int pid) {
-		this.pid = pid;
+	public void setCourseno(String courseno) {
+		this.courseno = courseno;
 	}
-
-	public int getGrade() {
-		return grade;
+	public String getCoursename() {
+		return coursename;
 	}
-
-	public void setGrade(int grade) {
-		this.grade = grade;
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
 	}
-
-	public String getStartTime() {
-		return startTime;
+	public String getInstrutor() {
+		return instrutor;
 	}
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
+	public void setInstrutor(String instrutor) {
+		this.instrutor = instrutor;
 	}
-
-	public String getEndTime() {
-		return endTime;
+	public String getSemester() {
+		return semester;
 	}
-
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
+	public void setSemester(String semester) {
+		this.semester = semester;
 	}
-
-	public String getPname() {
-		return pname;
+	public String getTeaching_assistants() {
+		return teaching_assistants;
 	}
-
-	public void setPname(String pname) {
-		this.pname = pname;
+	public void setTeaching_assistants(String teaching_assistants) {
+		this.teaching_assistants = teaching_assistants;
 	}
+	
 
 }

@@ -12,7 +12,7 @@ public interface LoginService {
 	public boolean testLegality(String account,String psw);
 	
 	/**
-	 * 根据账号返回对应角色moel
+	 * 根据账号返回对应角色model
 	 * @param account
 	 * @return
 	 */
