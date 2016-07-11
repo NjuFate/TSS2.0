@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/import_course"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-    app:showAsAction="never" />
+        android:title="@string/import_course"
+        app:showAsAction="never" />
     <item
-        android:id="@+id/action_settings2"
+        android:id="@+id/share"
         android:orderInCategory="100"
-        android:title="settings2"
+        android:title="@string/share"
         app:showAsAction="never" />
 </menu>
