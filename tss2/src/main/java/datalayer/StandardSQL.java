@@ -287,7 +287,7 @@ public class StandardSQL{
 			sb.append(fieldName);
 			sb.append(" "+getDataType(type));
 			if(fieldName.equals("id")){
-				sb.append(" auto_increment");
+//				sb.append(" auto_increment");
 			}
 			sb.append(", ");
 			if(!it.hasNext()){

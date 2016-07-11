@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
-
+import PO.File;
 import datalayer.JDBCHelper;
 import datalayer.StandardSQL;
 
@@ -42,7 +41,17 @@ public abstract class ManageService <T>{
 	 * @return
 	 * @throws Exception
 	 */
-	public abstract int add(T t);
+	public int add(T t){
+		String sql;
+		try {
+			sql = standardSQL.add(t);
+			return executeUpdate(sql);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	};
 	/**
 	 * 删除
 	 * @param t
@@ -50,21 +59,53 @@ public abstract class ManageService <T>{
 	 * @throws Exception
 	 */
 
-	public abstract int delete(T t);
+	public int delete(T t){
+		String sql;
+		try {
+			sql = standardSQL.delete(t);
+			return executeUpdate(sql);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	};
 	/**
 	 * 更新
 	 * @param t
 	 * @return
 	 * @throws Exception
 	 */
-	public abstract int update(T t);
+	public int update(T t){
+		String sql;
+		try {
+			sql = standardSQL.update(t);
+			return executeUpdate(sql);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+		return 0;
+	};
 	/**
 	 * 查看
 	 * @param t
 	 * @return
 	 * @throws Exception
 	 */
-	public abstract ArrayList<T> query(T t);
+	public ArrayList<T> query(T t){
+		String sql;
+		try {
+			sql = standardSQL.query(t);
+			return (ArrayList<T>) executeQuery(sql, t);
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	};
 
 	/**
 	 * 根据ResultSet返回结果得到Object
@@ -104,7 +145,6 @@ public abstract class ManageService <T>{
 		} catch (Exception e) {
 			// TODO: handle exception		
 			id = Integer.valueOf(date)*size;	
-			e.printStackTrace();
 		}finally{
 			helper.releaseConnection(resultSet, preparedStatement, connection);
 		}

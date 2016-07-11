@@ -29,7 +29,7 @@ public class TestFileManage {
 		file.setFileName("filename");
 		file.setFatherFile("fatherfile");
 		file.setUploadUser("uploaduser");
-		file.setDownNum(123);
+		file.setDownNum(12);
 		dao.add(file);
 	}
 
@@ -40,13 +40,13 @@ public class TestFileManage {
 	@Test
 	public void testupdate() throws Exception{
 		File file = new File();
-		file.setId(160711000);
+		file.setId(160711003);
 		file.setCourseID("courseid");
 		file.setPath("path");
 		file.setFileName("filename");
 		file.setFatherFile("fatherfile");
 		file.setUploadUser("uploaduser");
-		file.setDownNum(222);
+		file.setDownNum(22222);
 		dao.update(file);
 	}
 
@@ -71,7 +71,7 @@ public class TestFileManage {
 	@Test
 	public void testdel() throws Exception{
 		File file =  new File();
-		file.setId(160711001);
+		file.setId(160711002);
 		dao.delete(file);
 	}
 

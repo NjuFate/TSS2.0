@@ -6,7 +6,7 @@ public class User{
 	private int uid;//编号
 	private String uname;
 	private String bithYearAndMonth;//出生年月
-    private ArrayList<String> major;
+    private String major;
 	public int getUid() {
 		return uid;
 	}
@@ -25,10 +25,10 @@ public class User{
 	public void setBithYearAndMonth(String bithYearAndMonth) {
 		this.bithYearAndMonth = bithYearAndMonth;
 	}
-	public ArrayList<String> getMajor() {
+	public String getMajor() {
 		return major;
 	}
-	public void setMajor(ArrayList<String> major) {
+	public void setMajor(String major) {
 		this.major = major;
 	}
 	

@@ -11,7 +11,7 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
-	private ArrayList<String> major; // 主修方向
+	private String major; // 主修方向
 	private Role role;//角色分类
 	
 
@@ -55,11 +55,11 @@ public class User {
 		this.id = id;
 	}
 
-	public Iterator<String> getMajor() {
-		return major.iterator();
+	public String getMajor() {
+		return major;
 	}
 
-	public void setMajor(ArrayList<String> major) {
+	public void setMajor(String major) {
 		this.major = major;
 	}
 }

@@ -2,14 +2,14 @@ package PO;
 
 public class File{
 	
-	private int id;
+	private Integer id;
 	private String fileName;
 	private String path;
 	private String uploadUser;
 	private Integer downNum;
 	private String fatherFile;
 	private String courseID;
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	public void setId(int fileID) {
