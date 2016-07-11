@@ -9,23 +9,24 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/pages")
 public class FrontContorller {
 	@RequestMapping("/test")
-    public ModelAndView index(){
+	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("message", "Hello World!");
 		modelAndView.setViewName("documents");
-        return modelAndView;
-    }
+		return modelAndView;
+	}
+
 	@RequestMapping("/hello2")
-    public String index3(){	
-        return "login";
-    }
-	
-	@RequestMapping(value="/index", method = {RequestMethod.GET})
-    public ModelAndView index2(){
-        
-        ModelAndView modelAndView = new ModelAndView();  
-        modelAndView.addObject("message", "Hello World!");  
-        modelAndView.setViewName("index");  
-        return modelAndView;
-    }
+	public String index3() {
+		return "login";
+	}
+
+	@RequestMapping(value = "/index", method = { RequestMethod.GET })
+	public ModelAndView index2() {
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("message", "Hello World!");
+		modelAndView.setViewName("index");
+		return modelAndView;
+	}
 }
