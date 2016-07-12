@@ -3,6 +3,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
+import org.omg.PortableServer.ServantActivator;
+import org.springframework.context.support.StaticApplicationContext;
+
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+
 import data.manage.UserManage;
 import data.manage.UserRoleManage;
 import data.service.LoginService;
@@ -10,6 +16,7 @@ import general.Role;
 import model.User;
 import po.UserRole;
 import data.base.JDBCHelper;
+import data.base.ParticularQuery;
 
 /**
  * @author: xuan
@@ -25,26 +32,33 @@ import data.base.JDBCHelper;
 
 
 
-public class LoginImpl implements LoginService{
+public class LoginIn implements LoginService{
 	
 	JDBCHelper helper;
 	UserManage userManage;
 	UserRoleManage userRoleManage;
+	ParticularQuery query;
 	
 	
-	public LoginImpl() {
+	public LoginIn() {
 		// TODO Auto-generated constructor stub
 		helper = new JDBCHelper();
 		userManage = new UserManage();
 		userRoleManage = new UserRoleManage();
+		query = new ParticularQuery(helper);
 	}
 
 	
 	
 	public boolean testLegality(String account, String psw) {
 		// TODO Auto-generated method stub
-		String sql = "select u.psw from user u, phonenumber p, mailbox m where u.id = p.uid and u.id = m.uid and "
-				+ "(account = ? or  p.phonenumber = ? or m.mailbox = ?) ";
+		
+		
+		String sql = "select psw from user where id = ? ";
+		
+	    int id = query.getUserIdByAccount(account);
+	    if(id == 0)
+	    	return false;
 		
 		PreparedStatement preparedStatement = null;
 		Connection connection = helper.getConnection();
@@ -53,9 +67,7 @@ public class LoginImpl implements LoginService{
 		
 		try {
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, account);
-			preparedStatement.setString(2, account);
-			preparedStatement.setString(3, account);
+			preparedStatement.setInt(1, id);
 
 			resultSet = preparedStatement.executeQuery();
 			if(resultSet.next())
@@ -70,37 +82,17 @@ public class LoginImpl implements LoginService{
 			// TODO: handle exception
 			e.printStackTrace();
 			return false;
+		}finally {
+			helper.releaseConnection(resultSet, preparedStatement, connection);
 		}
 		return false;
 	}
 
 	public User roleIdentifier(String account) {
 		// TODO Auto-generated method stub
-		String sql = "select u.id from user u, phonenumber p, mailbox m where u.id = p.uid and u.id = m.uid and "
-				+ "(account = ? or  p.phonenumber = ? or m.mailbox = ?) ";
-		
-		PreparedStatement preparedStatement = null;
-		Connection connection = helper.getConnection();
-		ResultSet resultSet = null;
-		int id;
-		
-		try {
-			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, account);
-			preparedStatement.setString(2, account);
-			preparedStatement.setString(3, account);
-			resultSet = preparedStatement.executeQuery();
-			if(resultSet.next())
-				id = resultSet.getInt(1);
-			else
-				throw new NullPointerException();
-			
-				
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+		int id = query.getUserIdByAccount(account);
+		if(id == 0)
 			return null;
-		}
 		
 		po.User user = new po.User();
 		user.setId(id);
@@ -112,5 +104,18 @@ public class LoginImpl implements LoginService{
 		result.setRole(Role.valueOf(userRoles.get(0).getRCode()));
 		return result;
 	}
+	
+	
+	
+	public static void main(String[]args){
+		LoginIn in =new LoginIn();
+		System.out.println(in.testLegality("141250052", "huang"));
+		System.out.println(in.testLegality("141250053", "123"));
+		System.out.println(in.testLegality("141250052", "123456"));
+
+		
+	}
+	
+	
 
 }

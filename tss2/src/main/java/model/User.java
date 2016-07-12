@@ -15,6 +15,16 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
+	public String getPsw() {
+		return psw;
+	}
+
+	public void setPsw(String psw) {
+		this.psw = psw;
+	}
+
+
+	private String psw; // 密码
 	private List<String> major; // 主修方向
 	private Role role;//角色分类
 	
@@ -29,6 +39,7 @@ public class User {
 		this.account = user.getAccount();
 		this.name = user.getName();
 		this.age = user.getAge();
+	    this.psw = user.getPsw();
 		this.major = Arrays.asList(user.getMajor().split(" "));
 
 		

@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import data.login.LoginImpl;
-import data.login.LoginImpl;
+import data.login.LoginIn;
+import data.login.LoginIn;
 import general.Role;
 
 public class LoginImplTest {
-	LoginImpl impl = new LoginImpl();
+	LoginIn impl = new LoginIn();
 
 	@Test
 	public void testTestLegality() {

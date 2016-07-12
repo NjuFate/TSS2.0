@@ -46,16 +46,17 @@ public abstract class ManageService <T>{
 	/**
 	 * 添加
 	 * @param t
-	 * @return
+	 * @return 返回自增长主键的id
 	 * @throws Exception
 	 */
 	public int add(Object t){
 		String sql;
-		((BaseId) t).setId(implementation());;
+		((BaseId) t).setId(implementation());
 		
 		try {
 			sql = standardSQL.add(t);
-			return executeUpdate(sql);
+			 if(executeUpdate(sql) != 0)
+			return ((BaseId) t).getId();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
