@@ -2,7 +2,6 @@ package data.login;
 
 
 
-import java.awt.Point;
 import java.util.ArrayList;
 
 import org.omg.PortableServer.POA;
@@ -14,7 +13,6 @@ import data.manage.UserManage;
 import data.manage.UserRoleManage;
 import data.service.LoginService;
 import general.Role;
-import javafx.beans.property.StringProperty;
 import po.User;
 import po.MailBox;
 import po.PhoneNumber;

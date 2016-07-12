@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import data.base.JDBCHelper;
+import general.Role;
 import po.Authority;
 import po.ModuleAuthority;
 import po.RoleAuthority;
@@ -24,14 +25,14 @@ public class RoleProcess {
 	
 	
 
-	public RoleAuthority getRolePrivilege(String RCode){
+	public RoleAuthority getRolePrivilege(Role role){
 		RoleAuthority roleAuthority = new RoleAuthority();
-		roleAuthority.setRCode(RCode);
+		roleAuthority.setRCode(role.toString());
 
-		return getRoleModule(RCode, roleAuthority);
+		return getRoleModule(role.toString(), roleAuthority);
 	}
 
-	private RoleAuthority getRoleModule(String RCode, RoleAuthority roleAuthority){
+	private RoleAuthority getRoleModule(String role, RoleAuthority roleAuthority){
 		String sql1 = "select FatherRCode from  Role where RCode = ?";
 
 		String sql2 = "select MCode from RoleModule where RCode = ?";
@@ -41,7 +42,7 @@ public class RoleProcess {
 		PreparedStatement pStatement = null;
 		try {
 			pStatement = connection.prepareStatement(sql2);
-			pStatement.setString(1, RCode);
+			pStatement.setString(1, role);
 
 			resultSet = pStatement.executeQuery();
 			if(resultSet == null)
@@ -53,7 +54,7 @@ public class RoleProcess {
 			}
 
 			pStatement = connection.prepareStatement(sql1);
-			pStatement.setString(1, RCode);
+			pStatement.setString(1, role);
 
 			resultSet = pStatement.executeQuery();
 			if(resultSet == null)

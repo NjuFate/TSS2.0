@@ -22,7 +22,6 @@ public class ProjectManageTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(sql);
 		dao.executeUpdate(sql);
 	}
 	

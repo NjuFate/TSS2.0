@@ -15,6 +15,7 @@ import data.base.JDBCHelper;
 import data.base.StandardSQL;
 import po.BaseId;
 import po.File;
+import po.User;
 
 /**
  * @author: xuan
@@ -62,7 +63,7 @@ public abstract class ManageService <T>{
 		return 0;
 	};
 	/**
-	 * 删除
+	 * 删除,可匹配非主键
 	 * @param t
 	 * @return
 	 * @throws Exception
@@ -80,7 +81,7 @@ public abstract class ManageService <T>{
 		return 0;
 	};
 	/**
-	 * 更新
+	 * 更新，只能通过主键进行匹配, 更新除主键外的所有数据，最好和query一同使用
 	 * @param t
 	 * @return
 	 * @throws Exception
@@ -97,8 +98,34 @@ public abstract class ManageService <T>{
 		}
 		return 0;
 	};
+	
+	
+	
 	/**
-	 * 查看
+	 * 更新
+	 * @param t1 匹配条件
+	 * @param t2 更新内容
+	 * @return
+	 * @throws Exception
+	 */
+	public int update(T t1, T t2){
+		String sql;
+		try {
+			executeUpdate(standardSQL.safe(0));
+			sql = standardSQL.update(t1);
+			int i = executeUpdate(sql);
+			executeUpdate(standardSQL.safe(1));
+
+			return i;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+		return 0;
+	};
+	/**
+	 * 查看，可匹配非主键
 	 * @param t
 	 * @return
 	 * @throws Exception
@@ -272,6 +299,9 @@ public abstract class ManageService <T>{
 		}
 		return (T)newObject;
 	}
+	
+	
+	
 
 }
 

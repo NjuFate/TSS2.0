@@ -8,6 +8,7 @@ import java.util.Iterator;
 import org.junit.Test;
 
 import data.role.RoleProcess;
+import general.Role;
 import po.Authority;
 import po.ModuleAuthority;
 import po.RoleAuthority;
@@ -33,21 +34,21 @@ public class RoleProcessTest {
 
 	@Test
 	public void testGetModulePrivilege() {
-		 RoleAuthority roleAuthority = process.getRolePrivilege("GUEST");		
+		 RoleAuthority roleAuthority = process.getRolePrivilege(Role.GUEST);		
 		 assertEquals("RCode: GUEST CHECK_COURSE_MESSAGE", roleAuthority.toString());
 
-		   roleAuthority = process.getRolePrivilege("STUDENT");
+		   roleAuthority = process.getRolePrivilege(Role.STUDENT);
 			 assertEquals("RCode: STUDENT CHECK_HOMEWORK DOWNLOAD_COURSEWARE JOIN_CLASS MESSAGE_MANAGE "
 			 		+ "UPLOAD_HOMEWORK CHECK_COURSE_MESSAGE", roleAuthority.toString());
 
 
-		   roleAuthority = process.getRolePrivilege("TEACHER");
+		   roleAuthority = process.getRolePrivilege(Role.TEACHER);
 			 assertEquals("RCode: TEACHER UPLOAD_COURSEWARE DOWNLOAD_COURSEWARE DOWNLOAD_HOMEWORK DELETE_COURSEWARE "
 			 		+ "MESSAGE_MANAGE DELETE_HOMEWORK ASSIGN_HOMEWORK CHECK_COURSE_MESSAGE", roleAuthority.toString());
 
 		   
 
-		   roleAuthority = process.getRolePrivilege("ROOT");
+		   roleAuthority = process.getRolePrivilege(Role.ROOT);
 			 assertEquals("RCode: ROOT UPLOAD_COURSEWARE CLASS_MANAGE DOWNLOAD_COURSEWARE DELETE_COURSEWARE "
 			 		+ "USER_MANAGE COURSE_MANAGE DELETE_HOMEWORK ASSIGN_HOMEWORK CHECK_COURSE_MESSAGE USER_ROLE_SET DOWNLOAD_HOMEWORK "
 			 		+ "MESSAGE_MANAGE MODULE_AUTHORITY_SET", roleAuthority.toString());

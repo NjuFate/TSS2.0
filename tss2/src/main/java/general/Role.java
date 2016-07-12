@@ -1,5 +1,5 @@
 package general;
 
 public enum Role {
-	TEACHER,STUDENT;
+	GUEST,TEACHER,STUDENT,ACDEMICDEAN,ROOT;
 }
