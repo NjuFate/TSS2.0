@@ -43,7 +43,7 @@ public class ParticularQuery {
 	 
 	
      private int getUserId(String account, String idName, String tableName, String accountName){
-    	 String sql = "select " + idName +" from "+ tableName + " where " + accountName + " = " + account;
+    	 String sql = "select " + idName +" from "+ tableName + " where " + accountName + " = '" + account + "'";
     	 System.out.println(sql);
 
  		PreparedStatement preparedStatement = null;

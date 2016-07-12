@@ -104,13 +104,13 @@ public class StandardSQL{
 		while(it.hasNext()){
 			String k = (String)it.next();
 			String value = (String)map.get(k);
-			list.add(k+"="+value);
+			list.add(k+"=''"+value+"''");
 		}
 
 		sb.append(getTableName(o));
 		sb.append(" set "+fieldJoin(list));
 		sb.append(" where id =");
-		sb.append(id);
+		sb.append("''"+id+"''");
 
 		return sb.toString();
 	}
