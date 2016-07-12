@@ -9,9 +9,9 @@ public class CourseEntity {
     private String id;
     private String name;
     private List<String> teachers;
-    private List<List<String>> time;//每个元素是{周几，开始于第几节，结束于第几节，教室}
+    private List<CourseTimeEntity> time;//每个元素是{周几，开始于第几节，结束于第几节，教室}
     private List<Integer> weeks;
-    public CourseEntity(String id, String name, List<List<String>> time, List<String> teachers, List<Integer> weeks) {
+    public CourseEntity(String id, String name, List<CourseTimeEntity> time, List<String> teachers, List<Integer> weeks) {
         this.id = id;
         this.name = name;
         this.time = time;
@@ -43,11 +43,11 @@ public class CourseEntity {
         this.teachers = teachers;
     }
 
-    public List<List<String>> getTime() {
+    public List<CourseTimeEntity> getTime() {
         return time;
     }
 
-    public void setTime(List<List<String>> time) {
+    public void setTime(List<CourseTimeEntity> time) {
         this.time = time;
     }
 
