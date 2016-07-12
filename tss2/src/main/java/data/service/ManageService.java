@@ -113,7 +113,7 @@ public abstract class ManageService <T>{
 		String sql;
 		try {
 			executeUpdate(standardSQL.safe(0));
-			sql = standardSQL.update(t1);
+			sql = standardSQL.update(t1,t2);
 			int i = executeUpdate(sql);
 			executeUpdate(standardSQL.safe(1));
 
