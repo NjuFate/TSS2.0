@@ -2,8 +2,8 @@ package logic.project;
 
 import java.util.List;
 
-import dataServiceStub.ProjectServiceStub;
-import dataservice.ProjectService;
+import data.service.ProjectService;
+import data.stub.ProjectServiceStub;
 import model.Project;
 
 /**

@@ -1,16 +1,16 @@
-package datalayer;
+package data.role;
 
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 
-import PO.Authority;
-import PO.ModuleAuthority;
-import PO.RoleAuthority;
+import data.base.JDBCHelper;
+import po.Authority;
+import po.ModuleAuthority;
+import po.RoleAuthority;
 
 public class RoleProcess {
 	JDBCHelper helper;
@@ -18,8 +18,11 @@ public class RoleProcess {
 	
 	public RoleProcess() {
 		// TODO Auto-generated constructor stub
-		helper = JDBCHelper.create();
+		helper = new JDBCHelper();
 	}
+	
+	
+	
 
 	public RoleAuthority getRolePrivilege(String RCode){
 		RoleAuthority roleAuthority = new RoleAuthority();
@@ -34,8 +37,10 @@ public class RoleProcess {
 		String sql2 = "select MCode from RoleModule where RCode = ?";
 
 		ResultSet resultSet = null;
+		Connection connection = helper.getConnection();
+		PreparedStatement pStatement = null;
 		try {
-			PreparedStatement pStatement = helper.getConnection().prepareStatement(sql2);
+			pStatement = connection.prepareStatement(sql2);
 			pStatement.setString(1, RCode);
 
 			resultSet = pStatement.executeQuery();
@@ -47,7 +52,7 @@ public class RoleProcess {
 
 			}
 
-			pStatement = helper.getConnection().prepareStatement(sql1);
+			pStatement = connection.prepareStatement(sql1);
 			pStatement.setString(1, RCode);
 
 			resultSet = pStatement.executeQuery();
@@ -64,6 +69,8 @@ public class RoleProcess {
 		}catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			helper.releaseConnection(resultSet, pStatement , null );
 		}
 
 
@@ -77,8 +84,10 @@ public class RoleProcess {
 		String sql1 = "select * from Module where MCode = ?";
 		String sql2 = "select ACode from ModuleAuthority where MCode = ?";
 		ResultSet resultSet = null;
+		PreparedStatement pStatement = null;
+		Connection connection = helper.getConnection();
 		try {
-			PreparedStatement pStatement = helper.getConnection().prepareStatement(sql1);
+			pStatement = connection.prepareStatement(sql1);
 			pStatement.setString(1, MCode);
 
 			resultSet = pStatement.executeQuery();
@@ -114,6 +123,8 @@ public class RoleProcess {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			helper.releaseConnection(resultSet, pStatement, connection);
 		}
 
 
@@ -123,13 +134,15 @@ public class RoleProcess {
 	
 	public ArrayList<Authority> getAuthorityList(){
 		String sql = "select * from  Authority";
-		PreparedStatement preparedStatement;
+		PreparedStatement preparedStatement = null;
 		ArrayList<Authority>list;
+		ResultSet resultSet  = null;
+		Connection connection = helper.getConnection();
 		
 		try {
-			preparedStatement = helper.getConnection().prepareStatement(sql);
+			preparedStatement = connection.prepareStatement(sql);
 			
-			ResultSet resultSet = preparedStatement.executeQuery();
+		   resultSet = preparedStatement.executeQuery();
 			if(resultSet == null)
 				throw new NullPointerException();
 			list = new ArrayList<Authority>();
@@ -145,9 +158,13 @@ public class RoleProcess {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			helper.releaseConnection(resultSet, preparedStatement, connection);
 		}	
 		return null;
 	}
+	
+	
 	
 
 }

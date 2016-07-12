@@ -1,19 +1,19 @@
-package PO;
+package po;
 
-public class File{
+public class File implements BaseId{
 	
-	private String fileID;
+	private Integer id;
 	private String fileName;
 	private String path;
 	private String uploadUser;
-	private int downNum;
+	private Integer downNum;
 	private String fatherFile;
 	private String courseID;
-	public String getFileID() {
-		return fileID;
+	public Integer getId() {
+		return id;
 	}
-	public void setFileID(String fileID) {
-		this.fileID = fileID;
+	public void setId(int fileID) {
+		this.id = fileID;
 	}
 	public String getFileName() {
 		return fileName;
@@ -33,7 +33,7 @@ public class File{
 	public void setUploadUser(String uploadUser) {
 		this.uploadUser = uploadUser;
 	}
-	public int getDownNum() {
+	public Integer getDownNum() {
 		return downNum;
 	}
 	public void setDownNum(int downNum) {

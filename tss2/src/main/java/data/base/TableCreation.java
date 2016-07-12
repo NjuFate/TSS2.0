@@ -1,4 +1,4 @@
-package datalayer;
+package data.base;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -10,7 +10,7 @@ public class TableCreation {
 	JDBCHelper helper;
 	public TableCreation() {
 		// TODO Auto-generated constructor stub
-		helper = JDBCHelper.create();
+		helper = new JDBCHelper();
 	}
 	
 	
@@ -36,8 +36,8 @@ public class TableCreation {
 	}
 	
 	public void createFileTable(){
-		String sql = "create table File(fileID char(20), fileName varchar(30), path varchar(50), "
-				+ "uploadUser char(20), doloadNum INT(11),fatherFile varchar(50), courseID char(20), primary key(fileID))";
+		String sql = "create table File(id INT(11), fileName varchar(30), path varchar(50), "
+				+ "uploadUser char(20), downNum INT(11),fatherFile varchar(50), courseID char(20), primary key(id))";
 		try {
 			PreparedStatement preparedStatement = helper.getConnection().prepareStatement(sql);
 		
@@ -47,9 +47,13 @@ public class TableCreation {
 			}else {
 				System.out.println("FAIL!!!");
 			}
+			preparedStatement.close();
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			
 		}
 		
 		
@@ -81,7 +85,7 @@ public class TableCreation {
 	
 	public static void main(String [] args){
 		TableCreation creation = new TableCreation();
-		creation.createUserTable();
+		creation.createFileTable();
 		
 	}
 	

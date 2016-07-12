@@ -1,7 +1,11 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+
+import org.omg.PortableServer.POA;
 
 import general.Role;
 
@@ -11,8 +15,25 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
-	private ArrayList<String> major; // 主修方向
+	private List<String> major; // 主修方向
 	private Role role;//角色分类
+	
+	
+	public User() {
+		// TODO Auto-generated constructor stub
+		major = new ArrayList<String>();
+	}
+	
+	public User(po.User user){
+		this.id = user.getId();
+		this.account = user.getAccount();
+		this.name = user.getName();
+		this.age = user.getAge();
+		this.major = Arrays.asList(user.getMajor().split(" "));
+
+		
+	}
+	
 	
 
 	public String getAccount() {
@@ -59,7 +80,21 @@ public class User {
 		return major.iterator();
 	}
 
-	public void setMajor(ArrayList<String> major) {
+	public void setMajor(String major) {
+		this.major.add(major);
+	}
+	
+	public void setMajor(List<String> major) {
 		this.major = major;
+	}
+	
+	
+	public String toString(Iterator<String>lists){
+		String result = "";
+		while(lists.hasNext()){
+			String string = lists.next();
+			result = result + string + " ";
+		}
+	  return result;
 	}
 }

@@ -1,4 +1,4 @@
-package PO;
+package po;
 
 public class Authority {
 	private int AID;

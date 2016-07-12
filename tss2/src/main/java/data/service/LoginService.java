@@ -1,4 +1,4 @@
-package dataservice;
+package data.service;
 
 import model.User;
 

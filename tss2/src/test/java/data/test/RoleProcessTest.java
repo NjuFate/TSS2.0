@@ -1,4 +1,4 @@
-package datalayertest;
+package data.test;
 
 import static org.junit.Assert.*;
 
@@ -7,10 +7,10 @@ import java.util.Iterator;
 
 import org.junit.Test;
 
-import PO.Authority;
-import PO.ModuleAuthority;
-import PO.RoleAuthority;
-import datalayer.RoleProcess;
+import data.role.RoleProcess;
+import po.Authority;
+import po.ModuleAuthority;
+import po.RoleAuthority;
 
 public class RoleProcessTest {
 
