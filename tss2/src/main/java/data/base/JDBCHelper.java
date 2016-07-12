@@ -21,7 +21,7 @@ import java.sql.Statement;
 
 
 public class JDBCHelper {  
-	public static String url = "jdbc:mysql://localhost:3306/tss2.0?characterEncoding=UTF-8&useOldAliasMetadataBehavior=true";  
+	public static String url = "jdbc:mysql://123.206.70.29:3306/tss2.0?characterEncoding=UTF-8";  
 	public static final String driver = "com.mysql.jdbc.Driver";  
 	public static final String user = "root";  
 	public static final String password = "xuan";  
@@ -73,6 +73,8 @@ public class JDBCHelper {
 			}
 		}
 	}	
+	
+	
 
 
 
