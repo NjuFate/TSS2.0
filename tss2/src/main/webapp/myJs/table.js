@@ -1,3 +1,4 @@
+var baseUrl = "http://localhost:8080/tss2/data.do?";
 function createAjaxObj(){
 	var req;
 	if(window.XMLHttpRequest){
@@ -7,15 +8,15 @@ function createAjaxObj(){
 	}
 	return req;
 }
-function getProjectTable(){
+function getProjectTable(deal){
 	var req = createAjaxObj();
-	req.open("get","http://localhost:8080/tss2/data.do?method=projectList&account=123456",true);
+	req.open("get",baseUrl+"method=projectList&account=123456",true);
 	req.setRequestHeader("accept","application/json");
 	req.onreadystatechange = function(){
 		if(req.readyState==4 && req.status==200){
-			alert(req.responseText);
+			//alert(req.responseText);
 			eval("var result="+req.responseText);
-			alert(result);
+			deal(result);
 		}else{
 			//alert(req.readyState);
 			//alert(req.status);
@@ -24,7 +25,22 @@ function getProjectTable(){
 	req.send(null);
 }
 
-
+function fillProjectTable(data){
+	 var $table = $("#course-table>tbody");
+ 	 $table.empty();
+	 for(var i=0;i<data.length;i++){
+		var $tr = $("<tr> </tr>").addClass("gradeA");
+ 	    //alert($table)
+ 	    //alert($tr)
+	 	$tr.append($("<td></td>").text(data[i].courseno));
+	 	$tr.append($("<td></td>").text(data[i].coursename));
+	 	$tr.append($("<td></td>").text(data[i].instrutor));
+     	$tr.append($("<td></td>").text(data[i].semester));
+     	$tr.append($("<td></td>").text(data[i].teaching_assistants));
+     	$table.append($tr);
+	 }
+		
+}
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function statistics(deal,stockID){
