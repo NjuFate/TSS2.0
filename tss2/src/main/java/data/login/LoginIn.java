@@ -107,14 +107,6 @@ public class LoginIn implements LoginService{
 	
 	
 	
-	public static void main(String[]args){
-		LoginIn in =new LoginIn();
-		System.out.println(in.testLegality("141250052", "huang"));
-		System.out.println(in.testLegality("141250053", "123"));
-		System.out.println(in.testLegality("141250052", "123456"));
-
-		
-	}
 	
 	
 
