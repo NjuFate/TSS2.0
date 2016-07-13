@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/login_course"
+        android:orderInCategory="100"
+        android:title="@string/login_course"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/import_course"
+        android:orderInCategory="100"
+        android:title="@string/import_course"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/share_course"
+        android:orderInCategory="100"
+        android:title="@string/share_course"
+        app:showAsAction="never" />
+
+    <!--<item-->
+        <!--android:id="@+id/courseButton"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/share_course"-->
+        <!--app:showAsAction="always">-->
+
+    <!--</item>-->
+</menu>
