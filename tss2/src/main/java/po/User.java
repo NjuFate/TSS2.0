@@ -21,6 +21,7 @@ public class User implements BaseId{
 		this.name = user.getName();
 		this.age = user.getAge();
 		this.major = user.toString(user.getMajor());
+		this.psw = user.getPsw();
 
 		
 	}

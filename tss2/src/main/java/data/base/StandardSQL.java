@@ -35,7 +35,7 @@ public class StandardSQL{
 		sb.append(")");
 		return sb.toString();
 	}
-	
+
 	/**
 	 * 生成插入语句
 	 * @param o
@@ -63,17 +63,25 @@ public class StandardSQL{
 	 * @throws Exception
 	 */
 	public String delete(Object o) throws Exception{
-		Map map = getConditionMap(o);
+//		Map map = getConditionMap(o);
+//		可以通过非主键进行删除
+//		if(!map.containsKey("id")){
+//			throw new Exception("The primary_key is null!");
+//		}
+//		sb.append(" where id =");
+//		sb.append(map.get("id"));
+//		return sb.toString();
+		
+		
 		StringBuffer sb = new StringBuffer("delete from ");
-		if(!map.containsKey("id")){
-			throw new Exception("The primary_key is null!");
-		}
 		sb.append(getTableName(o));
-		sb.append(" where id =");
-		sb.append(map.get("id"));
+		String condition = getCondition(o, "and");
+		if(!"".equals(condition)){
+			sb.append(" where ").append(condition);
+		}
 		return sb.toString();
 	}
-	
+
 	/**
 	 * 生成修改语句
 	 * @param o
@@ -84,7 +92,7 @@ public class StandardSQL{
 		StringBuffer sb = new StringBuffer("update ");
 		Map map = getConditionMap(o);
 		String id = (String)map.get("id");
-		
+
 		if(!map.containsKey("id")){
 			throw new Exception("The primary_key is null!");
 		}else{
@@ -96,17 +104,41 @@ public class StandardSQL{
 		while(it.hasNext()){
 			String k = (String)it.next();
 			String value = (String)map.get(k);
-			list.add(k+"="+value);
+			list.add(k+"=''"+value+"''");
 		}
-		
+
 		sb.append(getTableName(o));
 		sb.append(" set "+fieldJoin(list));
 		sb.append(" where id =");
-		sb.append(id);
-		
+		sb.append("''"+id+"''");
+
 		return sb.toString();
 	}
 	
+	
+	
+	
+	/**
+	 * 生成修改语句
+	 * @param o1 匹配条件
+	 * @param o2 更新内容
+	 * @return
+	 * @throws Exception
+	 */
+	public String update(Object o1, Object o2) throws Exception{
+		StringBuffer sb = new StringBuffer("update ");
+
+		sb.append(getTableName(o1));
+		sb.append(" set "+getCondition(o2, ","));
+
+		String condition1 = getCondition(o1, "and");
+		if(!"".equals(condition1)){
+			sb.append(" where ").append(condition1);
+		}
+
+		return sb.toString();
+	}
+
 	/**生成查询语句
 	 * @param o
 	 * @return
@@ -114,14 +146,14 @@ public class StandardSQL{
 	 */
 	public String query(Object o) throws Exception{
 		StringBuffer sb = new StringBuffer("select ");
-		String condition = getCondition(o);
+		String condition = getCondition(o, "and");
 		sb.append(getField(o)).append("from ").append(getTableName(o));
 		if(!"".equals(condition)){
 			sb.append(" where ").append(condition);
 		}
 		return sb.toString();
 	}
-		
+
 	/**产生in条件语句
 	 * @param field
 	 * @param coll
@@ -144,7 +176,7 @@ public class StandardSQL{
 			return sb.toString();
 		}
 	}
-	
+
 	/**
 	 * 产生between或<>条件语句
 	 * @param field
@@ -173,7 +205,17 @@ public class StandardSQL{
 		}
 		return "";
 	}
-
+	
+	
+	/**生成安全语句
+	 * @param i
+	 * @return
+	 * @throws Exception
+	 */
+	public String safe(int i) throws Exception{
+		return "SET SQL_SAFE_UPDATES = " + i;
+	}
+	
 	/**
 	 * 根据对象得到数据库的表名称
 	 * @param o
@@ -186,7 +228,7 @@ public class StandardSQL{
 		tableName = tableName.substring(index,index+1).toLowerCase()+tableName.substring(index+1);
 		return tableName;
 	}
-	
+
 	/**得到比较语句
 	 * @param field
 	 * @param o
@@ -218,6 +260,9 @@ public class StandardSQL{
 		}
 		return "";
 	}
+	
+	
+	
 
 	/**将对象格式化为字符
 	 * @param o
@@ -236,7 +281,7 @@ public class StandardSQL{
 		}
 		return "";
 	}
-	
+
 	/**
 	 * 根据对象的类型映射数据库中的类型
 	 * @param c
@@ -258,7 +303,7 @@ public class StandardSQL{
 		}
 		return "varchar(100)";
 	}
-	
+
 	/**得到对象中所有<变量名,变量类型>的Map
 	 * @param o
 	 * @return
@@ -274,7 +319,7 @@ public class StandardSQL{
 		});
 		return map;
 	}
-	
+
 	/**
 	 * 得到建表语句的主体部分
 	 * @param map
@@ -289,7 +334,7 @@ public class StandardSQL{
 			sb.append(fieldName);
 			sb.append(" "+getDataType(type));
 			if(fieldName.equals("id")){
-//				sb.append(" auto_increment");
+				//				sb.append(" auto_increment");
 			}
 			sb.append(", ");
 			if(!it.hasNext()){
@@ -298,8 +343,8 @@ public class StandardSQL{
 		}
 		return sb.toString();
 	}
-	
-	
+
+
 	/**
 	 * 连接所有的字段组成字符串
 	 * @param coll
@@ -319,19 +364,19 @@ public class StandardSQL{
 		}
 		return sb.toString();
 	}
-	
+
 	/**连接所有的条件组成字符串
 	 * @param coll
 	 * @return
 	 */
-	private String conditionJoin(Collection coll){
+	private String conditionJoin(Collection coll, String joinLink){
 		StringBuffer sb = new StringBuffer();
 		Iterator it = coll.iterator();
 		while(it.hasNext()){
 			String s = (String)it.next();
 			sb.append(s);
 			if(it.hasNext()){
-				sb.append(" and ");
+				sb.append(" "+ joinLink +" ");
 			}else{
 				sb.append(" ");
 			}
@@ -382,8 +427,8 @@ public class StandardSQL{
 	 * @return
 	 * @throws Exception
 	 */
-	private String getCondition(Object o) throws Exception{
-		return conditionJoin(getConditionList(o));
+	private String getCondition(Object o, String joinLink) throws Exception{
+		return conditionJoin(getConditionList(o), joinLink);
 	}
 
 	/**
