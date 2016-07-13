@@ -16,7 +16,7 @@ import model.User;
  *
  */
 @Controller
-@RequestMapping("/pages")
+@RequestMapping("/logic")
 public class LoginServlet {
 	private RoleIdentifier roleIdentifier = new RoleIdentifier();
 	

@@ -8,25 +8,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/pages")
 public class FrontContorller {
-	@RequestMapping("/test")
-	public ModelAndView index() {
+	@RequestMapping("/login")
+	public ModelAndView test() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("message", "Hello World!");
-		modelAndView.setViewName("documents");
+		modelAndView.setViewName("login");
 		return modelAndView;
 	}
 
-	@RequestMapping("/hello2")
-	public String index3() {
-		return "login";
-	}
-
-	@RequestMapping(value = "/index", method = { RequestMethod.GET })
-	public ModelAndView index2() {
-
+	@RequestMapping("/index")
+	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("message", "Hello World!");
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
+	
+	@RequestMapping("/unlogin")
+	public ModelAndView unlogin() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("unlogin");
+		return modelAndView;
+	}
+
+	
 }

@@ -32,8 +32,8 @@ function fillProjectTable(data){
 		var $tr = $("<tr> </tr>").addClass("gradeA");
  	    //alert($table)
  	    //alert($tr)
-	 	$tr.append($("<td></td>").text(data[i].courseno));
-	 	$tr.append($("<td></td>").text(data[i].coursename));
+	 	$tr.append($("<td><a href='#' onclick='getSourceDoc();'>"+data[i].courseno+"</td>"));
+	 	$tr.append($("<td><a href='#' onclick='getSourceDoc();'>"+data[i].coursename+"</td>"));
 	 	$tr.append($("<td></td>").text(data[i].instrutor));
      	$tr.append($("<td></td>").text(data[i].semester));
      	$tr.append($("<td></td>").text(data[i].teaching_assistants));
@@ -42,44 +42,8 @@ function fillProjectTable(data){
 		
 }
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-function statistics(deal,stockID){
-	var req = createAjaxObj();
-    req.open("get",baseUrl+"method=statistics&stockID="+stockID,false);
-    req.setRequestHeader("accept","application/json");
-    req.onreadystatechange = function(){
-        if (req.readyState==4 && req.status == 200) {
-        	eval("var result="+req.responseText);       	
-            baseData = [];
-            if(stockID=="grail"){
-            baseData.push(2323);
-            baseData.push(result.increase);
-            baseData.push(result.increaseValue);
-            baseData.push(result.open);
-            baseData.push(result.close);
-            baseData.push(result.high);
-            baseData.push(result.low);
-            baseData.push(result.volume);
-            baseData.push(result.volumeValue);
-            }
-            else{
-			baseData.push(result.id);
-			baseData.push(result.name);
-			baseData.push(result.close);
-			baseData.push(result.increase);
-			baseData.push(result.increaseValue);
-			baseData.push(result.open);
-			baseData.push(result.close);
-			baseData.push(result.swing);
-			baseData.push(result.high);
-			baseData.push(result.low);
-			baseData.push(result.handchange);
-			baseData.push(result.volume);
-			baseData.push(result.volumeValue);
-            }
-            deal(baseData);
-            
-        }
-    };
-    req.send(null);
+function getSourceDoc(){
+	window.location.href="../views/teacher_upload.html";
 }
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
