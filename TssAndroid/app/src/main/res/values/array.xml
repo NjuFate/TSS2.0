@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ItemArray">
+        <item>导入课程</item>
+        <item>分享课表</item>
+        <item>登陆教务处</item>
+        <item>添加课程</item>
+    </array>
+</resources>

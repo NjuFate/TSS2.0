@@ -5,8 +5,4 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-
-    <string name="import_course">导入课程</string>
-    <string name="share_course">分享课表</string>
-    <string name="login_course">登录教务处</string>
 </resources>

@@ -9,7 +9,7 @@ public class CourseEntity {
     private String id;
     private String name;
     private List<String> teachers;
-    private List<CourseTimeEntity> time;//每个元素是{周几，开始于第几节，结束于第几节，教室}
+    private List<CourseTimeEntity> time;
     private List<Integer> weeks;
     public CourseEntity(String id, String name, List<CourseTimeEntity> time, List<String> teachers, List<Integer> weeks) {
         this.id = id;
