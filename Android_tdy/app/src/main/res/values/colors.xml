@@ -8,4 +8,5 @@
     <color name="colorCourseDack">#95A5A6</color>
     <color name="colorCourseDivider">#FFFFFF</color>
     <color name="colorWrongMessage">#E74C3C</color>
+    <color name="colorCourseAddHint">#FFCE54</color>
 </resources>
