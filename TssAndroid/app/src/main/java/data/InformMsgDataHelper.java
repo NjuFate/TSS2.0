@@ -14,6 +14,7 @@ import entity.InformMessage;
  * Created by dyp on 2016/7/13.
  */
 public class InformMsgDataHelper implements InformMsgDataService {
+    private static int msgNum=0;
     private MydataBaseHelper dbHelper;
 
 
@@ -24,9 +25,10 @@ public class InformMsgDataHelper implements InformMsgDataService {
 
     @Override
     public List<InformMessage> getInformMsg(String id) {
+        msgNum++;
         ArrayList<InformMessage> msgList = new ArrayList<InformMessage>();
         InformMessage msg = new InformMessage();
-        msg.setContent("毛泽东指出,中国欧盟构建和平、增长、改革、文明四大伙伴关系的共识正在落地生根。双方在重大国际事务上保持着战略对话,共同为改善全球经济治理、促进世界可持续发展作出了积极努力,在加强中欧各自发展战略对接方面达成重要共识并付诸行动。中欧双方要不断深化互利共赢的全面战略伙伴关系。");
+        msg.setContent("DYP+"+msgNum);
         msg.setTitle("江泽民");
         msg.setIconurl("!!!");
         msg.setMessageId(System.currentTimeMillis()+"DYP");
@@ -79,7 +81,8 @@ public class InformMsgDataHelper implements InformMsgDataService {
     @Override
     public List<InformMessage> getInformMsgBySender(String receiverID, String senderId) {
         String[] selectionArgs = new String[]{senderId};
-        Cursor cursor = dbHelper.query("InformMsg",null,"senderId=?",selectionArgs,null,null,null);
+        String orderby = "time DESC";
+        Cursor cursor = dbHelper.query("InformMsg",null,"senderId=?",selectionArgs,null,null,orderby);
 
         return loadData(cursor);
     }
@@ -99,15 +102,21 @@ public class InformMsgDataHelper implements InformMsgDataService {
         int result=0;
         String selection = "senderId=? and receiverId=?";
         String[] selectionArgs = new String[]{senderId,receiverId};
-        Cursor cursor = dbHelper.query("InformMsg",null,selection,selectionArgs,null,null,null);
-        if(cursor.moveToFirst()) {
-            do {
-                int ifread = cursor.getInt(cursor.getColumnIndex("ifread"));
-                if(ifread==0){
-                    result++;
-                }
-            } while (cursor.moveToNext());
+
+        try {
+            Cursor cursor = dbHelper.query("InformMsg",null,selection,selectionArgs,null,null,null);
+            if(cursor.moveToFirst()) {
+                do {
+                    int ifread = cursor.getInt(cursor.getColumnIndex("ifread"));
+                    if(ifread==0){
+                        result++;
+                    }
+                } while (cursor.moveToNext());
+            }
+        }catch (NullPointerException e){
+
         }
+
         return  result;
     }
 

@@ -56,6 +56,7 @@ public class MydataBaseHelper extends SQLiteOpenHelper {
     }
     //查
     public Cursor query( String table, String[] columns, String secletion, String[] args, String groupBy, String having, String orderBy){
+
         mdb = this.getWritableDatabase();
         Cursor cursor = mdb.query(table, columns, secletion, args, groupBy, having, orderBy);
 //        db.close();
