@@ -49,7 +49,7 @@ public class CreatAccount implements CreateAccountService{
            throw new AddAccountException();	
 		
 		UserRole role = new UserRole();
-		role.setRCode(user.getRole().toString());
+		role.setRole(user.getRole().toString());
 		role.setUid(id);
 		
 		if(userRoleManage.add(role) == 0)

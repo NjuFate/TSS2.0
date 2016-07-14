@@ -9,4 +9,5 @@
     <color name="colorCourseDivider">#FFFFFF</color>
     <color name="colorWrongMessage">#E74C3C</color>
     <color name="colorCourseAddHint">#FFCE54</color>
+    <color name="colorCourseText">#803BAFDA</color>
 </resources>

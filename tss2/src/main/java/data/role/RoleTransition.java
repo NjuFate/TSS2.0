@@ -29,7 +29,7 @@ public class RoleTransition implements RoleTransitionService{
 		UserRole u1 = new UserRole();
 		u1.setUid(id);
 		UserRole u2 = new UserRole();
-		u2.setRCode(role.toString());
+		u2.setRole(role.toString());
 		
 		if(userRoleManage.update(u1, u2)==0)
 		return false;
