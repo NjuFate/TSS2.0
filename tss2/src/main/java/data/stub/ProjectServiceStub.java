@@ -30,5 +30,10 @@ public class ProjectServiceStub implements ProjectService{
 		projectList.add(project2);
 		return projectList;
 	}
+
+	public List<Project> projectListStudent(String account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

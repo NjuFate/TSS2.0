@@ -1,6 +1,5 @@
 package model;
 
-import java.util.List;
 
 public class File {
 	private boolean isFolder;
@@ -16,10 +15,28 @@ public class File {
 	private String semester;
 	
 	
-	public boolean isFolder() {
+	public File(po.File file){
+		this.isFolder = new Boolean("" + file.getIsFolder());
+		this.father = file.getFather();
+		this.fileName = file.getFileName();
+		this.updateTime = file.getUpdateTime();
+		this.uploadBy = file.getUploadBy();
+		this.path = file.getPath();
+		this.courseno = file.getCourseno();
+		this.coursename = file.getCoursename();
+		this.semester = file.getSemester();
+		
+	}
+	
+	public File() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public boolean getIsFolder() {
 		return isFolder;
 	}
-	public void setFolder(boolean isFolder) {
+	public void setIsFolder(boolean isFolder) {
 		this.isFolder = isFolder;
 	}
 	public String getFather() {
