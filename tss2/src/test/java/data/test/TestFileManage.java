@@ -24,14 +24,14 @@ public class TestFileManage {
 	 */
 	@Test
 	public void testadd() throws Exception{
-		File file = new File();
-		file.setCourseID("courseid");
-		file.setPath("path");
-		file.setFileName("filename");
-		file.setFatherFile("fatherfile");
-		file.setUploadUser("uploaduser");
-		file.setDownNum(12);
-		dao.add(file);
+//		File file = new File();
+//		file.setCourseID("courseid");
+//		file.setPath("path");
+//		file.setFileName("filename");
+//		file.setFatherFile("fatherfile");
+//		file.setUploadUser("uploaduser");
+//		file.setDownNum(12);
+//		dao.add(file);
 	}
 
 	/**
@@ -40,15 +40,15 @@ public class TestFileManage {
 	 */
 	@Test
 	public void testupdate() throws Exception{
-		File file = new File();
-		file.setId(160711003);
-		file.setCourseID("courseid");
-		file.setPath("path");
-		file.setFileName("filename");
-		file.setFatherFile("fatherfile");
-		file.setUploadUser("uploaduser");
-		file.setDownNum(22222);
-		dao.update(file);
+//		File file = new File();
+//		file.setId(160711003);
+//		file.setCourseID("courseid");
+//		file.setPath("path");
+//		file.setFileName("filename");
+//		file.setFatherFile("fatherfile");
+//		file.setUploadUser("uploaduser");
+//		file.setDownNum(22222);
+//		dao.update(file);
 	}
 
 	/**测试查询操作
@@ -60,7 +60,7 @@ public class TestFileManage {
 		file.setId(160711000);
 		ArrayList<File>files = dao.query(file);
 		for(File f : files){
-			System.out.println(f.getId() + " " + f.getDownNum());
+//			System.out.println(f.getId() + " " + f.getDownNum());
 		}
 	
 	}

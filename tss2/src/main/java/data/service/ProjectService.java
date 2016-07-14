@@ -2,6 +2,7 @@ package data.service;
 
 import java.util.List;
 
+import data.exception.NoAccountException;
 import model.Project;
 
 /**
@@ -17,6 +18,7 @@ public interface ProjectService {
 	 *      返回老师所参与的课程 list
 	 * @param account
 	 * @return
+	 * @throws NoAccountException 
 	 */
 	public List<Project> projectList(String account);
 	

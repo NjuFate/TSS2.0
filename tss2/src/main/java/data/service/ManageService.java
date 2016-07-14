@@ -143,6 +143,8 @@ public abstract class ManageService <T>{
 		}
 		return null;
 	};
+	
+	
 
 	/**
 	 * 根据ResultSet返回结果得到Object
