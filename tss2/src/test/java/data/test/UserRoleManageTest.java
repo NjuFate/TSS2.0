@@ -16,7 +16,7 @@ public class UserRoleManageTest {
 	@Test
 	public void testAddUserRole() {
 		UserRole userRole = new UserRole();
-		userRole.setRCode(Role.STUDENT.toString());
+		userRole.setRole(Role.STUDENT.toString());
 		userRole.setUid(123);
 		dao.add(userRole);
 		

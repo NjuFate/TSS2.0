@@ -4,7 +4,7 @@ package po;
 public class UserRole implements BaseId{
 	private Integer id;
 	private Integer uid;
-	private String RCode;
+	private String role;
 	
 	
 	public Integer getId() {
@@ -19,11 +19,11 @@ public class UserRole implements BaseId{
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
-	public String getRCode() {
-		return RCode;
+	public String getRole() {
+		return role;
 	}
-	public void setRCode(String rCode) {
-		RCode = rCode;
+	public void setRole(String rCode) {
+		role = rCode;
 	}
 	
 

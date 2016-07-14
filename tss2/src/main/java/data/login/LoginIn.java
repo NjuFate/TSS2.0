@@ -101,7 +101,7 @@ public class LoginIn implements LoginService{
 		userRole.setUid(id);
 		ArrayList<UserRole> userRoles = userRoleManage.query(userRole);
 		model.User result = new model.User(users.get(0));
-		result.setRole(Role.valueOf(userRoles.get(0).getRCode()));
+		result.setRole(Role.valueOf(userRoles.get(0).getRole()));
 		return result;
 	}
 	
