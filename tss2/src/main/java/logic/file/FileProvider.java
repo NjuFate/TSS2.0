@@ -19,4 +19,9 @@ public class FileProvider {
 		List<File> fileList = fileService.getFileByCourse(courseno, coursename, semester, father);
 		return fileList;
 	}
+	
+	public List<File> getFileByCourseno(String courseno,String father){
+		List<File> fileList = fileService.getFileByCourseno(courseno, father);
+		return fileList;
+	}
 }

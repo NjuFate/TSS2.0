@@ -8,9 +8,9 @@ function createAjaxObj(){
 	}
 	return req;
 }
-function getProjectTable(deal){
+function getProjectTable(deal,account){
 	var req = createAjaxObj();
-	req.open("get",baseUrl+"method=projectList&account=123456",true);
+	req.open("get",baseUrl+"method=projectList&account="+account,true);
 	req.setRequestHeader("accept","application/json");
 	req.onreadystatechange = function(){
 		if(req.readyState==4 && req.status==200){

@@ -1,6 +1,7 @@
 package logic.login;
 
 import data.service.LoginService;
+import data.stub.LoginServiceStub;
 import model.User;
 
 public class RoleIdentifier {
@@ -11,7 +12,7 @@ public class RoleIdentifier {
 	}
 	
 	public RoleIdentifier(){
-		
+		loginService = new LoginServiceStub();
 	}
 	
 	public boolean legality(String account,String psw){

@@ -8,9 +8,9 @@ function createAjaxObj(){
 	}
 	return req;
 }
-function getDocTable(deal){
+function getDocTable(deal,courseno,father){
 	var req = createAjaxObj();
-	req.open("get",baseUrl+"method=fileList&courseno=123123&coursename=SE&semester=2016fall&father=coursno",true);
+	req.open("get",baseUrl+"method=fileList&courseno="+courseno+"&father="+father,true);
 	req.setRequestHeader("accept","application/json");
 	req.onreadystatechange = function(){
 		if(req.readyState==4 && req.status==200){
@@ -25,9 +25,13 @@ function getDocTable(deal){
 	req.send(null);
 }
 
-function openFolder(index){
+function openFolder(){
+	var courseno = getCookie("courseno");
 	var x=document.getElementById('doclist-table').rows[index].cells;
-	var fileName = x[0].innerText;
+	var father= x[0].innerText;
+	alert(father);
+	alert(courseno);
+	getDocTable(fillDocTable,courseno,father);
 }
 
 function fillDocTable(data){
@@ -39,7 +43,7 @@ function fillDocTable(data){
 		var $tr = $("<tr class='gradeA'> </tr>");
 		//alert(data[i].folder);
  	    if(
- 	    	data[i].folder){$tr.append($("<td><img border='0' src='../img/folder.jpg' width='20' height='20'><a id=index href='#' onclick='openFolder("+index+");'>"+data[i].fileName+"</td>")) ;}
+ 	    	data[i].isFolder){$tr.append($("<td><img border='0' src='../img/folder.jpg' width='20' height='20'><a id=index href='#' onclick='openFolder("+index+");'>"+data[i].fileName+"</td>")) ;}
  	    else{
  	    	$tr.append($("<td><img border='0' src='../img/doc.jpg' width='18' height='18'><a href="+data[i].path+">"+data[i].fileName+"</td>"));
  	    }
@@ -50,6 +54,16 @@ function fillDocTable(data){
      	$table.append($tr);
 	 }
 		
+}
+
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+  		var c = ca[i].trim();
+  		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  	}
+	return "";
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

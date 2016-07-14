@@ -1,5 +1,9 @@
 package ViewController;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -7,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import general.Role;
 import logic.login.RoleIdentifier;
+import model.Student;
 import model.Teacher;
 import model.User;
 
@@ -16,7 +21,7 @@ import model.User;
  *
  */
 @Controller
-@RequestMapping("/logic")
+@RequestMapping("/pages")
 public class LoginServlet {
 	private RoleIdentifier roleIdentifier = new RoleIdentifier();
 	
@@ -24,8 +29,9 @@ public class LoginServlet {
 		this.roleIdentifier = roleIdentifier;
 	}
 	
-	@RequestMapping(value = "/login", method = { RequestMethod.GET })
-	public ModelAndView login(String account,String psw) {
+	@RequestMapping(value = "/home", method = { RequestMethod.GET })
+	public ModelAndView login(String account,String psw,HttpServletRequest request,HttpServletResponse response) {
+		System.out.println("String = "+account+" psw = "+psw);
 		boolean legality = roleIdentifier.legality(account, psw);
 		if(!legality){
 			//密码账号不对应
@@ -34,23 +40,16 @@ public class LoginServlet {
 			return mav;
 		}else{
 			//密码账号对应
-			//判断角色
-			User user = roleIdentifier.identifyRole(account);
-			if(user.getRole() == Role.TEACHER){
-				//判断为老师
-				Teacher teacher = (Teacher)user;
-				
-				
-				//根据老师信息返回页面
-				
-			}
-			if(user.getRole() == Role.STUDENT){
-				//判断为学生
-			}
-			
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("index");
+			Cookie cookie;
+			cookie = new Cookie("account",account );
+			cookie.setPath("/");	
+			response.addCookie(cookie);
+			return mav;
 		}
 		
 		
-		return null;
+		
 	}
 }

@@ -42,6 +42,13 @@ public class FileImpl implements FileService{
 
 	}
 
+
+
+	public List<File> getFileByCourseno(String courseno, String father) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 	

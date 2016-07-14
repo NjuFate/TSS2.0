@@ -17,4 +17,6 @@ public interface FileService {
 	 * 比如仅判断coursename 和semester 是否相等
 	 */
 	public List<File> getFileByCourse(String courseno,String coursename,String semester,String father);
+	
+	public List<File> getFileByCourseno(String courseno,String father);
 }

@@ -15,36 +15,16 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/pages")
 public class FrontContorller {
 	@RequestMapping("/login")
-	public ModelAndView test(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView test() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("login");
-		String value = "哈哈哈";
-		
-		Cookie cookie;
-		try {
-			cookie = new Cookie("test", URLEncoder.encode(value, "UTF-8"));
-			cookie.setPath("/");	
-			response.addCookie(cookie);
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
 		return modelAndView;
 	}
-
+	
 	@RequestMapping("/index")
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("index");
-		return modelAndView;
-	}
-	
-	@RequestMapping("/unlogin")
-	public ModelAndView unlogin() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("unlogin");
 		return modelAndView;
 	}
 	

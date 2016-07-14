@@ -35,4 +35,31 @@ public class FileServiceStub implements FileService {
 		return fileList;
 	}
 
+	public List<File> getFileByCourseno(String courseno, String father) {
+		// TODO Auto-generated method stub
+		File file1 = new File();
+		File file2 = new File();
+		File file3 = new File();
+		
+		file1.setIsFolder(true);
+		file1.setFather(courseno);
+        file1.setFileName("base1");
+        file1.setPath("kkk");
+        file1.setUpdateTime("2016/07/12");
+        file1.setUploadBy("唐大爷");
+        
+        file2.setIsFolder(false);
+        file2.setFather(courseno);
+        file2.setFileName("test.doc");
+        file2.setPath("kkk");
+        file2.setUpdateTime("2016/07/12");
+        file2.setUploadBy("唐大爷");
+        
+        ArrayList<File> fileList = new ArrayList<File>();
+        fileList.add(file1);
+        fileList.add(file2);
+        
+		return fileList;
+	}
+
 }

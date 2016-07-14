@@ -42,13 +42,13 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="../pages/home" method="get">
                             <fieldset>
                                 <div class="form-group">
-                                    <input id="account" class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input id="account" class="form-control" placeholder="E-mail" name="account" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input id="psw" class="form-control" placeholder="Password" name="psw" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -56,7 +56,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="../pages/index" class="btn btn-lg btn-success btn-block" onclick='saveInfo();'>Login</a>
+                                 <button type="submit" class="btn btn-lg btn-success btn-block" value="commit">Login</button>
                             </fieldset>
                         </form>
                     </div>
@@ -78,12 +78,7 @@
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="../myJs/cookie.js"></script>
     <script>
-		function saveInfo(){
-			clearCookie("account");
-			var username = document.getElementById("account").value;
-			createCookie("account",username);
-		}
-		alert(document.cookie);
+		clearCookie("account");
 	</script>
 
 </body>

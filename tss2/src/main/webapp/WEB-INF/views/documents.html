@@ -374,14 +374,12 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script type="text/javascript">
-   	    
-    	
-    	
-    </script>
+    
     <script src="../myJs/table.js"></script>
+    <script src="../myJs/cookie.js"></script>
     <script type="text/javascript">
-    	getProjectTable(fillProjectTable);
+    	var account = getCookie("account");
+    	getProjectTable(fillProjectTable,account);
     </script>
     <script>
         $('#course-table').DataTable();
