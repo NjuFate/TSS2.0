@@ -29,7 +29,7 @@ function fillProjectTable(data){
 	 var $table = $("#course-table>tbody");
  	 $table.empty();
 	 for(var i=0;i<data.length;i++){
-		var $tr = $("<tr> </tr>").addClass("gradeA");
+		var $tr = $("<tr> </tr>");
  	    //alert($table)
  	    //alert($tr)
 	 	$tr.append($("<td><a href='#' onclick='getSourceDoc();'>"+data[i].courseno+"</td>"));
