@@ -8,15 +8,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.example.dyp.tssandroid.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +34,8 @@ public class MessageActivity extends AppCompatActivity {
     private ListView msgListView;
     private EditText inputText;
     private Button send;
-    private String senderId;
-    private String receiverId;
+    private int senderId;
+    private int receiverId;
     //	private Button receive;
     private MsgAdapter adapter;
     private ImageView gobackView;
@@ -38,6 +43,7 @@ public class MessageActivity extends AppCompatActivity {
     private List<Msg> msgList=new ArrayList<Msg>();
     private List<Msg> totalMsgList = new ArrayList<Msg>();
     private SwipeRefreshLayout mSwipeRefreshWidget;
+    private List<InformMessage> mDatas;
 
     private int maxNumOfMsg = 15;
     boolean isOver=false;
@@ -47,8 +53,8 @@ public class MessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final InformMsgDataHelper msgHelper = new InformMsgDataHelper(this);
         setContentView(R.layout.activity_message);
-        senderId = getIntent().getStringExtra("senderId");
-        receiverId = getIntent().getStringExtra("receiverId");
+        senderId = getIntent().getIntExtra("senderId",-1);
+        receiverId = getIntent().getIntExtra("receiverId",-1);
         adapter=new MsgAdapter(MessageActivity.this,R.layout.msg_item,msgList);
         inputText=(EditText)findViewById(R.id.input_text);
         gobackView = (ImageView) findViewById(R.id.goback_message);
@@ -131,6 +137,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+//                updateTime(mDatas);
                 String content=inputText.getText().toString();
                 if(!"".equals(content)){
                     Msg msg=new Msg(content,Msg.TYPE_SENT);
@@ -138,7 +145,7 @@ public class MessageActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     msgListView.setSelection(msgList.size());
                     inputText.setText("");
-                    msgHelper.sendMsg(receiverId,senderId,content);  //此处应该是异步操作
+                    long resultid = msgHelper.sendMsg(receiverId,senderId,content);  //此处应该是异步操作
                 }
 
             }
@@ -171,15 +178,14 @@ public class MessageActivity extends AppCompatActivity {
 
     private void initMsgs(){
         InformMsgDataHelper msgHelper = new InformMsgDataHelper(this);
-        List<InformMessage> list = msgHelper.getInformMsgBySender(receiverId,senderId);
+        mDatas = msgHelper.getInformMsgBySender(receiverId,senderId);
 
-        for(InformMessage msg:list){
+        for(InformMessage msg:mDatas){
             Msg textMsg = null;
             if(msg.getType()==1){
                 textMsg = new Msg(msg.getContent(),Msg.TYPE_RECEIVED);
             }else{
                 textMsg = new Msg(msg.getContent(),Msg.TYPE_SENT);
-                Toast.makeText(MessageActivity.this, msg.getSender()+"hh", Toast.LENGTH_SHORT).show();
             }
 
             totalMsgList.add(textMsg);
@@ -190,8 +196,9 @@ public class MessageActivity extends AppCompatActivity {
             if(msgList.size()<totalMsgList.size())
             msgList.add(0,totalMsgList.get(i));
         }
-        msgHelper.readMsg(list);
-        setTitle(senderId);
+        adapter.notifyDataSetChanged();
+        msgHelper.readMsg(mDatas);
+        setTitle(senderId+"");
 
 //        Msg msg1=new Msg("江主席，你觉得董先生连任好不好呀？",Msg.TYPE_RECEIVED);
 //        msgList.add(msg1);
@@ -203,5 +210,55 @@ public class MessageActivity extends AppCompatActivity {
 
     private void setTitle(String title){
         messageDetailTitle.setText(title);
+    }
+
+    private void updateTime(List<InformMessage> list){
+
+        for(InformMessage msg:list){
+//            LinearLayout view = (LinearLayout) getViewByPosition(list.indexOf(msg));
+
+            LinearLayout view;
+            int position = list.indexOf(msg);
+            int firstItem = msgListView.getFirstVisiblePosition();
+            int lastItem = firstItem+msgListView.getChildCount()-1;
+            if(position<firstItem||position>lastItem){
+                view = (LinearLayout) msgListView.getAdapter().getView(position,null,msgListView);
+
+            }else{
+                view = (LinearLayout) msgListView.getChildAt(position);
+            }
+
+
+
+//            RelativeLayout layout;
+//            if(msg.getType()==0){
+//                layout = (RelativeLayout) view.findViewById(R.id.right_layout);
+//            }else{
+//                layout = (RelativeLayout) view.findViewById(R.id.left_layout);
+//            }
+//
+//            ViewStub timestub = (ViewStub) layout.findViewById(R.id.time_view_stub);
+//            timestub.inflate();
+//            TextView timeTextView = (TextView) layout.findViewById(R.id.msg_Time_TextView);
+//            timeTextView.setText(msg.getTime()+"");
+//            TextView hh = (TextView) layout.findViewById(R.id.reply_textView);
+
+
+        }
+//        Toast.makeText(MessageActivity.this, "!!!"+list.get(0).getType(), Toast.LENGTH_SHORT).show();
+    }
+
+    public View getViewByPosition(int position){
+        View tempview;
+        int firstItem = msgListView.getFirstVisiblePosition();
+        int lastItem = firstItem+msgListView.getChildCount()-1;
+        if(position<firstItem||position>lastItem){
+            tempview =  msgListView.getAdapter().getView(position,null,msgListView);
+
+            return  tempview;
+        }else{
+            tempview = msgListView.getChildAt(position);
+            return tempview;
+        }
     }
 }

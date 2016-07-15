@@ -149,7 +149,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
             timeView = (TextView) itemView.findViewById(R.id.message_time);
         }
         public void hideRedDot(){
-            reddotView.setVisibility(View.GONE);
+            reddotView.setVisibility(View.INVISIBLE);
         }
         public void showRedDot(){
             reddotView.setVisibility(View.VISIBLE);

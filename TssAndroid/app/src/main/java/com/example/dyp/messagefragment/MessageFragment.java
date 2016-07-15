@@ -34,7 +34,7 @@ public class MessageFragment extends Fragment {
     private ListAdapter mListAdapter;
     private List<InformMessage> mDatas = new ArrayList<InformMessage>();;
     private SwipeRefreshLayout mSwipeRefreshWidget;
-    private String receiverId = "0000001";
+    private int receiverId = 1;
 
     @Nullable
     @Override
@@ -105,8 +105,8 @@ public class MessageFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), MessageActivity.class);
                 InformMessage msg = mDatas.get(position);
-                String sender = msg.getSender();
-                String receiver = msg.getReceiver();
+                int sender = msg.getSender();
+                int receiver = msg.getReceiver();
 
                 if(msg.getType()==0){
                     intent.putExtra("senderId",receiver);
@@ -146,7 +146,7 @@ public class MessageFragment extends Fragment {
 
     }
 
-    private void getRefreshed(String id){
+    private void getRefreshed(int id){
         InformMsgDataHelper helper = new InformMsgDataHelper(getActivity());
         List<InformMessage> list = helper.getInformMsg(id);
 
@@ -159,10 +159,10 @@ public class MessageFragment extends Fragment {
         mDatas.clear();
         for(InformMessage msg: list){
             if(msg.getType()==0){
-                msg.setTitle(msg.getReceiver());
+                msg.setTitle(msg.getReceiver()+"");
                 mDatas.add(0,msg);
             }else{
-                msg.setTitle(msg.getSender());
+                msg.setTitle(msg.getSender()+"");
                 mDatas.add(0,msg);
             }
 

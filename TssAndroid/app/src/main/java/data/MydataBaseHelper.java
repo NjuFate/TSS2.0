@@ -11,15 +11,16 @@ import android.widget.Toast;
  * Created by dyp on 2016/7/13.
  */
 public class MydataBaseHelper extends SQLiteOpenHelper {
-    public static  final String Create_InformMsg = "create table InformMsg("+"id Text primary key , "
-                                                                            +"receiverId Text,"
-                                                                            +"senderId Text,"
+    public static  final String Create_InformMsg = "create table InformMsg("+"id Integer primary key , "
+                                                                            +"receiverId Integer,"
+                                                                            +"senderId Integer,"
                                                                             +"title Text,"
                                                                             +"content Text,"
                                                                             +"time Integer,"
                                                                             +"ifread Integer,"
                                                                             +"type Integer,"
                                                                             +"localiconurl Text,"
+                                                                            +"messagetype Integer,"
                                                                             +"iconurl Text)";
 
     private Context mContext;
