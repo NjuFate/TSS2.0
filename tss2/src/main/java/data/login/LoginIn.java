@@ -104,6 +104,13 @@ public class LoginIn implements LoginService{
 		result.setRole(Role.valueOf(userRoles.get(0).getRole()));
 		return result;
 	}
+
+
+
+	public Role getRoleByAccount(String account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
