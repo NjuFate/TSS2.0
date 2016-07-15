@@ -15,6 +15,11 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
+	private String iconurl;
+	private String nickName;//昵称
+	
+	
+	
 	public String getPsw() {
 		return psw;
 	}
@@ -107,5 +112,21 @@ public class User {
 			result = result + string + " ";
 		}
 	  return result;
+	}
+
+	public String getIconurl() {
+		return iconurl;
+	}
+
+	public void setIconurl(String iconurl) {
+		this.iconurl = iconurl;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 }
