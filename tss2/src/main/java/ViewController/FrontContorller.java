@@ -1,8 +1,5 @@
 package ViewController;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import general.CookieHelper;
 
 @Controller
 @RequestMapping("/pages")
@@ -33,6 +32,18 @@ public class FrontContorller {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("documents");
 		return modelAndView;
+	}
+	
+	@RequestMapping("/userprofile")
+	public ModelAndView userProfile(HttpServletRequest request,HttpServletResponse response){
+		ModelAndView userProfile = new ModelAndView();
+		String account = CookieHelper.getCookieByName("account", request);
+		if(account.equals("")||account==null){
+			userProfile.setViewName("loginfalse");
+			return userProfile;
+		}
+		userProfile.setViewName("userprofile");
+		return userProfile;
 	}
 
 	

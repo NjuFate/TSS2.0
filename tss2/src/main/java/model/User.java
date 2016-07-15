@@ -15,19 +15,17 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
-	public String getPsw() {
-		return psw;
-	}
-
-	public void setPsw(String psw) {
-		this.psw = psw;
-	}
-
-
 	private String psw; // 密码
 	private List<String> major; // 主修方向
 	private Role role;//角色分类
 	
+	//new add
+	private String email;//邮箱
+	private String qq;//qq
+	private String grade;//年级
+	private String tel;//电话
+	private String educational_ID;//教务网账号
+	private String educational_Psw;//教务网密码
 	
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -44,6 +42,51 @@ public class User {
 
 		
 	}
+	
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getQq() {
+		return qq;
+	}
+	public void setQq(String qq) {
+		this.qq = qq;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getEducational_ID() {
+		return educational_ID;
+	}
+	public void setEducational_ID(String educational_ID) {
+		this.educational_ID = educational_ID;
+	}
+	public String getEducational_Psw() {
+		return educational_Psw;
+	}
+	public void setEducational_Psw(String educational_Psw) {
+		this.educational_Psw = educational_Psw;
+	}
+	public String getPsw() {
+		return psw;
+	}
+	public void setPsw(String psw) {
+		this.psw = psw;
+	}			
+	
 	
 	
 

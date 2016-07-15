@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tss 2 </title>
+    <title>TSS 2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,14 +17,14 @@
     <!-- MetisMenu CSS -->
     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-    <!-- DataTables CSS -->
-    <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- DataTables Responsive CSS -->
-    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="../dist/css/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-
+	
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Tss v2.0</a>
+                <a class="navbar-brand" href="index.html">TSS v2.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -282,8 +282,7 @@
                         <li>
                             <a href="../pages/index"><i class="fa fa-dashboard fa-fw"></i> Course Home</a>
                         </li>
-                        
-                         <li>
+                        <li>
                             <a href="../pages/documents"><i class="fa fa-dashboard fa-fw"></i> Lecture Notes</a>
                         </li>
                         <li>
@@ -296,10 +295,6 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Professional BBS</a>
                         </li>
                         
-                        
-                        
-                        
-                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -310,46 +305,53 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Course</h1>
+                    <h1 class="page-header">User Profile</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Course List
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="doclist-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Lecture Notes</th>
-                                            <th>Update Time</th>
-                                            <th>Upload By</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                  
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                           
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+            	<div class="col-lg-6">
+            	<form role="form">
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">UserName</label>
+                           <input type="text" class="form-control" id="userName">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">email</label>
+                           <input type="text" class="form-control" id="email">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">Tel</label>
+                           <input type="text" class="form-control" id="tel">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">qq</label>
+                           <input type="text" class="form-control" id="qq">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">Major</label>
+                           <input type="text" class="form-control" id="major">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">Grade</label>
+                           <input type="text" class="form-control" id="grade">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">Educational ID</label>
+                           <input type="text" class="form-control" id="grade">
+                      </div>
+                      <div class="form-group has-success">
+                           <label class="control-label" for="inputSuccess">Educational PSW</label>
+                           <input type="text" class="form-control" id="grade">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit Button</button>
+                      <button type="reset" class="btn btn-default">Reset Button</button>
+                </form>
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.col-lg-6 -->
             </div>
-            <!-- /.row -->
-          
+            <!-- /.row-->
         </div>
         <!-- /#page-wrapper -->
 
@@ -365,32 +367,40 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="../bower_components/raphael/raphael-min.js"></script>
+    <script src="../bower_components/morrisjs/morris.min.js"></script>
+    <script src="../js/morris-data.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    
-    <script src="../myJs/doc_list.js"></script>
+    <script src="../myJs/cookie.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <script>
-   
-    $(document).ready(function() {
-        $('#doclist-table').DataTable({
-                responsive: true
-        });
-    });
-    </script>
-    <script type="text/javascript">
-    	getDocTable(fillDocTable);
     </script>
     
-    <!-- my js -->
-    
-    
+    <script>
+    // var  dataSet = [
+    	// ["23","24","25"],
+    	// ["25","26","27"]
+    // ];
+//     
+    	// alert("get");
+        // $('#course-table').DataTable({
+        	// "responsive": true,
+        	// "ordering": false,
+        	// "searching": false,
+        	// data: dataSet,
+	        // columns: [
+	            // { title: "Name" },
+	            // { title: "Position" },
+	            // { title: "Office" }
+// 	           
+        // ]
+        // });    
+    </script>
 
 </body>
-
 </html>

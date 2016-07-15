@@ -11,15 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import general.CookieHelper;
 import general.Role;
 import logic.file.FileProvider;
 import logic.login.RoleIdentifier;
 import logic.project.ProjectProvider;
+import logic.schedule.ScheduleProvider;
 import model.File;
 import model.Project;
 import model.Student;
 import model.Teacher;
 import model.User;
+import po.ScheduleItem;
 /**
  * create to trans data from back to front
  * @author WangHuan
@@ -31,6 +34,9 @@ public class DataTransServlet {
 	private ProjectProvider projectProvider = new ProjectProvider();
 	private FileProvider fileProvider = new FileProvider();
 	private RoleIdentifier roleIdentifier = new RoleIdentifier();
+	
+	
+	
 	public void setProjectProvider(ProjectProvider projectProvider){
 		this.projectProvider = projectProvider;
 	}
@@ -73,10 +79,20 @@ public class DataTransServlet {
 		response.addCookie(cookie);
 		return fileList;
 	}
-	
+	/**
+	 * 
+	 * @param account
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(params="method=userInfo",method=RequestMethod.GET)
-	public @ResponseBody User userInfo(String account) throws Exception {
+	public @ResponseBody User userInfo(HttpServletRequest request) throws Exception {
 		//不知道会不会正确返回子类信息。。
+		String account ="";
+		account = CookieHelper.getCookieByName("account", request);
+		if(account == null||account.equals("")){
+			return null;
+		}
 		User user = roleIdentifier.identifyRole(account);
 		if(user.getRole() == Role.TEACHER){
 			Teacher teacher = (Teacher)user;
@@ -88,6 +104,10 @@ public class DataTransServlet {
 		}
 		return user;
 	}
+	
+	
+	
+//*************************************************************Android APIS**********************************************************
 	
 	
 	
