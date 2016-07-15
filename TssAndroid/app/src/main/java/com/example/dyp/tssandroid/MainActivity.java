@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            System.out.println("dyp!!!");
             return true;
         }
 
@@ -77,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-//        menu.clear();
-//        getMenuInflater().inflate(R.menu.course, menu);
+
         return super.onPrepareOptionsMenu(menu);
     }
 }

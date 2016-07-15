@@ -62,7 +62,6 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             }
             transaction.addToBackStack(null);
             transaction.replace(R.id.content,messageFra);
-            Toast.makeText(getActivity(), "点击了消息", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_gallery) {
             if(courseFra == null){
