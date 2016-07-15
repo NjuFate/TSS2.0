@@ -2,11 +2,13 @@ package com.example.dyp.coursefragment;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,28 +49,78 @@ public class FragmentDisplyCourse extends Fragment {
 
     public boolean isCourseLogin = false;
     public boolean isCourseImport = false;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        view = inflater.inflate(R.layout.content_course,container,false);
+        if(view==null){
+            view = inflater.inflate(R.layout.content_course,container,false);
+        }
+        else {
+            return view;
+        }
+        ViewGroup parent = (ViewGroup) view.getParent();
+        if (parent != null) {
+            parent.removeView(view);
+        }
+
         for(int i=0;i<7;i++){
             for(int j=0;j<11;j++){
                 boolCourseBox[i][j] = false;
             }
         }
         SharedPreferences sp = getActivity().getSharedPreferences("SIYHUK", Context.MODE_PRIVATE);
-        usernamestr = sp.getString("Course_username","s");
+        usernamestr = sp.getString("Course_username","s ");
         passwordstr = sp.getString("Course_password","s");
         isCourseLogin = sp.getBoolean("Course_login",false);
 
-//        if (usernamestr.equals("s")&&passwordstr.equals("s")){
-//            Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-//                    usernamestr+" "+passwordstr, Toast.LENGTH_LONG);
-//            toast.setGravity(Gravity.CENTER, 0, 0);
-//            toast.show();
-//        }
 
         initCourseBox();
         return view;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        FloatingActionButton fab = (FloatingActionButton)getActivity().findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentAddCourse details = new FragmentAddCourse();
+//                FragmentTransaction ft = getFragmentManager().beginTransaction();
+//                ft.replace(R.id.content,details);
+//                ft.addToBackStack(null);
+//                ft.commit();
+//
+//            }
+//        });
+        fab.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setItems(getResources().getStringArray(R.array.ItemArray), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1){
+                        if (arg1 == 0){
+                            initCourseBox();
+                        }
+                        if(arg1 == 1){
+                            shareCourseBox();
+                        }
+                        if(arg1 == 2){
+                            loginCourse();
+                        }
+                        if(arg1 == 3){
+                            FragmentAddCourse details = new FragmentAddCourse();
+                            FragmentTransaction ft = getFragmentManager().beginTransaction();
+                            ft.replace(R.id.content,details);
+                            ft.addToBackStack(null);
+                            ft.commit();
+                            isCourseImport = false;
+                        }
+                        arg0.dismiss();
+                    }
+                });
+                builder.show();
+            }
+        });
     }
 
     public void initCourseBox(){

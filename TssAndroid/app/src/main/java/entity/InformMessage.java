@@ -13,6 +13,7 @@ public class InformMessage {
     private String localiconurl;
     private long time;
     private int ifread;
+    private int type;
 
 
     public String getReceiver() {

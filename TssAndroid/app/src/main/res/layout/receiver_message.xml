@@ -33,7 +33,7 @@
             android:paddingLeft="18dp"
             android:paddingRight="25dp"
             android:paddingTop="8dp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="15sp" />
 
         <ImageView
@@ -43,7 +43,8 @@
             android:layout_alignBottom="@id/reply_textView_receiver"
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="14dp"
-            android:src="@drawable/head" />
+            android:src="@drawable/message_error"
+            android:visibility="invisible"/>
 
         <ProgressBar
             android:id="@+id/msg_senting_progressBar_receiver"
@@ -64,6 +65,9 @@
         android:layout_below="@id/repley_layout_receiver"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout="@layout/umeng_fb_msg_time" />
+        android:layout="@layout/umeng_fb_msg_time" >
+
+
+    </ViewStub>>
 
 </RelativeLayout>

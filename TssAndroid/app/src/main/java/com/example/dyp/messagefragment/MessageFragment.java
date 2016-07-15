@@ -72,9 +72,12 @@ public class MessageFragment extends Fragment {
             @Override
             public void onGlobalLayout() {
                 // TODO Auto-generated method stub
+
                 updateUnReadDot(mDatas);
             }
         });
+
+
         return view;
     }
 

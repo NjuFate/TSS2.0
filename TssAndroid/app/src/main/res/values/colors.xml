@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#1ABC9C</color>
 
     <color name="color0">#607d8b</color>
     <color name="color1">#eceff1</color>
@@ -21,4 +21,5 @@
     <color name="colorCourseDivider">#FFFFFF</color>
     <color name="colorWrongMessage">#E74C3C</color>
     <color name="colorCourseAddHint">#FFCE54</color>
+    <color name="colorCourseText">#803BAFDA</color>
 </resources>

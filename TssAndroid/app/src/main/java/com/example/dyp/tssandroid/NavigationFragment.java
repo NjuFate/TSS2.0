@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.dyp.coursefragment.FragmentDisplyCourse;
 import com.example.dyp.messagefragment.MessageFragment;
@@ -61,6 +62,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             }
             transaction.addToBackStack(null);
             transaction.replace(R.id.content,messageFra);
+            Toast.makeText(getActivity(), "点击了消息", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_gallery) {
             if(courseFra == null){
@@ -70,17 +72,17 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             transaction.replace(R.id.content,courseFra);
 
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
             if(contentFra == null){
                 contentFra = new ContentFragment();
             }
             System.out.println("touch content");
             transaction.replace(R.id.content,contentFra);
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
         }
         transaction.addToBackStack(null);
         transaction.commit();
