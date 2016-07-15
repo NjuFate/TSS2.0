@@ -40,6 +40,8 @@ public class AndroidAPI {
 	 */
 	@RequestMapping(params="method=android_messageGet",method=RequestMethod.GET)
 	public @ResponseBody List<model.InformMessage> getMessage(String account, long time){
+		System.out.println(account);
+		System.out.println(time);
 		return messageService.getInformMsg(account, time);
 	}
 	//public long sendMessage(model.InformMessage inform);
