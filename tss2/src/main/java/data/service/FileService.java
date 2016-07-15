@@ -19,4 +19,8 @@ public interface FileService {
 	public List<File> getFileByCourse(String courseno,String coursename,String semester,String father);
 	
 	public List<File> getFileByCourseno(String courseno,String father);
+	
+	public List<File> getAllFile();
+	
+	
 }

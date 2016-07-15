@@ -15,7 +15,7 @@ public interface MessageService {
 	public List<model.InformMessage> getInformMsg(String account,long time);
 
 	/**
-	 * 发送一个信息，你返回是否发送成功
+	 * 发送一个信息，返回message的id
 	 * @param inform
 	 * @return Long
 	 */
