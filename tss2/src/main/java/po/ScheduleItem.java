@@ -33,7 +33,12 @@ public class ScheduleItem {
 			this.teachers = teachers;
 		}
 	    
-	    
+	    public String toString(){
+	    	
+	    	
+	    	
+	    	return name+ "\n"+ id +"\n"+teachers + "\n" + message;
+	    }
 	    
 	
 	
