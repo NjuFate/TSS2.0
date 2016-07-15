@@ -8,10 +8,10 @@ import java.util.List;
 public class CourseEntity {
     private String id;
     private String name;
-    private List<String> teachers;
+    private String teachers;
     private List<CourseTimeEntity> time;
     private List<Integer> weeks;
-    public CourseEntity(String id, String name, List<CourseTimeEntity> time, List<String> teachers, List<Integer> weeks) {
+    public CourseEntity(String id, String name, List<CourseTimeEntity> time, String teachers, List<Integer> weeks) {
         this.id = id;
         this.name = name;
         this.time = time;
@@ -35,11 +35,11 @@ public class CourseEntity {
         this.name = name;
     }
 
-    public List<String> getTeachers() {
+    public String getTeachers() {
         return teachers;
     }
 
-    public void setTeachers(List<String> teachers) {
+    public void setTeachers(String teachers) {
         this.teachers = teachers;
     }
 

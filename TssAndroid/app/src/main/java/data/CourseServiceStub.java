@@ -20,9 +20,7 @@ public class CourseServiceStub implements CourseService {
         List<CourseTimeEntity> time1 = new ArrayList<CourseTimeEntity>();
         time1.add(time11);
         time1.add(time12);
-        List<String> teachers1 = new ArrayList<String>();
-        teachers1.add("汤恩义");
-        teachers1.add("伏晓");
+        String teachers1 = "伏晓，汤恩义";
         List<Integer> weeks1 = new ArrayList<Integer>();
         for(int i=1;i<=18;i++)
             weeks1.add(i);
@@ -33,9 +31,7 @@ public class CourseServiceStub implements CourseService {
         List<CourseTimeEntity> time2 = new ArrayList<CourseTimeEntity>();
         time2.add(time21);
         time2.add(time22);
-        List<String> teachers2 = new ArrayList<String>();
-        teachers2.add("刘钦");
-        teachers2.add("丁二玉");
+        String teachers2 = "刘钦，丁二玉";
         List<Integer> weeks2 = new ArrayList<Integer>();
         for(int i=1;i<=18;i++)
             weeks2.add(i);

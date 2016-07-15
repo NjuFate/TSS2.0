@@ -1,157 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
+    android:orientation="vertical"
     android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingRight="10dp"
+    android:weightSum="1">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.05"
+        android:orientation="horizontal"
         android:weightSum="1">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
+            android:gravity="center|left"
             android:text="课程内容"
-            android:textSize="12dp"
             android:textColor="@color/colorCourseText"
-            android:gravity="center|left"/>
+            android:textSize="12dp" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorCourseText"
-        />
+        android:background="@color/colorCourseText" />
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
+        android:orientation="horizontal"
         android:weightSum="1">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
+            android:gravity="center|left"
             android:text="课程名称"
-            android:textSize="18dp"
-            android:gravity="center|left"/>
+            android:textSize="18dp" />
+
         <EditText
             android:id="@+id/addCourse_courseName"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.7"
+            android:background="#00000000"
             android:hint="(未填写)"
-            android:textColorHint="@color/colorCourseAddHint"
-            android:background="#00000000"/>
+            android:textColorHint="@color/colorCourseAddHint" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#6F000000"
-        />
+        android:background="#6F000000" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
+        android:orientation="horizontal"
         android:weightSum="1">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
+            android:gravity="center|left"
             android:text="老师"
-            android:textSize="18dp"
-            android:gravity="center|left"/>
+            android:textSize="18dp" />
+
         <EditText
             android:id="@+id/addCourse_courseTeachers"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.7"
+            android:background="#00000000"
             android:hint="(未填写)"
-            android:textColorHint="@color/colorCourseAddHint"
-            android:background="#00000000"/>
+            android:textColorHint="@color/colorCourseAddHint" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="#6F000000"
-        />
+        android:background="#6F000000" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
+        android:orientation="horizontal"
         android:weightSum="1">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:text="周数"
-            android:textSize="18dp"
-            android:gravity="center|left"/>
+            android:gravity="center|left"
+            android:text="教室"
+            android:textSize="18dp" />
+
         <EditText
-            android:id="@+id/addCourse_weeks"
+            android:id="@+id/addCourse_courseClassroom"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.7"
+            android:background="#00000000"
             android:hint="(未填写)"
-            android:textColorHint="@color/colorCourseAddHint"
-            android:background="#00000000"/>
+            android:textColorHint="@color/colorCourseAddHint" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="#6F000000"
-        />
+        android:background="#6F000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center|left"
+            android:text="课程时间"
+            android:textColor="@color/colorCourseText"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorCourseText" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1"
-        android:text="时间选择"/>
-    <LinearLayout
+        android:layout_weight="0.05"
+        android:gravity="center|left"
+        android:text="周数选择" />
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:orientation="horizontal"
+        android:layout_weight="0.1"
+        android:weightSum="1">
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/weekModoule1"
+            android:layout_weight="0.33333"
+            android:text="全部"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/weekModoule2"
+            android:layout_weight="0.33333"
+            android:text="单周"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/weekModoule3"
+            android:layout_weight="0.33333"
+            android:text="双周"/>
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#6F000000" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.17"
-        android:weightSum="1"
-        android:paddingBottom="10dp">
+        android:layout_weight="0.05"
+        android:text="时间选择" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
         <widget.WheelView
             android:id="@+id/courseWheelWeekday"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33333" />
+
         <widget.WheelView
             android:id="@+id/courseWheelStart"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.33333"/>
+            android:layout_weight="0.33333" />
+
         <widget.WheelView
             android:id="@+id/courseWheelEnd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.333333"/>
+            android:layout_weight="0.333333" />
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="确定"
-        android:layout_gravity="center"
-        android:background="#00FFFFFF"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#6F000000" />
 
+    <Button
+        android:id="@+id/courseAddConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/colorCourseButton"
+        android:text="确 定"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"/>
 
 </LinearLayout>

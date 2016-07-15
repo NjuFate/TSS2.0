@@ -68,7 +68,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
                 courseFra = new FragmentDisplyCourse();
             }
             transaction.addToBackStack(null);
-            transaction.replace(R.id.content,courseFra);
+            transaction.replace(R.id.content,courseFra,"disply");
 
         } else if (id == R.id.nav_slideshow) {
             if(contentFra == null){
