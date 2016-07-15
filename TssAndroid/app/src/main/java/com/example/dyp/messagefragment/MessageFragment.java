@@ -34,7 +34,7 @@ public class MessageFragment extends Fragment {
     private ListAdapter mListAdapter;
     private List<InformMessage> mDatas = new ArrayList<InformMessage>();;
     private SwipeRefreshLayout mSwipeRefreshWidget;
-    private int receiverId = 1;
+    private int receiverId = 141250052;
 
     @Nullable
     @Override
