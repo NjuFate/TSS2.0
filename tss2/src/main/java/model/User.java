@@ -15,6 +15,9 @@ public class User {
 	private String account;// 账号
 	private String name; // 名字
 	private int age; // 年龄
+
+	private String iconurl;
+	private String nickName;//昵称
 	private String psw; // 密码
 	private List<String> major; // 主修方向
 	private Role role;//角色分类
@@ -26,6 +29,20 @@ public class User {
 	private String tel;//电话
 	private String educational_ID;//教务网账号
 	private String educational_Psw;//教务网密码
+	
+	
+	
+	public String getPsw() {
+		return psw;
+	}
+
+	public void setPsw(String psw) {
+		this.psw = psw;
+	}
+
+
+
+	
 	
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -80,12 +97,6 @@ public class User {
 	public void setEducational_Psw(String educational_Psw) {
 		this.educational_Psw = educational_Psw;
 	}
-	public String getPsw() {
-		return psw;
-	}
-	public void setPsw(String psw) {
-		this.psw = psw;
-	}			
 	
 	
 	
@@ -150,5 +161,21 @@ public class User {
 			result = result + string + " ";
 		}
 	  return result;
+	}
+
+	public String getIconurl() {
+		return iconurl;
+	}
+
+	public void setIconurl(String iconurl) {
+		this.iconurl = iconurl;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 }

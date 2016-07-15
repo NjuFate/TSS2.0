@@ -8,6 +8,8 @@ public class User implements BaseId{
 	private Integer age; // 年龄
 	private String psw;
 	private String major; // 主修方向
+	private String iconurl;
+	private String nickName;//昵称
 	
 	
 	public User() {
@@ -75,6 +77,22 @@ public class User implements BaseId{
 
 	public void setPsw(String psw) {
 		this.psw = psw;
+	}
+
+	public String getIconurl() {
+		return iconurl;
+	}
+
+	public void setIconurl(String iconurl) {
+		this.iconurl = iconurl;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 
 	

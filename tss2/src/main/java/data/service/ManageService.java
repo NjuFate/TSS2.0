@@ -14,8 +14,9 @@ import java.util.List;
 import data.base.JDBCHelper;
 import data.base.StandardSQL;
 import po.BaseId;
-import po.File;
-import po.User;
+import po.BaseLongId;
+
+
 
 /**
  * @author: xuan
@@ -40,6 +41,28 @@ public abstract class ManageService <T>{
     	standardSQL = new StandardSQL();
     }
 
+    
+	/**
+	 * 添加
+	 * @param t
+	 * @return 返回自增长主键的id
+	 * @throws Exception
+	 */
+    
+    public long addByLong(Object t){
+		String sql;
+		((BaseLongId) t).setId(implementationByLong());
+		
+		try {
+			sql = standardSQL.add(t);
+			 if(executeUpdate(sql) != 0)
+			return ((BaseLongId) t).getId();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 
 
@@ -190,6 +213,46 @@ public abstract class ManageService <T>{
 		return id;
 
 	}
+	
+	
+	
+	public long  implementationByLong(){
+		String date = new SimpleDateFormat("yyMMdd").format(new Date());
+		String sql = "select max(id) from " + tableName;
+		System.out.println(sql);
+		ResultSet resultSet = null;
+		long id = 0;
+		PreparedStatement preparedStatement = null;
+		Connection connection = helper.getConnection();
+
+		try {
+
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+
+			if(resultSet == null){
+				throw new NullPointerException("resultSet is null!");
+			}
+
+
+
+			if(resultSet.next()){
+				id = resultSet.getLong(1);
+				if(id < (Long.valueOf(date)*Long.valueOf(size)))
+					throw new NullPointerException();
+				id++;
+			}			
+
+		} catch (Exception e) {
+			// TODO: handle exception		
+			id = Long.valueOf(date)*Long.valueOf(size);	
+		}finally{
+			helper.releaseConnection(resultSet, preparedStatement, connection);
+		}
+		return id;
+
+	}
+
 
 
 
