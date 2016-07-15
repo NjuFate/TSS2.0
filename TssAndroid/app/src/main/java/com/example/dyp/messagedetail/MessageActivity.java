@@ -38,12 +38,14 @@ public class MessageActivity extends AppCompatActivity {
     private List<Msg> msgList=new ArrayList<Msg>();
     private List<Msg> totalMsgList = new ArrayList<Msg>();
     private SwipeRefreshLayout mSwipeRefreshWidget;
+
     private int maxNumOfMsg = 15;
     boolean isOver=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final InformMsgDataHelper msgHelper = new InformMsgDataHelper(this);
         setContentView(R.layout.activity_message);
         senderId = getIntent().getStringExtra("senderId");
         receiverId = getIntent().getStringExtra("receiverId");
@@ -136,10 +138,7 @@ public class MessageActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     msgListView.setSelection(msgList.size());
                     inputText.setText("");
-                    msg=new Msg("中央也支持他吗？",Msg.TYPE_RECEIVED);
-                    msgList.add(msg);
-                    adapter.notifyDataSetChanged();
-                    msgListView.setSelection(msgList.size());
+                    msgHelper.sendMsg(receiverId,senderId,content);  //此处应该是异步操作
                 }
 
             }
@@ -175,7 +174,14 @@ public class MessageActivity extends AppCompatActivity {
         List<InformMessage> list = msgHelper.getInformMsgBySender(receiverId,senderId);
 
         for(InformMessage msg:list){
-            Msg textMsg = new Msg(msg.getContent(),Msg.TYPE_RECEIVED);
+            Msg textMsg = null;
+            if(msg.getType()==1){
+                textMsg = new Msg(msg.getContent(),Msg.TYPE_RECEIVED);
+            }else{
+                textMsg = new Msg(msg.getContent(),Msg.TYPE_SENT);
+                Toast.makeText(MessageActivity.this, msg.getSender()+"hh", Toast.LENGTH_SHORT).show();
+            }
+
             totalMsgList.add(textMsg);
 
         }

@@ -18,13 +18,23 @@ public class MydataBaseHelper extends SQLiteOpenHelper {
                                                                             +"content Text,"
                                                                             +"time Integer,"
                                                                             +"ifread Integer,"
+                                                                            +"type Integer,"
                                                                             +"localiconurl Text,"
                                                                             +"iconurl Text)";
 
     private Context mContext;
     private SQLiteDatabase mdb;
+    private static MydataBaseHelper helper = null;
 
-    public  MydataBaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,int version){
+
+    public synchronized static MydataBaseHelper getInstance(Context context){
+        if(helper==null){
+            helper = new MydataBaseHelper(context,"TssAndroid",null,1);
+        }
+        return helper;
+    }
+
+    private   MydataBaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,int version){
         super(context,name,factory,version);
         mContext = context;
     }
@@ -59,7 +69,7 @@ public class MydataBaseHelper extends SQLiteOpenHelper {
 
         mdb = this.getWritableDatabase();
         Cursor cursor = mdb.query(table, columns, secletion, args, groupBy, having, orderBy);
-//        db.close();
+//        mdb.close();
         return cursor;
     }
     //删

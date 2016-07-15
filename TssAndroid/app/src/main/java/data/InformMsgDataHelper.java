@@ -4,7 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import dataservice.InformMsgDataService;
@@ -20,7 +24,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
 
 
     public InformMsgDataHelper(Context context){
-        dbHelper = new MydataBaseHelper(context,"TssAndroid",null,1);
+        dbHelper = MydataBaseHelper.getInstance(context);
     }
 
     @Override
@@ -36,6 +40,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
         msg.setReceiver("0000001");
         msg.setTime(System.currentTimeMillis());
         msg.setIfread(0);
+        msg.setType(1);
         msgList.add(msg);
         saveInformMsg(msgList);
         return getLocalInformMsg(id);
@@ -55,6 +60,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
             values.put("iconurl",msg.getIconurl());
             values.put("time",msg.getTime());
             values.put("ifread",msg.getIfread());
+            values.put("type",msg.getType());
             dbHelper.insert("InformMsg",values);
         }
 
@@ -68,9 +74,28 @@ public class InformMsgDataHelper implements InformMsgDataService {
         String groupBy = "senderId";
         String  having = "time>=max(time)";
         Cursor cursor = dbHelper.query("InformMsg",null,selection,selectionArgs,groupBy,having,null);
+        Cursor cursor1 = dbHelper.query("InformMsg",null,"senderId=?",new String[]{userId},"receiverId","time>=max(time)",null);
+        List<InformMessage> senderMsgList  = loadData(cursor);
+        List<InformMessage> userMsgList = loadData(cursor1);
+        List<InformMessage> tempList = new ArrayList<InformMessage>();
+
+        for(InformMessage senderMsg:senderMsgList){
+            for(InformMessage userMsg:userMsgList){
+                if(senderMsg.getSender().equals(userMsg.getReceiver())){
+                    if(senderMsg.getTime()<userMsg.getTime()){
+                        senderMsgList.remove(senderMsg);
+                        tempList.add(userMsg);
+                    }
+                }
+            }
+        }
+
+        for(InformMessage msg:tempList){
+            senderMsgList.add(msg);
+        }
 
 
-        return loadData(cursor);
+        return senderMsgList;
     }
 
     @Override
@@ -80,9 +105,10 @@ public class InformMsgDataHelper implements InformMsgDataService {
 
     @Override
     public List<InformMessage> getInformMsgBySender(String receiverID, String senderId) {
-        String[] selectionArgs = new String[]{senderId};
+        String[] selectionArgs = new String[]{senderId,receiverID,receiverID,senderId};
+        String selection = "(senderId=? and receiverId=?) OR (senderId=? and receiverId=?)";
         String orderby = "time DESC";
-        Cursor cursor = dbHelper.query("InformMsg",null,"senderId=?",selectionArgs,null,null,orderby);
+        Cursor cursor = dbHelper.query("InformMsg",null,selection,selectionArgs,null,null,orderby);
 
         return loadData(cursor);
     }
@@ -113,11 +139,73 @@ public class InformMsgDataHelper implements InformMsgDataService {
                     }
                 } while (cursor.moveToNext());
             }
+
         }catch (NullPointerException e){
 
         }
 
         return  result;
+    }
+
+    @Override
+    public String getLastTime(List<InformMessage> list) {
+        String result;
+        long time = 0;
+        for(InformMessage msg:list){
+            if(time<msg.getTime())time=msg.getTime();
+        }
+        Calendar mCalendar= Calendar.getInstance();
+        mCalendar.setTimeInMillis(time);
+        Calendar nCalendar= Calendar.getInstance();
+        nCalendar.setTimeInMillis(System.currentTimeMillis());
+
+        int daydistance = nCalendar.get(Calendar.DAY_OF_YEAR)-mCalendar.get(Calendar.DAY_OF_YEAR);
+
+        int yeardistcance = nCalendar.get(Calendar.YEAR)-mCalendar.get(Calendar.YEAR);
+        if(yeardistcance!=0){
+            daydistance = daydistance + 365*yeardistcance;
+        }
+
+
+
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format1 = new SimpleDateFormat("HH:mm");
+        Date date = mCalendar.getTime();
+        switch (daydistance){
+            case 0:
+                result = format1.format(date);
+                break;
+            case 1:
+                result = "昨天";
+                break;
+            case 2:
+                result = "前天";
+                break;
+            default:
+                result = format.format(date);
+                break;
+        }
+
+        return result;
+    }
+
+    @Override
+    public String sendMsg(String userId, String receiverId, String content) {
+        InformMessage msg = new InformMessage();
+        msg.setContent(content);
+        msg.setTitle("毛泽东");
+        msg.setIconurl("!!!");
+        msg.setMessageId(System.currentTimeMillis()+"DYP1");
+        msg.setSender(userId);
+        msg.setReceiver(receiverId);
+        msg.setTime(System.currentTimeMillis());
+        msg.setIfread(1);
+        msg.setType(0);
+
+        List<InformMessage> list = new ArrayList<InformMessage>();
+        list.add(msg);
+        saveInformMsg(list);
+        return null;
     }
 
     private List<InformMessage> loadData(Cursor cursor){
@@ -133,6 +221,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
                 String receiverId = cursor.getString(cursor.getColumnIndex("receiverId"));
                 long time = cursor.getLong(cursor.getColumnIndex("time"));
                 int ifread = cursor.getInt(cursor.getColumnIndex("ifread"));
+                int type = cursor.getInt(cursor.getColumnIndex("type"));
                 InformMessage msg = new InformMessage();
                 msg.setTitle(title);
                 msg.setContent(content);
@@ -143,6 +232,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
                 msg.setSender(senderId);
                 msg.setTime(time);
                 msg.setIfread(ifread);
+                msg.setType(type);
                 list.add(msg);
 
             }while (cursor.moveToNext());

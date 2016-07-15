@@ -88,4 +88,12 @@ public class InformMessage {
     public void setIfread(int ifread) {
         this.ifread = ifread;
     }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 }

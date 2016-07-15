@@ -42,7 +42,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
     @Override
     public void onBindViewHolder(final ItemViewHolder itemViewHolder, final int i) {
         itemViewHolder.mTextView.setText(mDatas.get(i).getTitle());
-        itemViewHolder.describeTextView.setText(mDatas.get(i).getContent()+"Describe");
+        itemViewHolder.describeTextView.setText(mDatas.get(i).getContent());
         if(mOnItemClickListener != null) {
             /**
              * 这里加了判断，itemViewHolder.itemView.hasOnClickListeners()
@@ -138,6 +138,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
         private TextView describeTextView;
         private ImageView iconView;
         private ImageView reddotView;
+        private TextView timeView;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
@@ -145,6 +146,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
             describeTextView = (TextView) itemView.findViewById(R.id.message_describe);
             iconView = (ImageView) itemView.findViewById(R.id.left);
             reddotView = (ImageView) itemView.findViewById(R.id.message_informRedDot);
+            timeView = (TextView) itemView.findViewById(R.id.message_time);
         }
         public void hideRedDot(){
             reddotView.setVisibility(View.GONE);
@@ -152,6 +154,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
         public void showRedDot(){
             reddotView.setVisibility(View.VISIBLE);
         }
+        public void setTime(String time){ timeView.setText(time);}
     }
 
 }

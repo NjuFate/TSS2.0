@@ -15,4 +15,6 @@ public interface InformMsgDataService {
     public List<InformMessage> getInformMsgBySender(String receiverID, String senderId);
     public void readMsg(List<InformMessage> list);
     public int checkIfRead(String senderId, String receiverId);
+    public String getLastTime(List<InformMessage> list);
+    public String sendMsg(String userId, String receiverId,String content);
 }

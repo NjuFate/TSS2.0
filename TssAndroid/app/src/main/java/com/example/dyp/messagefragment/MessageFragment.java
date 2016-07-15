@@ -35,6 +35,7 @@ public class MessageFragment extends Fragment {
     private List<InformMessage> mDatas = new ArrayList<InformMessage>();;
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private String receiverId = "0000001";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,12 +74,23 @@ public class MessageFragment extends Fragment {
             public void onGlobalLayout() {
                 // TODO Auto-generated method stub
 
-                updateUnReadDot(mDatas);
+
+
+                updateUnReadDotAndTime(mDatas);
+
             }
         });
 
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initData();
+
+
     }
 
     private void setRecyclerView(){
@@ -92,8 +104,18 @@ public class MessageFragment extends Fragment {
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), MessageActivity.class);
-                intent.putExtra("senderId",mDatas.get(position).getSender());
-                intent.putExtra("receiverId",mDatas.get(position).getReceiver());
+                InformMessage msg = mDatas.get(position);
+                String sender = msg.getSender();
+                String receiver = msg.getReceiver();
+
+                if(msg.getType()==0){
+                    intent.putExtra("senderId",receiver);
+                    intent.putExtra("receiverId",sender);
+                }else{
+                    intent.putExtra("senderId",sender);
+                    intent.putExtra("receiverId",receiver);
+                }
+
                 startActivity(intent);
             }
 
@@ -129,24 +151,32 @@ public class MessageFragment extends Fragment {
         List<InformMessage> list = helper.getInformMsg(id);
 
         updateViewList(list);
+        mSwipeRefreshWidget.setRefreshing(false);
     }
 
 
     private void updateViewList(List<InformMessage> list){
         mDatas.clear();
         for(InformMessage msg: list){
-            mDatas.add(0,msg);
+            if(msg.getType()==0){
+                msg.setTitle(msg.getReceiver());
+                mDatas.add(0,msg);
+            }else{
+                msg.setTitle(msg.getSender());
+                mDatas.add(0,msg);
+            }
+
         }
 
         mListAdapter.notifyDataSetChanged();
-        mSwipeRefreshWidget.setRefreshing(false);
+
 
 
     }
 
 
 
-    private void updateUnReadDot(List<InformMessage> list){
+    private void updateUnReadDotAndTime(List<InformMessage> list){
         InformMsgDataHelper helper = new InformMsgDataHelper(getActivity());
         for(InformMessage msg:list){
             int result = helper.checkIfRead(msg.getSender(),msg.getReceiver());
@@ -157,6 +187,8 @@ public class MessageFragment extends Fragment {
                 Toast.makeText(getActivity(), mRecyclerView.getChildCount() + " ", Toast.LENGTH_SHORT).show();
             }else{
                 ListAdapter.ItemViewHolder holder = (ListAdapter.ItemViewHolder) mRecyclerView.getChildViewHolder(view);
+                String time = helper.getLastTime(list);
+                holder.setTime(time);
                 if(result==0){
                     holder.hideRedDot();
                 }else{
