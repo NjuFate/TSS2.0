@@ -7,39 +7,18 @@ public class InformMessage {
     private String iconurl;
     private String title;
     private String content;
-    private String messageId;
-    private String receiver;
-    private String sender;
+    private long messageId;
+    private int receiver;
+    private int sender;
     private String localiconurl;
     private long time;
     private int ifread;
     private int type;
+    private int messageType;
 
 
-    public String getReceiver() {
 
-        return receiver;
-    }
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
-    }
-
-    public String getSender() {
-        return sender;
-    }
-
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
-
-    public String getMessageId() {
-        return messageId;
-    }
-
-    public void setMessageId(String messageId) {
-        this.messageId = messageId;
-    }
 
     public String getIconurl() {
         return iconurl;
@@ -95,5 +74,37 @@ public class InformMessage {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public long getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(long messageId) {
+        this.messageId = messageId;
+    }
+
+    public int getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(int receiver) {
+        this.receiver = receiver;
+    }
+
+    public int getSender() {
+        return sender;
+    }
+
+    public void setSender(int sender) {
+        this.sender = sender;
+    }
+
+    public int getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(int messageType) {
+        this.messageType = messageType;
     }
 }
