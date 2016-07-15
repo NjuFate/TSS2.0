@@ -17,6 +17,7 @@ import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import com.example.dyp.messagedetail.MessageActivity;
+import com.example.dyp.messagedetail.MsgActivity;
 import com.example.dyp.tssandroid.R;
 
 import java.util.ArrayList;
@@ -103,7 +104,7 @@ public class MessageFragment extends Fragment {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent();
-                intent.setClass(mContext, MessageActivity.class);
+                intent.setClass(mContext, MsgActivity.class);
                 InformMessage msg = mDatas.get(position);
                 int sender = msg.getSender();
                 int receiver = msg.getReceiver();

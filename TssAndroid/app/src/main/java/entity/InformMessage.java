@@ -4,6 +4,13 @@ package entity;
  * Created by dyp on 2016/7/13.
  */
 public class InformMessage {
+    public static final int MESSAGE_FROM_OTHER = 1;
+    public static final int MESSAGE_FROM_USER = 0;
+    public static final int MESSAGE_READ = 1;
+    public static final int MESSAGE_UNREAD = 0;
+    public static final int MESSAGE_TYPE_USER = 1;
+    public static final int MESSAGE_TYPE_SYSTEM = 0;
+
     private String iconurl;
     private String title;
     private String content;

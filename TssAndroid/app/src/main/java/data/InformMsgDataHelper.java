@@ -229,13 +229,13 @@ public class InformMsgDataHelper implements InformMsgDataService {
         msg.setIfread(1);
         msg.setType(0);
 
-        long id = networkHelper.sendInformMsg(msg);
-
-        msg.setMessageId(id);
+//        long id = networkHelper.sendInformMsg(msg);
+//
+//        msg.setMessageId(id);
         List<InformMessage> list = new ArrayList<InformMessage>();
         list.add(msg);
         saveInformMsg(list);
-        return id;
+        return msg.getMessageId();
     }
 
     private List<InformMessage> loadData(Cursor cursor){

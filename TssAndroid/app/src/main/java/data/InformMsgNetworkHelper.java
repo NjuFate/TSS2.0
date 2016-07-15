@@ -41,7 +41,7 @@ public class InformMsgNetworkHelper {
 
         ArrayList<InformMessage> msgList = new ArrayList<InformMessage>();
         InformMessage msg = new InformMessage();
-        msg.setContent("DYP");
+        msg.setContent("DYP"+System.currentTimeMillis());
         msg.setTitle("江泽民");
         msg.setIconurl("!!!");
         msg.setMessageId(System.currentTimeMillis());
