@@ -26,9 +26,11 @@ function getProjectTable(deal,account){
 }
 
 function fillProjectTable(data){
+	 index = 0;
 	 var $table = $("#course-table>tbody");
  	 $table.empty();
 	 for(var i=0;i<data.length;i++){
+	 	index ++;
 		var $tr = $("<tr> </tr>");
  	    //alert($table)
  	    //alert($tr)
@@ -43,6 +45,11 @@ function fillProjectTable(data){
 }
 
 function getSourceDoc(){
+	var x=document.getElementById('course-table').rows[index].cells;
+	var courseno= x[0].innerText;
+	var coursename=x[1].innerText;
+	document.cookie = "courseno" + "=" + courseno +";path=/";
+	document.cookie = "coursename" + "=" + coursename +";path=/";
 	window.location.href="../views/teacher_upload.html";
 }
 

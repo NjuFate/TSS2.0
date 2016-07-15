@@ -24,7 +24,7 @@ public class FileServiceStub implements FileService {
         file2.setIsFolder(false);
         file2.setFather(courseno);
         file2.setFileName("test.doc");
-        file2.setPath("kkk");
+        file2.setPath("E:/GitProject/hello.txt");
         file2.setUpdateTime("2016/07/12");
         file2.setUploadBy("唐大爷");
         
@@ -44,14 +44,14 @@ public class FileServiceStub implements FileService {
 		file1.setIsFolder(true);
 		file1.setFather(courseno);
         file1.setFileName("base1");
-        file1.setPath("kkk");
+        file1.setPath("E:/GitProject/hello.txt");
         file1.setUpdateTime("2016/07/12");
         file1.setUploadBy("唐大爷");
         
         file2.setIsFolder(false);
         file2.setFather(courseno);
         file2.setFileName("test.doc");
-        file2.setPath("kkk");
+        file2.setPath("E:/GitProject/hello.txt");
         file2.setUpdateTime("2016/07/12");
         file2.setUploadBy("唐大爷");
         

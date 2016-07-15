@@ -1,5 +1,6 @@
 package data.service;
 
+import general.Role;
 import model.User;
 
 public interface LoginService {
@@ -17,4 +18,11 @@ public interface LoginService {
 	 * @return
 	 */
 	public User roleIdentifier(String account);
+	
+	/**
+	 * 根据账号返回 role 角色分类不需要多余信息
+	 * @param account
+	 * @return
+	 */
+	public Role getRoleByAccount(String account);
 }

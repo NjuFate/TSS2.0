@@ -2,6 +2,7 @@ package general;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class CookieHelper {
 	public static String getCookieByName(String cookieName,HttpServletRequest request){
@@ -16,5 +17,12 @@ public class CookieHelper {
 		    }
 		}
 		return result;
+	}
+	
+	public static void addNewCookie(String cookieName,String cookieValue,HttpServletResponse response){
+		Cookie cookie;
+		cookie = new Cookie(cookieName,cookieValue );
+		cookie.setPath("/");	
+		response.addCookie(cookie);
 	}
 }

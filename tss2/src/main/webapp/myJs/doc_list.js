@@ -25,13 +25,15 @@ function getDocTable(deal,courseno,father){
 	req.send(null);
 }
 
-function openFolder(){
+function openFolder(index){
 	var courseno = getCookie("courseno");
 	var x=document.getElementById('doclist-table').rows[index].cells;
 	var father= x[0].innerText;
-	alert(father);
-	alert(courseno);
 	getDocTable(fillDocTable,courseno,father);
+}
+
+function test(){
+	//alert("get");
 }
 
 function fillDocTable(data){
@@ -45,12 +47,10 @@ function fillDocTable(data){
  	    if(
  	    	data[i].isFolder){$tr.append($("<td><img border='0' src='../img/folder.jpg' width='20' height='20'><a id=index href='#' onclick='openFolder("+index+");'>"+data[i].fileName+"</td>")) ;}
  	    else{
- 	    	$tr.append($("<td><img border='0' src='../img/doc.jpg' width='18' height='18'><a href="+data[i].path+">"+data[i].fileName+"</td>"));
+ 	    	$tr.append($("<td><img border='0' src='../img/doc.jpg' width='18' height='18'><a href=../downloadFile/download?path="+data[i].path+">"+data[i].fileName+"</td>"));
  	    }
 	 	$tr.append($("<td></td>").text(data[i].updateTime));
 	 	$tr.append($("<td></td>").text(data[i].uploadBy));
-     	//$tr.append($("<td></td>").text(data[i].semester));
-     	//$tr.append($("<td></td>").text(data[i].teaching_assistants));
      	$table.append($tr);
 	 }
 		
@@ -67,3 +67,6 @@ function getCookie(cname){
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+var courseno = getCookie("courseno");
+var coursename = getCookie("coursename");
+getDocTable(fillDocTable,courseno,coursename);

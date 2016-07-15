@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import general.CookieHelper;
 import general.Role;
 import logic.login.RoleIdentifier;
 import model.Student;
@@ -42,10 +43,13 @@ public class LoginServlet {
 			//密码账号对应
 			ModelAndView mav = new ModelAndView();
 			mav.setViewName("index");
-			Cookie cookie;
-			cookie = new Cookie("account",account );
-			cookie.setPath("/");	
-			response.addCookie(cookie);
+			CookieHelper.addNewCookie("account", account, response);
+			String role = "normal";
+			//判断并记录角色
+			if(roleIdentifier.getRoleByAccount(account) == Role.TEACHER){
+				role = "teacher";
+			}
+			CookieHelper.addNewCookie("role",role, response);
 			return mav;
 		}
 		

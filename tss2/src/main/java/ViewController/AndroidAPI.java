@@ -15,10 +15,19 @@ import po.ScheduleItem;
 public class AndroidAPI {
 	private ScheduleProvider scheduleProvider = new ScheduleProvider();
 	
+	/**
+	 * for DaYe Tang
+	 * @param userName
+	 * @param password
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(params="method=andoird_projectTable",method=RequestMethod.GET)
 	public @ResponseBody List<ScheduleItem> projectTable(String userName,String password) throws Exception {
 		//account 合法性检验：
 		List<ScheduleItem> projectList = scheduleProvider.getAllCourses(userName, password);
 		return projectList;
 	}
+	
+	
 }
