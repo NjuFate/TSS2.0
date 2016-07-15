@@ -62,4 +62,9 @@ public class FileServiceStub implements FileService {
 		return fileList;
 	}
 
+	public List<File> getAllFile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

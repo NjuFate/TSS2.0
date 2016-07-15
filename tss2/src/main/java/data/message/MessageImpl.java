@@ -68,21 +68,5 @@ public class MessageImpl implements MessageService{
 	
 	
 	
-	public static void main(String[]args){
-		MessageImpl impl = new MessageImpl();
-		model.InformMessage po = new model.InformMessage();
-		po.setIconurl("iconurl");
-		po.setTitle("title");
-		po.setContent("content");
-		po.setReceiver(111);
-		po.setSender(1111);
-		po.setTime(1231);
-		po.setIfread(1);
-		po.setMessagetype(1);
-		
-		impl.sendMessage(po);
-//		List<model.InformMessage>list = impl.getInformMsg("141250052", 2);
-//		System.out.println(list.get(0).getIconurl() + list.get(0).getTitle());
-	}
-
+	
 }

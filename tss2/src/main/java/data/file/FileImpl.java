@@ -1,10 +1,12 @@
 package data.file;
 
-import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.httpclient.methods.multipart.StringPart;
+
+import com.sun.javafx.runtime.VersionInfo;
 
 import data.manage.FileManage;
 import data.service.FileService;
@@ -25,9 +27,13 @@ public class FileImpl implements FileService{
 		// TODO Auto-generated method stub
 		po.File file = new po.File();
 		file.setCourseno(courseno);
-		file.setCoursename(coursename);
-		file.setSemester(semester);
+		
 		file.setFather(father);
+		
+		if(coursename!=null)
+		file.setCoursename(coursename);
+		if(semester!=null)
+		file.setSemester(semester);
 		
 		List<po.File>files = fileManage.query(file);
 		if(files == null || files.size() == 0)
@@ -46,10 +52,26 @@ public class FileImpl implements FileService{
 
 	public List<File> getFileByCourseno(String courseno, String father) {
 		// TODO Auto-generated method stub
-		return null;
+         return getFileByCourse(courseno, null, null, father);
 	}
 
-	
-	
+
+
+	public List<File> getAllFile() {
+		// TODO Auto-generated method stub
+		String sql = "select * from file";
+		try {
+			List<po.File>files = fileManage.executeQuery(sql, new po.File());
+			List<File> rFiles = new ArrayList<File>();
+			
+			for(po.File f : files){
+				rFiles.add(new File(f));
+			}
+			return rFiles;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}	
 	
 }
