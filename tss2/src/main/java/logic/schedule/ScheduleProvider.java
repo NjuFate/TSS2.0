@@ -21,9 +21,9 @@ import po.ScheduleItem;
 public class ScheduleProvider {
 
 	// 登陆 Url  
-	private static final String loginUrl = "http://jwas2.nju.edu.cn:8080/jiaowu/login.do";  
+	private static final String loginUrl = "http://desktop.nju.edu.cn:8080/jiaowu/login.do";  
 	// 需登陆后访问的 Url  
-	private static final String dataUrl = "http://jwas2.nju.edu.cn:8080/jiaowu/student/teachinginfo/courseList.do?method=currentTermCourse";  
+	private static final String dataUrl = "http://desktop.nju.edu.cn:8080/jiaowu/student/teachinginfo/courseList.do?method=currentTermCourse";  
 
 
 	public List<ScheduleItem> getAllCourses(String userName, String password){

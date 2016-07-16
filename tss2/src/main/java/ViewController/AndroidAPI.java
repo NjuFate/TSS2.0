@@ -54,4 +54,10 @@ public class AndroidAPI {
 	public @ResponseBody long sendMessage(){
 		return 0;
 	}
+	
+	
+	
+	/**
+	 * 
+	 */
 }
