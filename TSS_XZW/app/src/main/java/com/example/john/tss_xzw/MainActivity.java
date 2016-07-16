@@ -112,10 +112,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
-//            stub s = new stub();
-            File_Helper fh = new File_Helper();
-            My_File mf = fh.getRootFile();
-            FragmentFileShow fileShow = new FragmentFileShow(mf);
+            stub s = new stub();
+//            File_Helper fh = new File_Helper();
+//            My_File mf = fh.getRootFile();
+            FragmentFileShow fileShow = new FragmentFileShow(s.getMainFile());
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.replace(R.id.FileContent,fileShow);
             ft.addToBackStack(null);

@@ -14,8 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.dyp.FileFragment.FragmentFileShow;
 import com.example.dyp.coursefragment.FragmentDisplyCourse;
 import com.example.dyp.messagefragment.MessageFragment;
+
+import data.stub;
 
 
 /**
@@ -71,11 +74,12 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             transaction.replace(R.id.content,courseFra,"disply");
 
         } else if (id == R.id.nav_slideshow) {
-            if(contentFra == null){
-                contentFra = new ContentFragment();
-            }
-            System.out.println("touch content");
-            transaction.replace(R.id.content,contentFra);
+            stub s = new stub();
+            FragmentFileShow fileShow = new FragmentFileShow(s.getMainFile());
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.replace(R.id.content,fileShow);
+            ft.addToBackStack(null);
+            ft.commit();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

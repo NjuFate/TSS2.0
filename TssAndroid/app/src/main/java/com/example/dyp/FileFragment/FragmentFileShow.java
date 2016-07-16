@@ -1,4 +1,4 @@
-package com.example.john.tss_xzw;
+package com.example.dyp.FileFragment;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.john.tss_xzw.util.My_File;
+import com.example.dyp.tssandroid.R;
+
+import data.My_File;
 
 /**
  * Created by john on 2016/7/14.
@@ -52,7 +54,7 @@ public class FragmentFileShow extends Fragment {
                     public void onClick(View v) {
                         FragmentFileShow fileShow = new FragmentFileShow(son_file);
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.FileContent, fileShow);
+                        ft.replace(R.id.content, fileShow);
                         ft.addToBackStack(null);
                         ft.commit();
                     }
