@@ -1,6 +1,7 @@
 package com.example.dyp.messagefragment;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,6 +17,7 @@ import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import com.example.dyp.messagedetail.MessageActivity;
+import com.example.dyp.messagedetail.MsgActivity;
 import com.example.dyp.tssandroid.R;
 
 import java.util.ArrayList;
@@ -34,13 +36,15 @@ public class MessageFragment extends Fragment {
     private ListAdapter mListAdapter;
     private List<InformMessage> mDatas = new ArrayList<InformMessage>();;
     private SwipeRefreshLayout mSwipeRefreshWidget;
-    private int receiverId = 1;
+    private Context mContext;
+    private int receiverId = 141250052;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.messagelayout,container,false);
+        mContext = getActivity();
         mRecyclerView = (RecyclerView) view.findViewById(R.id.message_recycler_view);
         mSwipeRefreshWidget = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_widget);
         mSwipeRefreshWidget.setColorSchemeResources(android.R.color.holo_blue_light, android.R.color.holo_red_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
@@ -48,24 +52,22 @@ public class MessageFragment extends Fragment {
 
             @Override
             public void onRefresh() {
-//                tv.setText("正在刷新");
+
                 // TODO Auto-generated method stub
                 new Handler().postDelayed(new Runnable() {
 
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-//                        tv.setText("刷新完成");
-//                        mDatas.clear();
                         getRefreshed(receiverId);
                     }
                 }, 1000);
             }
         });
         // 这句话是为了，第一次进入页面的时候显示加载进度条
-        mSwipeRefreshWidget.setProgressViewOffset(false, 0, (int) TypedValue
-                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources()
-                        .getDisplayMetrics()));
+//        mSwipeRefreshWidget.setProgressViewOffset(false, 0, (int) TypedValue
+//                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources()
+//                        .getDisplayMetrics()));
 
         setRecyclerView();
         initData();
@@ -88,22 +90,21 @@ public class MessageFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        initData();
-
+        initData();     //为了更新时间
 
     }
 
     private void setRecyclerView(){
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this.getActivity());
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this.getActivity(), -1));
-        mListAdapter = new ListAdapter(getActivity(),mDatas);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, -1));
+        mListAdapter = new ListAdapter(mContext,mDatas);
         mListAdapter.setOnItemClickListener(new ListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent();
-                intent.setClass(getActivity(), MessageActivity.class);
+                intent.setClass(mContext, MsgActivity.class);
                 InformMessage msg = mDatas.get(position);
                 int sender = msg.getSender();
                 int receiver = msg.getReceiver();
@@ -128,7 +129,6 @@ public class MessageFragment extends Fragment {
             }
         });
 
-
         mRecyclerView.setAdapter(mListAdapter);
 
     }
@@ -139,7 +139,7 @@ public class MessageFragment extends Fragment {
      */
     protected void initData() {
 
-        InformMsgDataHelper helper = new InformMsgDataHelper(getActivity());
+        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
         List<InformMessage> list=helper.getLocalInformMsg(receiverId);
 //        helper.deleteAllInformMsg(receiverId);
         updateViewList(list);
@@ -147,7 +147,7 @@ public class MessageFragment extends Fragment {
     }
 
     private void getRefreshed(int id){
-        InformMsgDataHelper helper = new InformMsgDataHelper(getActivity());
+        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
         List<InformMessage> list = helper.getInformMsg(id);
 
         updateViewList(list);
@@ -177,14 +177,13 @@ public class MessageFragment extends Fragment {
 
 
     private void updateUnReadDotAndTime(List<InformMessage> list){
-        InformMsgDataHelper helper = new InformMsgDataHelper(getActivity());
+        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
         for(InformMessage msg:list){
             int result = helper.checkIfRead(msg.getSender(),msg.getReceiver());
-//            Toast.makeText(getActivity(), result+msg.getTitle(), Toast.LENGTH_SHORT).show();
             View view = mRecyclerView.getLayoutManager().findViewByPosition(list.indexOf(msg));
 
             if(null==view) {
-                Toast.makeText(getActivity(), mRecyclerView.getChildCount() + " ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "更新未读消息和时间出错啦！", Toast.LENGTH_SHORT).show();
             }else{
                 ListAdapter.ItemViewHolder holder = (ListAdapter.ItemViewHolder) mRecyclerView.getChildViewHolder(view);
                 String time = helper.getLastTime(list);

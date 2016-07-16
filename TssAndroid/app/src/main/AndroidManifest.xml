@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dyp.tssandroid">
 
+    <uses-permission android:name="android.permission.INTERNETI" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,11 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.example.dyp.messagedetail.MessageActivity"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.dyp.messagedetail.MsgActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

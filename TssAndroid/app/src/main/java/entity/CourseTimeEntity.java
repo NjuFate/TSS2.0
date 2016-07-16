@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/7/11.
  */
@@ -8,12 +10,14 @@ public class CourseTimeEntity {
     private int start;
     private int end;
     private String classroom;
+    private List<Integer> weeks;
 
-    public CourseTimeEntity(int weekday, int start, int end, String classroom) {
+    public CourseTimeEntity(int weekday, int start, int end, String classroom, List<Integer> weeks) {
         this.weekday = weekday;
         this.start = start;
         this.end = end;
         this.classroom = classroom;
+        this.weeks = weeks;
     }
 
     public int getWeekday() {
@@ -46,5 +50,13 @@ public class CourseTimeEntity {
 
     public void setClassroom(String classroom) {
         this.classroom = classroom;
+    }
+
+    public void setWeeks(List<Integer> weeks) {
+        this.weeks = weeks;
+    }
+
+    public List<Integer> getWeeks() {
+        return weeks;
     }
 }
