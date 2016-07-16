@@ -11,12 +11,7 @@ package data.base;
  * @description: JDBC 连接数据的helper
  */
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
 
 import data.service.JDBCService;
 

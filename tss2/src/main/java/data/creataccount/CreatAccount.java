@@ -100,5 +100,17 @@ public class CreatAccount implements CreateAccountService{
 		
 		return true;
 	}
+	
+	
+	
+	public static void main(String[]args) throws AddAccountException, AddUserRoleException{
+		CreatAccount account = new CreatAccount();
+		User user = new User();
+		user.setAccount("141250124");
+//		user.set
+		
+		
+		account.addAccount(user);
+	}
 
 }

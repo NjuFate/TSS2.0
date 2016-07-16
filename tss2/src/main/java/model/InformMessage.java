@@ -26,6 +26,12 @@ public class InformMessage implements BaseLongId{
 		
 	}
 	
+	public String toString(){
+		
+		
+		return id + " " + receiver + " "+ iconurl + " " + sender;
+	}
+	
 	public InformMessage() {
 		// TODO Auto-generated constructor stub
 	}
