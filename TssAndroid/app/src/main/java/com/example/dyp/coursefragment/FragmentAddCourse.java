@@ -83,12 +83,12 @@ public class FragmentAddCourse extends Fragment{
                 int start = ((WheelView)view.findViewById(R.id.courseWheelStart)).getCurrentItem()+1;
                 int end = ((WheelView)view.findViewById(R.id.courseWheelEnd)).getCurrentItem()+start;
                 List<CourseTimeEntity> times = new ArrayList<CourseTimeEntity>();
-                times.add(new CourseTimeEntity(weekday,start,end,courseClassroom));
                 List<Integer> weeks =  new ArrayList<Integer>();
                 for(int i=1;i<=18;i++)
                     weeks.add(i);
+                times.add(new CourseTimeEntity(weekday,start,end,courseClassroom,null));
 
-                CourseEntity entity = new CourseEntity(null,courseName,times,courseTeachers,weeks);
+                CourseEntity entity = new CourseEntity(null,courseName,times,courseTeachers);
                 FragmentManager fm  = getActivity().getFragmentManager();
                 FragmentDisplyCourse displyFragment = (FragmentDisplyCourse)fm.findFragmentByTag("disply");
                 displyFragment.addCourse(entity);

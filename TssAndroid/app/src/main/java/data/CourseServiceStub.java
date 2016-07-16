@@ -15,27 +15,33 @@ public class CourseServiceStub implements CourseService {
     public CourseServiceStub(){}
     @Override
     public List<CourseEntity> getAllCourses(String username, String passworld) {
-        CourseTimeEntity time11= new CourseTimeEntity(2,3,6,"仙林校区-仙二203");
-        CourseTimeEntity time12= new CourseTimeEntity(2,9,11,"仙林校区-仙二203");
+        List<Integer> all  = new ArrayList<Integer>();
+        List<Integer> odd  = new ArrayList<Integer>();
+        List<Integer> even  = new ArrayList<Integer>();
+        for(int i=1;i<=18;i++){
+            all.add(i);
+            if(i%2!=0){
+                odd.add(i);
+            }
+            else{
+                even.add(i);
+            }
+        }
+        CourseTimeEntity time11= new CourseTimeEntity(2,3,6,"仙林校区-仙二203",all);
+        CourseTimeEntity time12= new CourseTimeEntity(2,9,11,"仙林校区-仙二203",all);
         List<CourseTimeEntity> time1 = new ArrayList<CourseTimeEntity>();
         time1.add(time11);
         time1.add(time12);
         String teachers1 = "伏晓，汤恩义";
-        List<Integer> weeks1 = new ArrayList<Integer>();
-        for(int i=1;i<=18;i++)
-            weeks1.add(i);
-        CourseEntity entity1 = new CourseEntity("000001","数据结构与算法",time1,teachers1,weeks1);
+        CourseEntity entity1 = new CourseEntity("000001","数据结构与算法",time1,teachers1);
 
-        CourseTimeEntity time21= new CourseTimeEntity(1,1,4,"仙林校区-仙二505");
-        CourseTimeEntity time22= new CourseTimeEntity(5,5,7,"仙林校区-仙二306");
+        CourseTimeEntity time21= new CourseTimeEntity(1,1,4,"仙林校区-仙二505",all);
+        CourseTimeEntity time22= new CourseTimeEntity(5,5,7,"仙林校区-仙二306",all);
         List<CourseTimeEntity> time2 = new ArrayList<CourseTimeEntity>();
         time2.add(time21);
         time2.add(time22);
         String teachers2 = "刘钦，丁二玉";
-        List<Integer> weeks2 = new ArrayList<Integer>();
-        for(int i=1;i<=18;i++)
-            weeks2.add(i);
-        CourseEntity entity2 = new CourseEntity("000001","软件工程与计算2",time2,teachers2,weeks2);
+        CourseEntity entity2 = new CourseEntity("000001","软件工程与计算2",time2,teachers2);
 
 //        CourseTimeEntity time31= new CourseTimeEntity(1,5,6,"仙林校区-仙二505");
 //        CourseTimeEntity time32= new CourseTimeEntity(6,5,7,"仙林校区-仙二306");

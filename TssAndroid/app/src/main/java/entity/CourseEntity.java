@@ -10,13 +10,11 @@ public class CourseEntity {
     private String name;
     private String teachers;
     private List<CourseTimeEntity> time;
-    private List<Integer> weeks;
-    public CourseEntity(String id, String name, List<CourseTimeEntity> time, String teachers, List<Integer> weeks) {
+    public CourseEntity(String id, String name, List<CourseTimeEntity> time, String teachers) {
         this.id = id;
         this.name = name;
         this.time = time;
         this.teachers = teachers;
-        this.weeks = weeks;
     }
 
     public String getId() {
@@ -49,13 +47,5 @@ public class CourseEntity {
 
     public void setTime(List<CourseTimeEntity> time) {
         this.time = time;
-    }
-
-    public List<Integer> getWeeks() {
-        return weeks;
-    }
-
-    public void setWeeks(List<Integer> weeks) {
-        this.weeks = weeks;
     }
 }
