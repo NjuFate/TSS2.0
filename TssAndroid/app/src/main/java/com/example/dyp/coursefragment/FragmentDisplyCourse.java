@@ -37,8 +37,8 @@ public class FragmentDisplyCourse extends Fragment {
 
     private CourseService service;
     public boolean[][] boolCourseBox = new boolean[7][11];
-    public static final int[] COLORLIST = {0x7F9B59B6, 0x7F1ABC9C, 0x7F4FCE19, 0x7FED5565, 0x7FFFCE54,
-            0x7FF39412};
+    public static final int[] COLORLIST = {0x7F9B59B6, 0x7F1ABC9C, 0x7F4FCE19,0x7F8E44AD, 0x7FED5565, 0x7FFFCE54,
+            0x7FF39C12};
     public int offset = 0;
 
     private String usernamestr;
