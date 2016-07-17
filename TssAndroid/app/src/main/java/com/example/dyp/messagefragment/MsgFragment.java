@@ -134,7 +134,9 @@ public class MsgFragment extends Fragment implements LoaderManager.LoaderCallbac
 //                Toast.makeText(getActivity(), "LongClick" +position+"@@"+mDatas.get(position).getTitle(), Toast.LENGTH_SHORT).show();
 //                mListAdapter.remove(position); //remove the item
 //                Toast.makeText(getActivity(), mRecyclerView.getChildCount()+" ", Toast.LENGTH_SHORT).show();
-
+                InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
+                helper.deleteAllInformMsg(receiverId);
+                initData();
             }
         });
 
