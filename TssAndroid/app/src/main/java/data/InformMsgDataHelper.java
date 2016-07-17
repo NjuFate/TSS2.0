@@ -21,23 +21,16 @@ import entity.InformMessage;
 public class InformMsgDataHelper implements InformMsgDataService {
     private static int msgNum=0;
     private MydataBaseHelper dbHelper;
-    private InformMsgNetworkHelper networkHelper;
+
 
 
 
     public InformMsgDataHelper(Context context){
         dbHelper = MydataBaseHelper.getInstance(context);
-        networkHelper = new InformMsgNetworkHelper();
+
     }
 
-    @Override
-    public List<InformMessage> getInformMsg(int id) {
-        msgNum++;
-        List<InformMessage> msgList = networkHelper.getInformMsg(id);
 
-        saveInformMsg(msgList);
-        return getLocalInformMsg(id);
-    }
 
     @Override
     public boolean saveInformMsg(List<InformMessage> list) {
@@ -45,7 +38,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
 
         for(InformMessage msg:list){
             ContentValues values = new ContentValues();
-            values.put("id",msg.getMessageId());
+            values.put("id",msg.getId());
             values.put("receiverId",msg.getReceiver());
             values.put("senderId",msg.getSender());
             values.put("title",msg.getTitle());
@@ -112,7 +105,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
             ContentValues values = new ContentValues();
             msg.setIfread(1);
             values.put("ifread",msg.getIfread());
-            dbHelper.update("InformMsg",values,"id=?",new String[]{msg.getMessageId()+""});
+            dbHelper.update("InformMsg",values,"id=?",new String[]{msg.getId()+""});
         }
     }
 
@@ -220,9 +213,9 @@ public class InformMsgDataHelper implements InformMsgDataService {
     public long sendMsg(int userId, int receiverId, String content) {
         InformMessage msg = new InformMessage();
         msg.setContent(content);
-        msg.setTitle("毛泽东");
+        msg.setTitle("oldyellow");
         msg.setIconurl("!!!");
-        msg.setMessageId(System.currentTimeMillis());
+        msg.setId(System.currentTimeMillis());
         msg.setSender(userId);
         msg.setReceiver(receiverId);
         msg.setTime(System.currentTimeMillis());
@@ -235,7 +228,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
         List<InformMessage> list = new ArrayList<InformMessage>();
         list.add(msg);
         saveInformMsg(list);
-        return msg.getMessageId();
+        return msg.getId();
     }
 
     private List<InformMessage> loadData(Cursor cursor){
@@ -258,7 +251,7 @@ public class InformMsgDataHelper implements InformMsgDataService {
                 msg.setContent(content);
                 msg.setIconurl(iconurl);
                 msg.setLocaliconurl(localiconurl);
-                msg.setMessageId(id);
+                msg.setId(id);
                 msg.setLocaliconurl(localiconurl);
                 msg.setReceiver(receiverId);
                 msg.setSender(senderId);

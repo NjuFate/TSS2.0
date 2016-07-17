@@ -8,10 +8,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.dyp.tssandroid.R;
@@ -36,6 +38,7 @@ public class MsgActivity extends AppCompatActivity {
     private List<InformMessage> showMsgList;
     private int senderId;
     private int receiverId;
+    private String title;
 
     private InformMsgDataHelper helper;
 
@@ -58,6 +61,7 @@ public class MsgActivity extends AppCompatActivity {
         showMsgList = new ArrayList<InformMessage>();
         senderId = getIntent().getIntExtra("senderId",-1);
         receiverId = getIntent().getIntExtra("receiverId",-1);
+        title = getIntent().getStringExtra("title");
         mAdapter = new MsgRecylerViwAdapter(this,showMsgList);
         mSwipeRefreshWidget = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
         goBackView = (ImageView) findViewById(R.id.goback_message);
@@ -74,7 +78,7 @@ public class MsgActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        messageDetailTitle.setText(senderId+"");
+        messageDetailTitle.setText(title);
     }
 
     private void setSendTool(){
@@ -94,6 +98,7 @@ public class MsgActivity extends AppCompatActivity {
                     mRecylerView.smoothScrollToPosition(showMsgList.size()-1);
                     inputText.setText("");
                     long resultid = helper.sendMsg(receiverId,senderId,content);  //此处应该是异步操作
+//                    upDateTime(mDatas);
                 }
 
             }
@@ -164,8 +169,23 @@ public class MsgActivity extends AppCompatActivity {
         }
         mAdapter.notifyDataSetChanged();
         msgHelper.readMsg(mDatas);
-        setTitle(senderId+"");
 
+
+    }
+
+    private void upDateTime(List<InformMessage> list){
+        for(InformMessage msg:list){
+            LinearLayout view = (LinearLayout) mRecylerView.getLayoutManager().findViewByPosition(list.indexOf(msg));
+            RelativeLayout layout;
+            if(msg.getType()==0){
+                layout = (RelativeLayout) view.findViewById(R.id.right_layout);
+            }else{
+                layout = (RelativeLayout) view.findViewById(R.id.left_layout);
+            }
+            ViewStub stub = (ViewStub) layout.findViewById(R.id.time_view_stub);
+            stub.inflate();
+
+        }
     }
 
 }

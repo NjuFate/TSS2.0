@@ -14,7 +14,7 @@ public class InformMessage {
     private String iconurl;
     private String title;
     private String content;
-    private long messageId;
+    private long id;
     private int receiver;
     private int sender;
     private String localiconurl;
@@ -83,13 +83,7 @@ public class InformMessage {
         this.type = type;
     }
 
-    public long getMessageId() {
-        return messageId;
-    }
 
-    public void setMessageId(long messageId) {
-        this.messageId = messageId;
-    }
 
     public int getReceiver() {
         return receiver;
@@ -113,5 +107,13 @@ public class InformMessage {
 
     public void setMessageType(int messageType) {
         this.messageType = messageType;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

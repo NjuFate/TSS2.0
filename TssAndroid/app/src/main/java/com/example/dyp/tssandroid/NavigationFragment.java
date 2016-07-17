@@ -12,11 +12,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.dyp.FileFragment.FragmentFileShow;
 import com.example.dyp.coursefragment.FragmentDisplyCourse;
-import com.example.dyp.messagefragment.MessageFragment;
+import com.example.dyp.messagefragment.MsgFragment;
 
 import data.stub;
 
@@ -61,7 +60,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
         if (id == R.id.nav_message) {
             // Handle the camera action
             if(messageFra == null){
-                messageFra = new MessageFragment();
+                messageFra = new MsgFragment();
             }
             transaction.addToBackStack(null);
             transaction.replace(R.id.content,messageFra);

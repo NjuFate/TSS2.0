@@ -3,40 +3,45 @@ package com.example.dyp.messagefragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.content.Loader;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
-import com.example.dyp.messagedetail.MessageActivity;
+import com.example.dyp.loaders.InformMsgLoader;
 import com.example.dyp.messagedetail.MsgActivity;
 import com.example.dyp.tssandroid.R;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.app.LoaderManager;
 import data.InformMsgDataHelper;
 import entity.InformMessage;
 
-
 /**
- * Created by dyp on 2016/7/11.
+ * Created by dyp on 2016/7/16.
  */
-public class MessageFragment extends Fragment {
+public class MsgFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<InformMessage>>{
+    private static final String URL_GET_RECENT_MESSAGE = "http://123.206.70.29:8080/tss2/android.do";
+    private static final int LOADER_ID = 1;
 
     private RecyclerView mRecyclerView;
     private ListAdapter mListAdapter;
     private List<InformMessage> mDatas = new ArrayList<InformMessage>();;
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private Context mContext;
+    private LoaderManager.LoaderCallbacks<List<InformMessage>> mCallBack;
+    private LoaderManager loaderManager;
     private int receiverId = 141250052;
 
     @Nullable
@@ -45,6 +50,8 @@ public class MessageFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.messagelayout,container,false);
         mContext = getActivity();
+        loaderManager = getLoaderManager();
+        loaderManager.initLoader(LOADER_ID,null,this);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.message_recycler_view);
         mSwipeRefreshWidget = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_widget);
         mSwipeRefreshWidget.setColorSchemeResources(android.R.color.holo_blue_light, android.R.color.holo_red_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
@@ -59,7 +66,8 @@ public class MessageFragment extends Fragment {
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        getRefreshed(receiverId);
+//                        getRefreshed(receiverId);
+                        loaderManager.getLoader(LOADER_ID).forceLoad();
                     }
                 }, 1000);
             }
@@ -117,6 +125,7 @@ public class MessageFragment extends Fragment {
                     intent.putExtra("receiverId",receiver);
                 }
 
+                intent.putExtra("title",msg.getTitle());
                 startActivity(intent);
             }
 
@@ -146,23 +155,21 @@ public class MessageFragment extends Fragment {
 
     }
 
-    private void getRefreshed(int id){
-        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
-        List<InformMessage> list = helper.getInformMsg(id);
-
-        updateViewList(list);
-        mSwipeRefreshWidget.setRefreshing(false);
-    }
+//    private void getRefreshed(int id){
+//        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
+//        List<InformMessage> list = helper.getInformMsg(id);
+//
+//        updateViewList(list);
+//        mSwipeRefreshWidget.setRefreshing(false);
+//    }
 
 
     private void updateViewList(List<InformMessage> list){
         mDatas.clear();
         for(InformMessage msg: list){
             if(msg.getType()==0){
-                msg.setTitle(msg.getReceiver()+"");
                 mDatas.add(0,msg);
             }else{
-                msg.setTitle(msg.getSender()+"");
                 mDatas.add(0,msg);
             }
 
@@ -198,6 +205,26 @@ public class MessageFragment extends Fragment {
         }
     }
 
+
+    @Override
+    public Loader<List<InformMessage>> onCreateLoader(int id, Bundle args) {
+        InformMsgLoader loader = new InformMsgLoader(mContext, URL_GET_RECENT_MESSAGE,receiverId);
+
+        return loader;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<List<InformMessage>> loader, List<InformMessage> data) {
+        InformMsgDataHelper helper = new InformMsgDataHelper(mContext);
+        helper.saveInformMsg(data);
+        List<InformMessage> list = helper.getLocalInformMsg(receiverId);
+
+        updateViewList(helper.getLocalInformMsg(receiverId));
+        mSwipeRefreshWidget.setRefreshing(false);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<List<InformMessage>> loader) {
+
+    }
 }
-
-

@@ -8,7 +8,6 @@ import entity.InformMessage;
  * Created by dyp on 2016/7/13.
  */
 public interface InformMsgDataService {
-    public List<InformMessage> getInformMsg(int id);
     public boolean saveInformMsg(List<InformMessage> list);
     public List<InformMessage> getLocalInformMsg(int userId);
     public void deleteAllInformMsg(int userId);
