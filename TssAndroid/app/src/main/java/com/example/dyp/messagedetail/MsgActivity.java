@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dyp.tssandroid.R;
 
@@ -54,7 +55,17 @@ public class MsgActivity extends AppCompatActivity {
         setToolBar();
         setSendTool();
 
+
+
     }
+
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if(hasFocus){
+//            upDateTime(mDatas);
+//        }
+//    }
 
     private void setActivity(){
         mDatas = new ArrayList<InformMessage>();
@@ -98,8 +109,8 @@ public class MsgActivity extends AppCompatActivity {
                     mRecylerView.smoothScrollToPosition(showMsgList.size()-1);
                     inputText.setText("");
                     long resultid = helper.sendMsg(receiverId,senderId,content);  //此处应该是异步操作
-//                    upDateTime(mDatas);
                 }
+
 
             }
         });
@@ -175,15 +186,17 @@ public class MsgActivity extends AppCompatActivity {
 
     private void upDateTime(List<InformMessage> list){
         for(InformMessage msg:list){
-            LinearLayout view = (LinearLayout) mRecylerView.getLayoutManager().findViewByPosition(list.indexOf(msg));
+            View view =  mRecylerView.getLayoutManager().findViewByPosition(list.indexOf(msg));
+
+            MsgRecylerViwAdapter.MsgViewHolder holder = (MsgRecylerViwAdapter.MsgViewHolder) mRecylerView.getChildViewHolder(view);
             RelativeLayout layout;
-            if(msg.getType()==0){
-                layout = (RelativeLayout) view.findViewById(R.id.right_layout);
+            if(msg.getType()==InformMessage.MESSAGE_FROM_USER){
+                ((ViewStub) holder.rightLayout.findViewById(R.id.time_view_stub)).inflate();
             }else{
-                layout = (RelativeLayout) view.findViewById(R.id.left_layout);
+                ((ViewStub) holder.leftLayout.findViewById(R.id.time_view_stub)).inflate();
             }
-            ViewStub stub = (ViewStub) layout.findViewById(R.id.time_view_stub);
-            stub.inflate();
+//            ViewStub stub = (ViewStub) layout.findViewById(R.id.time_view_stub);
+//            stub.inflate();
 
         }
     }
