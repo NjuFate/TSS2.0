@@ -65,14 +65,14 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             transaction.addToBackStack(null);
             transaction.replace(R.id.content,messageFra);
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_courses) {
             if(courseFra == null){
                 courseFra = new FragmentDisplyCourse();
             }
             transaction.addToBackStack(null);
             transaction.replace(R.id.content,courseFra,"disply");
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_files) {
             stub s = new stub();
             FragmentFileShow fileShow = new FragmentFileShow(s.getMainFile());
             FragmentTransaction ft = getFragmentManager().beginTransaction();
