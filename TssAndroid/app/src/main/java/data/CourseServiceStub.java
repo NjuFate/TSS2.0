@@ -236,10 +236,11 @@ public class CourseServiceStub implements CourseService {
     }
 
     @Override
-    public boolean login(String username, String passworld) {
+    public boolean login(String username, String password) {
+        System.out.println(username+" "+password);
         String jsonStr = "";
         try {
-            URL url = new URL("http://139.129.54.63/tss2/android.do?method=andoird_projectTable&userName="+username+" &password="+passworld);
+            URL url = new URL("http://139.129.54.63/tss2/android.do?method=andoird_projectTable&userName=141250124&password=tangdaye123");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
             String line;
@@ -247,9 +248,10 @@ public class CourseServiceStub implements CourseService {
                 jsonStr += line;
             }
         } catch (Exception e) {
-
+                e.printStackTrace();
         }
-        if(jsonStr.length()==2){
+        System.out.println(jsonStr);
+        if(jsonStr.length()==0){
             return false;
         }
         return true;

@@ -37,18 +37,16 @@ public class FragmentDisplyCourse extends Fragment {
 
     private CourseService service;
     public boolean[][] boolCourseBox = new boolean[7][11];
-    public static final int[] COLORLIST = {0x7F9B59B6, 0x7F1ABC9C, 0x7F4FCE19,0x7F8E44AD, 0x7FED5565, 0x7FFFCE54,
+    public static final int[] COLORLIST = {0x7F9B59B6, 0x7F1ABC9C, 0x7F4FCE19, 0x7F8E44AD, 0x7FED5565, 0x7FFFCE54,
             0x7FF39C12};
     public int offset = 0;
 
-    private String usernamestr;
-    private String passwordstr;
     private ProgressDialog progressdialog;
     private AlertDialog selfdialog;
     private View loginView;
 
-    public boolean isCourseLogin = false;
-    public boolean isCourseImport = false;
+    private String passwordstr;
+    private String usernamestr;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,12 +65,6 @@ public class FragmentDisplyCourse extends Fragment {
                 boolCourseBox[i][j] = false;
             }
         }
-        SharedPreferences sp = getActivity().getSharedPreferences("SIYHUK", Context.MODE_PRIVATE);
-        usernamestr = sp.getString("Course_username", "s ");
-        passwordstr = sp.getString("Course_password", "s ");
-        isCourseLogin = sp.getBoolean("Course_login", false);
-
-
         initCourseBox();
         return view;
     }
@@ -81,17 +73,6 @@ public class FragmentDisplyCourse extends Fragment {
     public void onResume() {
         super.onResume();
         FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentAddCourse details = new FragmentAddCourse();
-//                FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                ft.replace(R.id.content,details);
-//                ft.addToBackStack(null);
-//                ft.commit();
-//
-//            }
-//        });
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -112,7 +93,6 @@ public class FragmentDisplyCourse extends Fragment {
                             ft.replace(R.id.content, details);
                             ft.addToBackStack(null);
                             ft.commit();
-                            isCourseImport = false;
                         }
                         arg0.dismiss();
                     }
@@ -124,21 +104,6 @@ public class FragmentDisplyCourse extends Fragment {
 
     public void initCourseBox() {
         service = new CourseServiceStub();
-
-        if (!isCourseLogin) {
-            Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                    "请先登录教务处", Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
-            return;
-        }
-        if (isCourseImport) {
-            Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                    "您已导入课表，更换身份请重新登录教务处", Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
-            return;
-        }
         List<CourseEntity> resourse = service.getAllCourses(usernamestr, passwordstr);
         for (CourseEntity entity : resourse) {
             List<CourseTimeEntity> times = entity.getTime();
@@ -197,7 +162,6 @@ public class FragmentDisplyCourse extends Fragment {
             offset = (offset + 1) % 6;
 
         }
-        isCourseImport = true;
 
     }
 
@@ -210,12 +174,12 @@ public class FragmentDisplyCourse extends Fragment {
         loginView = inflater.inflate(R.layout.login_course, null);
 
         final EditText username = (EditText) loginView.findViewById(R.id.txt_username);
-        final EditText password = (EditText) loginView.findViewById(R.id.txt_password);
-        username.setText("tdy");
-        password.setText("123456");
+        final EditText password = (EditText) loginView.findViewById(R.id.txt_password );
+        username.setText("141250124");
+        password.setText("tangdaye123");
         AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
         ad.setView(loginView);
-        ad.setTitle("教务处账号登录");
+        ad.setTitle("教务处账号登录 ");
         selfdialog = ad.create();
         selfdialog.setButton("登录", new DialogInterface.OnClickListener() {
             @Override
@@ -225,19 +189,15 @@ public class FragmentDisplyCourse extends Fragment {
                 progressdialog = ProgressDialog.show(getActivity(), "请等待...", "正在为您登录...");
                 boolean flag = service.login(usernamestr, passwordstr);
                 if (flag) {
-                    isCourseLogin = true;
-                    SharedPreferences sp = getActivity().getSharedPreferences("SIYHUK", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sp.edit();
-                    editor.putString("Course_username", usernamestr);
-                    editor.putString("Course_password", passwordstr);
-                    editor.putBoolean("Course_login", isCourseLogin);
-                    editor.commit();
                     Toast toast = Toast.makeText(getActivity().getApplicationContext(),
                             "登录成功！请点击导入课程表获得课表", Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 } else {
-                    loginView.findViewById(R.id.txt_loginerror).setVisibility(View.VISIBLE);
+                    Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+                            "密码认证错误，请重新登录", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                 }
                 progressdialog.dismiss();
             }
@@ -267,7 +227,7 @@ public class FragmentDisplyCourse extends Fragment {
                         "您周" + weekday + "第" + start + "到" + end + "节的课程存在时间上的冲突，请检查后继续", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
-                return ;
+                return;
             }
         }
         classroom = time.getClassroom();
