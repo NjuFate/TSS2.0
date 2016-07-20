@@ -1,19 +1,19 @@
 package po;
 
-public class MailBox implements BaseId, BaseUid{
-	private Integer id;
-	private Integer uid;
+public class MailBox implements BaseId{
+	private Long id;
+	private Long uid;
 	private String mailBox;
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
-	public Integer getUid() {
+	public Long getUid() {
 		return uid;
 	}
-	public void setUid(int uid) {
+	public void setUid(long uid) {
 		this.uid = uid;
 	}
 	public String getMailBox() {

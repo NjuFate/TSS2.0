@@ -1,9 +1,9 @@
 package po;
 
-public class InformMessage implements BaseLongId{
+public class InformMessage implements BaseId{
 	private Long id;// 数据库id
 	private String content;		//信息内容
-	private Integer receiver;	//接收者的ID
+	private Integer receiver;	//接收者的ID,变成接收者帐号
 	private Integer sender;		//发送者的ID
 	private Long time;			//信息发送的时间，用毫秒
 	private Integer ifread;		//信息是否阅读过，0为否，1为是，默认为0
