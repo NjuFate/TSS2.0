@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.dyp.tssandroid.MainActivity"
+    tools:context="com.example.tss.tssandroid.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <TextView
