@@ -103,7 +103,7 @@ public class MsgRecylerViwAdapter extends RecyclerView.Adapter {
         return value;
     }
 
-    class MsgViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnLongClickListener{
+    public class MsgViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnLongClickListener{
         public int position;
         public View rootView;
         public RelativeLayout leftLayout;

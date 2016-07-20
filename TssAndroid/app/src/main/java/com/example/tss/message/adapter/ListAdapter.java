@@ -127,12 +127,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemViewHolder
     /**
      * 处理item的点击事件和长按事件
      */
-    interface OnItemClickListener {
+    public interface OnItemClickListener {
         public void onItemClick(View view, int position);
         public void onItemLongClick(View view, int position);
     }
 
-    class ItemViewHolder extends RecyclerView.ViewHolder {
+    public class ItemViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mTextView;
         private TextView describeTextView;
