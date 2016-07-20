@@ -30,19 +30,13 @@ public class ProjectManageTest {
 	@Test
 	public void testAddProject() {
 		Project project = new  Project();
-		project.setCoursename("software");
-		project.setCourseno("1101");
+		project.setCoursename("SE1");
+		project.setCourseno("c1094");
 		project.setTeaching_assistants("hdx ch");
 		project.setInstrutor("laowang");
-		project.setSemester("semester1");
+		project.setSemester("2016Summer");
 		dao.add(project);
-		project.setCourseno("1201");
-		project.setSemester("semester2");
-		dao.add(project);
-		project.setCourseno("1102");
-		project.setSemester("semester1");
-		dao.add(project);
-
+		
 
 		
 	}

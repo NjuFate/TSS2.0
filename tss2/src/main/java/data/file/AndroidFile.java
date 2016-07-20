@@ -26,18 +26,11 @@ public class AndroidFile implements AndroidDownLoadService{
 
 	public List<AndroidProject> getCurrentSemesterCourse() {
 		// TODO Auto-generated method stub
-		String sql = "select * from project where semester=" + getCurrentSemester();
+		String sql = "select * from project where semester='" + getCurrentSemester()+"'";
 		try {
-			List<Project>projects = projectManage.executeQuery(sql, new Project());
-			if(projects.isEmpty() || projects == null)
-				throw new Exception();
-
-			List<AndroidProject> rProject = new ArrayList<AndroidProject>();
-
-			for(Project p : projects){
-				rProject.add(new AndroidProject(p));
-			}
-			return rProject;
+			List<AndroidProject>projects = projectManage.executeQuery(sql, new AndroidProject());
+			
+			return projects;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -50,7 +43,7 @@ public class AndroidFile implements AndroidDownLoadService{
 
 	public List<File> getCurrentSemesterFile() {
 		// TODO Auto-generated method stub
-		String sql = "select * from file where semester=" + getCurrentSemester();
+		String sql = "select * from file where semester='" + getCurrentSemester()+"'";
 		try {
 			List<po.File>files = fileManage.executeQuery(sql, new po.File());
 			List<File> rFiles = new ArrayList<File>();
