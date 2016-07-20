@@ -9,12 +9,8 @@ public class FileManage extends ManageService<File>{
 	
 	public FileManage(){
 		super();
-		size = 1000;
+		size = 100000;
 		tableName = "file";
 	}
-	
 
-	
-	
-	
 }

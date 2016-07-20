@@ -2,57 +2,45 @@ package data.test;
 
 import static org.junit.Assert.*;
 
+import java.awt.Image;
 import java.util.List;
 
 import org.junit.Test;
 
-import data.file.FileImpl;
 
+import data.file.FileImpl;
+import model.File;
+import model.FileExtra;
 
 public class FileImplTest {
-	
-	FileImpl impl = new FileImpl();
-	
-//	@Test
-//	public void add(){
-//		FileManage fileManage = new FileManage();
-//		File file = new File();
-//		String[]filename = {"0","1","2","3","4","5"};
-//		file.setIsFolder(0);
-//		
-//		file.setFather("software");
-//		file.setUpdateTime("2016-07-12");
-//		file.setUploadBy("hdx");
-//		file.setPath("apple/software");
-//		file.setCourseno("1101");
-//		file.setCoursename("software");
-//		file.setSemester("2016年第二学期");
-//		for(int i =0;i<filename.length;i++){
-//			file.setFileName(filename[i]);
-//			fileManage.add(file);
-//		}
-//		file.setFather("math");
-//		file.setPath("apple/math");
-//		file.setCourseno("1102");
-//
-//
-//		for(int i =0;i<filename.length;i++){
-//			file.setFileName(filename[i]);
-//			fileManage.add(file);
-//		}
-//	}
-	
-	
-	
-	
-	
-	
-	
+	FileImpl impl  = new FileImpl();
+
 	@Test
 	public void testGetFileByCourse() {
-		List<model.File>list = impl.getFileByCourse("1102", "software", "semester1", "math");
-		assertEquals(6, list.size());
-		assertEquals("hdx", list.get(0).getUploadBy());
+         List<File>files = impl.getFileByCourse("c1094", "SE1", "2016Summer", "c1094");		
+         assertEquals(2, files.size());
+	}
+
+	@Test
+	public void testGetFileByCourseno() {
+		List<File>files = impl.getFileByCourseno("c1094","c1094");		
+        assertEquals(2, files.size());
+	}
+
+	@Test
+	public void testSearchByID() {
+		FileExtra file = impl.searchByID(Long.valueOf("16072000000"));		
+        assertEquals("first.ppt", file.getFileName());
+	}
+
+	@Test
+	public void testSearchByName() {
+		List<FileExtra> file = impl.searchByName("first");		
+        assertEquals(1, file.size());	
+        }
+
+	@Test
+	public void testAddFileMessage() {
 	}
 
 }

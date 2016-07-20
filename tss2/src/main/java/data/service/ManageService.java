@@ -14,7 +14,6 @@ import java.util.List;
 import data.base.JDBCHelper;
 import data.base.StandardSQL;
 import po.BaseId;
-import po.BaseLongId;
 
 
 
@@ -42,27 +41,7 @@ public abstract class ManageService <T>{
     }
 
     
-	/**
-	 * 添加
-	 * @param t
-	 * @return 返回自增长主键的id
-	 * @throws Exception
-	 */
-    
-    public long addByLong(Object t){
-		String sql;
-		((BaseLongId) t).setId(implementationByLong());
-		
-		try {
-			sql = standardSQL.add(t);
-			 if(executeUpdate(sql) != 0)
-			return ((BaseLongId) t).getId();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return 0;
-	}
+
 
 
 
@@ -72,7 +51,7 @@ public abstract class ManageService <T>{
 	 * @return 返回自增长主键的id
 	 * @throws Exception
 	 */
-	public int add(Object t){
+	public long add(Object t){
 		String sql;
 		((BaseId) t).setId(implementation());
 		
@@ -177,46 +156,7 @@ public abstract class ManageService <T>{
 	 * @throws Exception
 	 */
 
-	public int  implementation(){
-		String date = new SimpleDateFormat("yyMMdd").format(new Date());
-		String sql = "select max(id) from " + tableName;
-		System.out.println(sql);
-		ResultSet resultSet = null;
-		int id = 0;
-		PreparedStatement preparedStatement = null;
-		Connection connection = helper.getConnection();
-
-		try {
-
-			preparedStatement = connection.prepareStatement(sql);
-			resultSet = preparedStatement.executeQuery();
-
-			if(resultSet == null){
-				throw new NullPointerException("resultSet is null!");
-			}
-
-
-
-			if(resultSet.next()){
-				id = resultSet.getInt(1);
-				if(id < (Integer.valueOf(date)*size))
-					throw new NullPointerException();
-				id++;
-			}			
-
-		} catch (Exception e) {
-			// TODO: handle exception		
-			id = Integer.valueOf(date)*size;	
-		}finally{
-			helper.releaseConnection(resultSet, preparedStatement, connection);
-		}
-		return id;
-
-	}
-	
-	
-	
-	public long  implementationByLong(){
+	public long  implementation(){
 		String date = new SimpleDateFormat("yyMMdd").format(new Date());
 		String sql = "select max(id) from " + tableName;
 		System.out.println(sql);
@@ -238,22 +178,21 @@ public abstract class ManageService <T>{
 
 			if(resultSet.next()){
 				id = resultSet.getLong(1);
-				if(id < (Long.valueOf(date)*Long.valueOf(size)))
+				if(id < (Long.valueOf(date)*size))
 					throw new NullPointerException();
 				id++;
 			}			
 
 		} catch (Exception e) {
 			// TODO: handle exception		
-			id = Long.valueOf(date)*Long.valueOf(size);	
+			id = Long.valueOf(date)*size;	
 		}finally{
 			helper.releaseConnection(resultSet, preparedStatement, connection);
 		}
 		return id;
 
 	}
-
-
+	
 
 
 	/**
@@ -286,7 +225,7 @@ public abstract class ManageService <T>{
 	 * @throws SQLException 
 	 * @throws Exception
 	 */
-	public List executeQuery(String sql, T t) throws SQLException{
+	public List executeQuery(String sql, Object t) throws SQLException{
 		System.out.println("[Execeute SQL] "+sql);
 		List list = new ArrayList();
 		Connection conn = null;
@@ -298,7 +237,7 @@ public abstract class ManageService <T>{
 			ResultSet rs = stat.getResultSet();
 			int total = rs.getMetaData().getColumnCount();
 			while(rs.next()){
-				T obj = this.getObj(rs, t);
+				Object obj = this.getObj(rs, t);
 				list.add(obj);
 			}
 		}catch(Exception e){
@@ -315,7 +254,7 @@ public abstract class ManageService <T>{
 	 * @return Object
 	 * @throws Exception
 	 */
-	public Object getObject(T t, String id){
+	public Object getObject(Object t, String id){
 		Object bean = null;
 		Connection conn = null;
 		Statement stat = null;
@@ -345,7 +284,7 @@ public abstract class ManageService <T>{
 	 * @return
 	 * @throws Exception
 	 */
-	private T getObj(ResultSet rs,T t) throws Exception{
+	private Object getObj(ResultSet rs,Object t) throws Exception{
 		if(t==null){
 			return null;
 		}
@@ -363,7 +302,7 @@ public abstract class ManageService <T>{
 				method.invoke(newObject, new Object[] { value });
 			}
 		}
-		return (T)newObject;
+		return newObject;
 	}
 	
 	

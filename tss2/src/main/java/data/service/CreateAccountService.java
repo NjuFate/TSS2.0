@@ -33,17 +33,7 @@ public interface CreateAccountService {
 	
 	public boolean addAccount(model.User user) throws AddAccountException, AddUserRoleException;
 	
-	
-	/**
-	 * 添加绑定手机号
-	 * @param account 账号
-	 * @param phoneNumber 绑定手机号码
-	 * @return true 成功， false 失败
-	 * @throws NoAccountException 
-	 * @throws AddPhoneNumberException 
-	 */
-	public boolean addPhoneNumber(String account, String phoneNumber) throws NoAccountException, AddPhoneNumberException;
-	
+
 	
 	/**
 	 * 添加绑定邮箱号

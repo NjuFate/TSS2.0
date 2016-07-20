@@ -2,6 +2,8 @@ package model;
 
 
 public class File {
+	
+	private long id;
 	private boolean isFolder;
 	private String father;//上级目录，第一级目录下的文件的父目录为课程名
 	private String fileName;//文件名
@@ -16,6 +18,7 @@ public class File {
 	
 	
 	public File(po.File file){
+		this.id = file.getId();
 		this.isFolder = new Boolean("" + file.getIsFolder());
 		this.father = file.getFather();
 		this.fileName = file.getFileName();
@@ -88,6 +91,16 @@ public class File {
 	public void setSemester(String semester) {
 		this.semester = semester;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
 	
 	
 }

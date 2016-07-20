@@ -11,22 +11,25 @@ import general.Role;
 
 public class User {
 
-	private int id;// 编号
+	private long id;// 编号
 	private String account;// 账号
+	private String hAccount;//环信帐号
+	private String psw; // 密码
 	private String name; // 名字
 	private int age; // 年龄
 
 	private String iconurl;
 	private String nickName;//昵称
-	private String psw; // 密码
+	
 	private List<String> major; // 主修方向
 	private Role role;//角色分类
 	
-	//new add
+	//new add 非必需
 	private String email;//邮箱
 	private String qq;//qq
 	private String grade;//年级
 	private String tel;//电话
+	
 	private String educational_ID;//教务网账号
 	private String educational_Psw;//教务网密码
 	
@@ -133,11 +136,11 @@ public class User {
 		this.age = age;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -177,5 +180,13 @@ public class User {
 
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
+	}
+
+	public String gethAccount() {
+		return hAccount;
+	}
+
+	public void sethAccount(String hAccount) {
+		this.hAccount = hAccount;
 	}
 }

@@ -68,4 +68,10 @@ public class ProjectImpl implements ProjectService{
 	}
 
 
+	public List<Project> getAllProject() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }
