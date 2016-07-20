@@ -1,5 +1,7 @@
 package dataservice;
 
+import android.content.Context;
+
 import java.util.List;
 
 import entity.CourseEntity;
@@ -9,7 +11,7 @@ import entity.CourseEntity;
  */
 public interface CourseService {
 
-    public List<CourseEntity> getAllCourses(String username, String password);
+    public List<CourseEntity> getAllCourses(Context context, String username, String password);
 //
     public boolean login(String username, String password);
 }

@@ -104,7 +104,7 @@ public class FragmentDisplyCourse extends Fragment {
 
     public void initCourseBox() {
         service = new CourseServiceStub();
-        List<CourseEntity> resourse = service.getAllCourses(usernamestr, passwordstr);
+        List<CourseEntity> resourse = service.getAllCourses(getActivity(),usernamestr, passwordstr);
         for (CourseEntity entity : resourse) {
             List<CourseTimeEntity> times = entity.getTime();
             int weekday = 0;
