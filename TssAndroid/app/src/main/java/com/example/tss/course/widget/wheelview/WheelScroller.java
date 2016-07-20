@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.example.tss.course.widget;
+package com.example.tss.course.widget.wheelview;
 
 import android.content.Context;
 import android.os.Handler;

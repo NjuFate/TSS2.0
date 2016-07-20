@@ -196,19 +196,19 @@
         android:orientation="horizontal"
         android:weightSum="1">
 
-        <com.example.tss.course.widget.WheelView
+        <com.example.tss.course.widget.wheelview.WheelView
             android:id="@+id/courseWheelWeekday"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33333" />
 
-        <com.example.tss.course.widget.WheelView
+        <com.example.tss.course.widget.wheelview.WheelView
             android:id="@+id/courseWheelStart"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33333" />
 
-        <com.example.tss.course.widget.WheelView
+        <com.example.tss.course.widget.wheelview.WheelView
             android:id="@+id/courseWheelEnd"
             android:layout_width="0dp"
             android:layout_height="match_parent"

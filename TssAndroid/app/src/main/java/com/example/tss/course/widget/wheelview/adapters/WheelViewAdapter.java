@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.example.tss.course.widget.adapters;
+package com.example.tss.course.widget.wheelview.adapters;
 
 import android.database.DataSetObserver;
 import android.view.View;

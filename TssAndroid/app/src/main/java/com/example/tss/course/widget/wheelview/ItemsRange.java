@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.example.tss.course.widget;
+package com.example.tss.course.widget.wheelview;
 
 /**
  * Range for visible items.

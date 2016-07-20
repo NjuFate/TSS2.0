@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.example.tss.course.widget;
+package com.example.tss.course.widget.wheelview;
 
 /**
  * Wheel adapter interface

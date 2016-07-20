@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tss.tssandroid.R;
+import com.example.dyp.tssandroid.R;
 
 import java.util.List;
 
