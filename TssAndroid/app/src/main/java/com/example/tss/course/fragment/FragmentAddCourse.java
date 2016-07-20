@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.tss.course.widget.wheelview.adapters.ArrayWheelAdapter;
-import com.example.dyp.tssandroid.R;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,7 @@ import com.example.tss.course.entity.CourseEntity;
 import com.example.tss.course.entity.CourseTimeEntity;
 import com.example.tss.course.widget.wheelview.OnWheelChangedListener;
 import com.example.tss.course.widget.wheelview.WheelView;
+import com.example.tss.tssandroid.R;
 
 
 /**

@@ -17,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.dyp.tssandroid.R;
 
 import java.util.List;
 
@@ -26,6 +25,7 @@ import com.example.tss.course.helper.CourseServiceStub;
 import com.example.tss.course.dataservice.CourseService;
 import com.example.tss.course.entity.CourseEntity;
 import com.example.tss.course.entity.CourseTimeEntity;
+import com.example.tss.tssandroid.R;
 
 
 /**
