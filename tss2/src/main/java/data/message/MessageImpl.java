@@ -36,7 +36,8 @@ public class MessageImpl implements MessageService{
 			List<model.InformMessage> mmsgs  =  new ArrayList<model.InformMessage>();
 			User user = new User();
 			user.setId(msgs.get(0).getSender());
-		    user = userManage.query(user).get(0);
+			ArrayList<User>users = userManage.query(user);
+		    user = users.get(0);
 		    String iconurl = user.getIconurl();
 		    String title = user.getNickName();
 		    
@@ -49,6 +50,9 @@ public class MessageImpl implements MessageService{
 			return mmsgs;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}catch (Exception e) {
+			// TODO: handle exception
 			e.printStackTrace();
 		}
 		 

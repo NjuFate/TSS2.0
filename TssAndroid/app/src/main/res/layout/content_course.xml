@@ -10,7 +10,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.example.dyp.tssandroid.MainActivity"
+        tools:context="com.example.tss.tssandroid.MainActivity"
         tools:showIn="@layout/app_bar_main"
         android:orientation="vertical"
         android:background="@color/colorCourseLight">

@@ -1,17 +1,23 @@
 package logic.schedule;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.httpclient.Cookie;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.NameValuePair;
-import org.apache.commons.httpclient.cookie.CookiePolicy;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.http.Consts;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.impl.cookie.PublicSuffixDomainFilter;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -20,151 +26,109 @@ import po.ScheduleItem;
 
 public class ScheduleProvider {
 
-	// 登陆 Url  
-	private static final String loginUrl = "http://desktop.nju.edu.cn:8080/jiaowu/login.do";  
-	// 需登陆后访问的 Url  
-	private static final String dataUrl = "http://desktop.nju.edu.cn:8080/jiaowu/student/teachinginfo/courseList.do?method=currentTermCourse";  
+
+	private static final String URL = "http://desktop.nju.edu.cn:8080/jiaowu/login.do";//访问的登陆网址
+	private static final String SURL = "http://desktop.nju.edu.cn:8080/jiaowu/student/teachinginfo/courseList.do?method=currentTermCourse";
+	private static HttpClient httpClient;
+
+	/** 
+	 * 登陆到教务系统 
+	 * @author xuan
+	 * @param userName 用户名
+	 * @param password 密码
+	 * @return 成功返回true 失败返回false
+	 *  
+	 */  
+	public boolean login(String userName,String password){  
+		httpClient = new DefaultHttpClient(new ThreadSafeClientConnManager());
 
 
-	public List<ScheduleItem> getAllCourses(String userName, String password){
-		List<ScheduleItem>schedule;
-		String tmpcookies = null;
-		HttpClient httpClient = null;
-		PostMethod postMethod = null;
+		HttpPost httpost = new HttpPost(URL);  
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+
+		nvps.add(new BasicNameValuePair("userName", userName));   
+		nvps.add(new BasicNameValuePair("password", password));   
+		nvps.add(new BasicNameValuePair("returnUrl", "null"));  
+
+		/*设置字符*/  
+		httpost.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));  
+
+		/*尝试登陆*/  
+		HttpResponse response;  
+		try {     
+			response = httpClient.execute(httpost);  
+
+			/*验证是否请求和响应都成功*/
+			if(response.getStatusLine().getStatusCode() == 200){  
+				return true;  
+			}else{  
+				httpClient = null;
+				return false;  
+			}  
+		} catch (ClientProtocolException e) {  
+			e.printStackTrace();  
+		} catch (IOException e) {  
+			e.printStackTrace();  
+		}  
+
+		return false;  
+	}
 
 
-		try {  
-			// 设置 HttpClient 接收 Cookie,用与浏览器一样的策略  
-			CookieClient client = getCookieClient(userName, password);
-			tmpcookies = client.getCookie();
-			httpClient = client.getHttpClient();
-			postMethod = client.getPostMethod();
-			// 进行登陆后的操作
-			GetMethod getMethod = new GetMethod(dataUrl);  
-			// 每次访问需授权的网址时需带上前面的 cookie 作为通行证  
-			getMethod.setRequestHeader("cookie", tmpcookies);  
-			// 你还可以通过 PostMethod/GetMethod 设置更多的请求后数据  
-			// 例如，referer 从哪里来的，UA 像搜索引擎都会表名自己是谁，无良搜索引擎除外  
-			postMethod.setRequestHeader("Referer", "http://www.cc");  
-			postMethod.setRequestHeader("User-Agent", "www Spot");  
-			httpClient.executeMethod(getMethod);  
+	public List<ScheduleItem> getAllCourses(String userName,String password){
+		if(!login(userName, password))
+			return null;
+		/*检查是否已经登陆成功*/  
+		if(httpClient==null)
+			return null;
 
-			InputStream inputStream = getMethod.getResponseBodyAsStream();   
-			BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));   
-			StringBuffer stringBuffer = new StringBuffer();   
-			String str= "";   
-			while((str = br.readLine()) != null){   
-				stringBuffer.append(str+"\n");   
-			}   
-			
-			
-			
-			String text = stringBuffer.toString();
-			schedule = new ArrayList<ScheduleItem>();
-			Document doc = Jsoup.parse(text);
+		HttpGet httpGet = new HttpGet(SURL);
+
+		HttpResponse response;
+		try {
+			response = httpClient.execute(httpGet);
+			String htmlTxt = null;
+			/*验证是否请求和响应都成功*/
+			if(response.getStatusLine().getStatusCode() == 200){
+				HttpEntity entity = response.getEntity();
+				htmlTxt = EntityUtils.toString(entity, "utf-8");
+			}else {
+				return null;
+			}
+			List<ScheduleItem>schedule = new ArrayList<ScheduleItem>();
+			Document doc = Jsoup.parse(htmlTxt);
 			Elements trs = doc.select("table").select("tr");
-			for(int i = 3;i<trs.size() - 1;i++){
+			for(int i = 3;i<trs.size() - 1;i++){ //i的具体参数需要参照htmlTxt的格式
 				Elements tds = trs.get(i).select("td");
 				try {
-
 					ScheduleItem item = new ScheduleItem();
 					item.setId(tds.get(0).text());
 					item.setName(tds.get(2).text());
 					item.setTeachers(tds.get(4).text());
 					item.setMessage(tds.get(5).text());
 					schedule.add(item);
-
 				}catch (Exception e) {
 					// TODO: handle exception
 					continue;
 				}
-
 			}
 			return schedule;
-		} catch (Exception e) {  
-			e.printStackTrace();  
-		}  
-		return null;
-	}
-
-
-	public boolean login(String userName, String password){
-		CookieClient client = getCookieClient(userName, password);
-		String cookie = client.getCookie();
-		return cookie.contains(userName);
-	}
-
-
-	private CookieClient getCookieClient(String userName, String password){
-
-		HttpClient httpClient = new HttpClient();  
-		// 模拟登陆，按实际服务器端要求选用 Post 或 Get 请求方式  
-		PostMethod postMethod = new PostMethod(loginUrl);  
-		// 设置登陆时要求的信息，用户名和密码  
-		NameValuePair[] data = { 
-				new NameValuePair("userName", userName),  
-				new NameValuePair("password", password),
-				new NameValuePair("returnUrl", null) };  
-		postMethod.setRequestBody(data);  
-
-
-		try {  
-			// 设置 HttpClient 接收 Cookie,用与浏览器一样的策略  
-			httpClient.getParams().setCookiePolicy(  
-					CookiePolicy.BROWSER_COMPATIBILITY);  
-			httpClient.executeMethod(postMethod);  
-			// 获得登陆后的 Cookie  
-			Cookie[] cookies = httpClient.getState().getCookies();  
-			StringBuffer tmpcookies = new StringBuffer();  
-			for (Cookie c : cookies) {  
-				tmpcookies.append(c.toString() + ";");  
-			} 
-			return new CookieClient(httpClient, postMethod, tmpcookies.toString());
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-		} 
+		}
+
 		return null;
 	}
 
 
-
-	public class CookieClient{
-		private HttpClient httpClient;
-		private PostMethod postMethod;
-		private String cookie;
-		public HttpClient getHttpClient() {
-			return httpClient;
-		}
-
-		public CookieClient(HttpClient httpClient, PostMethod postMethod,String cookie) {
-			// TODO Auto-generated constructor stub
-			this.cookie = cookie;
-			this.httpClient = httpClient;
-			this.postMethod = postMethod;
-		}
-
-		public void setHttpClient(HttpClient httpClient) {
-			this.httpClient = httpClient;
-		}
-		public String getCookie() {
-			return cookie;
-		}
-		public void setCookie(String cookie) {
-			this.cookie = cookie;
-		}
-
-		public PostMethod getPostMethod() {
-			return postMethod;
-		}
-
-		public void setPostMethod(PostMethod postMethod) {
-			this.postMethod = postMethod;
-		}
+}
 
 
-	}
-
-
-}  
 
