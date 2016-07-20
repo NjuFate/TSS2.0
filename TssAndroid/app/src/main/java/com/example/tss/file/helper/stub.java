@@ -1,5 +1,7 @@
 package com.example.tss.file.helper;
 
+import com.example.tss.file.entity.My_File;
+
 /**
  * Created by john on 2016/7/11.
  */

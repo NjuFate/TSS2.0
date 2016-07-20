@@ -11,9 +11,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.tss.file.entity.My_File;
 import com.example.tss.tssandroid.R;
-
-import data.My_File;
 
 /**
  * Created by john on 2016/7/14.

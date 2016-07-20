@@ -1,7 +1,7 @@
 package com.example.tss.file.helper;
 
-import data.Isolated_File;
-import data.My_File;
+import com.example.tss.file.entity.Isolated_File;
+import com.example.tss.file.entity.My_File;
 
 /**
  * Created by john on 2016/7/15.
