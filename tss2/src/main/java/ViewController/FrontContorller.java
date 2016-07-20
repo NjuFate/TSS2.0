@@ -45,6 +45,20 @@ public class FrontContorller {
 		userProfile.setViewName("userprofile");
 		return userProfile;
 	}
+	
+	@RequestMapping("/upanddown")
+	public ModelAndView upanddown(HttpServletRequest request){
+		ModelAndView upanddown = new ModelAndView();
+		String role = CookieHelper.getCookieByName("role", request);
+		System.out.println("role= "+ role);
+		if(role.equals("teacher")){
+			upanddown.setViewName("teacher_upload");
+		}
+		if(role.equals("student")){
+			upanddown.setViewName("student_download");
+		}
+		return upanddown;
+	}
 
 	
 }

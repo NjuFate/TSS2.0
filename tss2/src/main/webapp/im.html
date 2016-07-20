@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type='text/javascript' src='strophe.js'></script>
+<script type="text/javascript" src="easemob.im-1.1.1.js"></script>
+<script type="text/javascript" src="easemob.im.shim.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script> 
+
+</head>
+<body>
+
+<div id="regist-box">
+	user<input type="text" id="usename" />
+	password<input type="password" id="password" />
+	nickname<input type="text" id="nickname" />
+	<input type="button" value="regist"  id="regist" />
+</div>
+
+</body>
+<script>
+	var account = document.getElementById('user').value;
+	var psw = document.getElementById('password').value;
+	var nickName = document.getElementById('nickname').value;
+	 $("#regist").on('click', function() {
+	var options = {
+		username : account,
+		password : psw,
+		appKey : 'njufate#njufate',
+		success : function(result) {
+				//注册成功;
+				alert("注册成功");
+		},
+		error : function(e) {
+				//注册失败;
+				alert("注册失败");
+		}
+	};
+	Easemob.im.Helper.registerUser(options);
+  });
+</script>
+</html>
