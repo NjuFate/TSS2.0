@@ -13,19 +13,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tss.tssandroid.R;
 
 import java.util.List;
 
 
+import com.example.tss.course.helper.CourseJsonHelper;
 import com.example.tss.course.helper.CourseServiceStub;
 import com.example.tss.course.dataservice.CourseService;
 import com.example.tss.course.entity.CourseEntity;
 import com.example.tss.course.entity.CourseTimeEntity;
-import com.example.tss.tssandroid.R;
+import com.example.tss.util.fileUtil.FileUtil;
 
 
 /**
@@ -59,11 +62,6 @@ public class FragmentDisplyCourse extends Fragment {
             parent.removeView(view);
         }
 
-        for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 11; j++) {
-                boolCourseBox[i][j] = false;
-            }
-        }
         initCourseBox();
         return view;
     }
@@ -78,15 +76,12 @@ public class FragmentDisplyCourse extends Fragment {
                 builder.setItems(getResources().getStringArray(R.array.ItemArray), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
                         if (arg1 == 0) {
-                            initCourseBox();
-                        }
-                        if (arg1 == 1) {
                             shareCourseBox();
                         }
-                        if (arg1 == 2) {
+                        if (arg1 == 1) {
                             loginCourse();
                         }
-                        if (arg1 == 3) {
+                        if (arg1 == 2) {
                             FragmentAddCourse details = new FragmentAddCourse();
                             FragmentTransaction ft = getFragmentManager().beginTransaction();
                             ft.replace(R.id.content, details);
@@ -102,8 +97,15 @@ public class FragmentDisplyCourse extends Fragment {
     }
 
     public void initCourseBox() {
-        service = new CourseServiceStub();
-        List<CourseEntity> resourse = service.getAllCourses(getActivity(),usernamestr, passwordstr);
+        List<CourseEntity> resourse;
+        String userNametemp = FileUtil.read(getActivity(),"userName.txt");
+        if(userNametemp!=null){
+            resourse = CourseJsonHelper.analyse(FileUtil.read(getActivity(),"courseData.txt"));
+        }
+        else {
+            loginCourse();
+            return ;
+        }
         for (CourseEntity entity : resourse) {
             List<CourseTimeEntity> times = entity.getTime();
             int weekday = 0;
@@ -118,7 +120,7 @@ public class FragmentDisplyCourse extends Fragment {
                 for (int i = start - 1; i < end - 1; i++) {
                     if (boolCourseBox[weekday - 1][i]) {
                         Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                                "您周" + weekday + "第" + start + "到" + end + "节的课程存在时间上的冲突，请检查后继续", Toast.LENGTH_LONG);
+                                "您周 " + weekday + "第" + start + "到" + end + "节的课程存在时间上的冲突，请检查后继续", Toast.LENGTH_LONG);
                         toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                         confilict = true;
@@ -158,7 +160,7 @@ public class FragmentDisplyCourse extends Fragment {
                     }
                 });
             }
-            offset = (offset + 1) % 6;
+            offset = (offset + 1) % 7;
 
         }
 
@@ -189,9 +191,19 @@ public class FragmentDisplyCourse extends Fragment {
                 boolean flag = service.login(usernamestr, passwordstr);
                 if (flag) {
                     Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                            "登录成功！请点击导入课程表获得课表", Toast.LENGTH_LONG);
+                            "成功导入！ ", Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
+                    service = new CourseServiceStub();
+                    service.getAllCourses(getActivity(), usernamestr, passwordstr);
+
+
+                    Fragment courseFra = new FragmentDisplyCourse();
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.replace(R.id.content, courseFra);
+                    ft.addToBackStack(null);
+                    ft.commit();
+
                 } else {
                     Toast toast = Toast.makeText(getActivity().getApplicationContext(),
                             "密码认证错误，请重新登录", Toast.LENGTH_LONG);
@@ -261,5 +273,6 @@ public class FragmentDisplyCourse extends Fragment {
         });
         offset = (offset + 1) % 7;
     }
+    void deleteCourse(int weekday,int start,int end){}
 }
 

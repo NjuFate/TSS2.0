@@ -15,7 +15,7 @@ import java.util.List;
  * Created by Administrator on 2016/7/20.
  */
 public class CourseJsonHelper {
-    public static List<CourseEntity> Analysis(String jsonStr){
+    public static List<CourseEntity> analyse(String jsonStr){
         List<Integer> all = new ArrayList<Integer>();
         List<Integer> odd = new ArrayList<Integer>();
         List<Integer> even = new ArrayList<Integer>();
