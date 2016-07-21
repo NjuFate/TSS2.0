@@ -3,26 +3,25 @@ package data.message;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import data.base.JDBCHelper;
-import data.base.ParticularQuery;
-import data.manage.MessageManage;
+import data.base.UserQuery;
+import data.manage.InformMessageManage;
 import data.manage.UserManage;
 import data.service.MessageService;
+import model.LoginUser;
 import po.User;
 import po.InformMessage;
 
-public class MessageImpl implements MessageService{
+public class InformMessageImpl implements MessageService{
 	
-	MessageManage messageManage;
+	InformMessageManage messageManage;
 	UserManage userManage;
-	ParticularQuery query;
+	UserQuery query;
 	
-	public MessageImpl() {
+	public InformMessageImpl() {
 		// TODO Auto-generated constructor stub
-		messageManage = new MessageManage();
+		messageManage = new InformMessageManage();
 		userManage = new UserManage();
-		query = new ParticularQuery(new JDBCHelper());
+		query = new UserQuery(userManage);
 	}
 	
 
@@ -36,7 +35,12 @@ public class MessageImpl implements MessageService{
 
 	public List<model.InformMessage> getInformMsg(String account, long time) {
 		// TODO Auto-generated method stub
-		int id = query.getUserIdByAccount(account);
+		LoginUser u = query.getLoginMessage(account);
+		if(u == null)
+			return null;
+		
+		long id = u.getId();
+		
 		String sql  = "select * from informMessage where  receiver = " + id + " and time >=" +time;
 		 try {
 			List<InformMessage> msgs = messageManage.executeQuery(sql, new InformMessage());

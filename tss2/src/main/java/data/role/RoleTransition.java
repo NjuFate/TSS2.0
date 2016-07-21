@@ -1,30 +1,33 @@
 package data.role;
 
-import data.base.JDBCHelper;
-import data.base.ParticularQuery;
+import data.base.UserQuery;
 import data.exception.NoAccountException;
+import data.manage.UserManage;
 import data.manage.UserRoleManage;
 import data.service.RoleTransitionService;
 import general.Role;
+import model.LoginUser;
 import po.UserRole;
 
 public class RoleTransition implements RoleTransitionService{
 	
-	ParticularQuery query;
+	UserQuery query;
 	UserRoleManage userRoleManage;
 	
 	
 	public RoleTransition() {
 		// TODO Auto-generated constructor stub
-		query = new ParticularQuery(new JDBCHelper());
+		query = new UserQuery(new UserManage());
 		userRoleManage = new UserRoleManage();
 	}
 
 	public boolean roleChange(String account, Role role) throws NoAccountException {
 		// TODO Auto-generated method stub
-		int id = query.getUserIdByAccount(account);
-		if(id == 0)
+		long id = 0;
+		LoginUser u = query.getLoginMessage(account);
+		if(u == null)
 			throw new NoAccountException();
+		id = u.getId();
 		
 		UserRole u1 = new UserRole();
 		u1.setUid(id);

@@ -29,8 +29,8 @@ public class FileImplTest {
 
 	@Test
 	public void testSearchByID() {
-		FileExtra file = impl.searchByID(Long.valueOf("16072000000"));		
-        assertEquals("first.ppt", file.getFileName());
+		FileExtra file = impl.searchByID(Long.valueOf("16072000002"));		
+        assertEquals("base", file.getTitle());
 	}
 
 	@Test

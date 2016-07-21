@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-
-import org.omg.PortableServer.POA;
-
 import general.Role;
 
 public class User {
@@ -53,13 +50,22 @@ public class User {
 	}
 	
 	public User(po.User user){
+	
+		this.major = Arrays.asList(user.getMajor().split(" "));
 		this.id = user.getId();
 		this.account = user.getAccount();
+		this.hAccount = user.gethAccount();
 		this.name = user.getName();
 		this.age = user.getAge();
-	    this.psw = user.getPsw();
-		this.major = Arrays.asList(user.getMajor().split(" "));
-
+		this.psw = user.getPsw();
+		this.email = user.getEmail();
+		this.qq = user.getQq();
+		this.tel = user.getTel();
+		this.educational_ID = user.getEducational_ID();
+		this.educational_Psw = user.getEducational_Psw();
+		this.grade = user.getGrade();
+        this.iconurl = user.getIconurl();
+        this.nickName = user.getNickName();
 		
 	}
 	

@@ -2,35 +2,50 @@ package model;
 
 public class FileExtra {
 
-	private long id;
-	private String path;
-	private String fileName;
-	private String icon;
+	private long Id;
+	private String Url;
+	private String Title;
+	private String Icon;
+
+	public FileExtra(FileEx ex) {
+		// TODO Auto-generated constructor stub
+		this.Icon = ex.getIcon();
+		this.Url = ex.getPath();
+		this.Title = ex.getFileName();
+		this.Id = ex.getId();
+	
+	}
+
+
+
+
+
+
 	public long getId() {
-		return id;
+		return Id;
 	}
 	public void setId(long id) {
-		this.id = id;
+		Id = id;
 	}
-	public String getPath() {
-		return path;
+	public String getUrl() {
+		return Url;
 	}
-	public void setPath(String path) {
-		this.path = path;
+	public void setUrl(String url) {
+		Url = url;
 	}
-	public String getFileName() {
-		return fileName;
+	public String getTitle() {
+		return Title;
 	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setTitle(String title) {
+		Title = title;
 	}
 	public String getIcon() {
-		return icon;
+		return Icon;
 	}
 	public void setIcon(String icon) {
-		this.icon = icon;
+		Icon = icon;
 	}
-	
-	
-	
+
+
+
 }

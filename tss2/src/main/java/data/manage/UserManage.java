@@ -9,7 +9,7 @@ public class UserManage extends ManageService<User>{
 	public UserManage() {
 		// TODO Auto-generated constructor stub
 		super();
-		size = 1000;
+		size = 100000;
 		tableName = "user";
 		
 		

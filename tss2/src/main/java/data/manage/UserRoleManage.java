@@ -10,7 +10,7 @@ public class UserRoleManage extends ManageService<UserRole>{
 	public UserRoleManage() {
 		// TODO Auto-generated constructor stub
 		super();
-		size = 1000;
+		size = 100000;
 		tableName = "userrole";
 	}
 	

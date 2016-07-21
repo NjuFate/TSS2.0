@@ -6,6 +6,7 @@ import java.util.List;
 import data.manage.FileManage;
 import data.service.FileService;
 import model.File;
+import model.FileEx;
 import model.FileExtra;
 
 public class FileImpl implements FileService{
@@ -55,12 +56,13 @@ public class FileImpl implements FileService{
 	public FileExtra searchByID(long id) {
 		// TODO Auto-generated method stub
 
-		String sql = "select * from file where id=" + id;
+		String sql = "select * from file where id ='" + id + "'";
 		try {
-			List<FileExtra>fileExtras = fileManage.executeQuery(sql, new FileExtra());
-			if(fileExtras==null||fileExtras.isEmpty())
+			List<FileEx>fileExs = fileManage.executeQuery(sql, new FileEx());
+			if(fileExs==null||fileExs.isEmpty())
 				throw new Exception();
-			return fileExtras.get(0);
+			
+			return new  FileExtra(fileExs.get(0));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -75,7 +77,13 @@ public class FileImpl implements FileService{
 		
 		String sql = "select * from file where filename like '%"+name+"%'";
 		try {
-			List<FileExtra>fileExtras = fileManage.executeQuery(sql, new FileExtra());
+			List<FileEx>fileExs = fileManage.executeQuery(sql, new FileEx());
+			
+			List<FileExtra>fileExtras = new ArrayList<FileExtra>();
+			for(FileEx ex: fileExs)
+			fileExtras.add(new FileExtra(ex));
+			
+
 			return fileExtras;
 		} catch (Exception e) {
 			// TODO: handle exception
