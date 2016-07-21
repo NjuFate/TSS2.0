@@ -22,9 +22,9 @@ public class MessageSenderTest {
 	@Test
 	public void sendMessage(){
 		Message msg = new Message();
-		msg.setMsg("hello tss 2.0");
+		msg.setMsg("hahahah");
 		msg.setType("txt");
-		String[] target = {"xiaohong","xiaoming"};
+		String[] target = {"xiaohong","xiaoming","DYP"};
 		String from = "admin";
 		messageSender.sendMessage(msg, target, from);
 	}

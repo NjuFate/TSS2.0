@@ -1,11 +1,9 @@
 package logic.message;
 
 import java.io.IOException;
-
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
-
 import model.json.Message;
 import model.json.MessageBody;
 import model.json.TokenBody;
@@ -81,7 +79,7 @@ public class MessageSender {
 			httpClient.executeMethod(post);
 			String response = post.getResponseBodyAsString();
 			//result = msgReciver.getTokenFromJsonStr(response);
-			//System.out.println(response);
+			System.out.println(response);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
