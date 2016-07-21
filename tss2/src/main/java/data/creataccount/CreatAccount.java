@@ -1,79 +1,73 @@
 package data.creataccount;
 
-import data.base.JDBCHelper;
-import data.base.ParticularQuery;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import data.exception.AddAccountException;
-import data.exception.AddMailBoxException;
 import data.exception.AddUserRoleException;
 import data.exception.NoAccountException;
-import data.manage.MailBoxManage;
 import data.manage.UserManage;
 import data.manage.UserRoleManage;
 import data.service.CreateAccountService;
 import model.User;
-import po.MailBox;
 import po.UserRole;
 
 public class CreatAccount implements CreateAccountService{
+	private static 
 	UserManage userManage;
 	UserRoleManage userRoleManage;
-	JDBCHelper helper;
-	MailBoxManage mailBoxManage;
-	ParticularQuery query;
 	
 	public CreatAccount() {
 		// TODO Auto-generated constructor stub
-		helper = new JDBCHelper();
 		userManage = new UserManage();
 		userRoleManage = new UserRoleManage();
-		mailBoxManage = new MailBoxManage();
-		query = new ParticularQuery(helper);
 	}
 	
 	
 	
 
-	public boolean addAccount(User user) throws AddAccountException, AddUserRoleException {
+	public String addAccount(User user) throws AddAccountException, AddUserRoleException {
 		// TODO Auto-generated method stub
 		po.User addUser = new po.User(user);
+		String hAccount = createHAccount();
+		addUser.sethAccount(hAccount);
 		long id = userManage.add(addUser);
+		
+		
 		
 		//添加失败
 		if(id == 0)
-			
-           throw new AddAccountException();	
+           throw new AddAccountException();
 		
 		UserRole role = new UserRole();
 		role.setRole(user.getRole().toString());
 		role.setUid(id);
 		
-		if(userRoleManage.add(role) == 0)
-			
+		if(userRoleManage.add(role) == 0)	
 			throw new AddUserRoleException();
 		
-		return  true;
-	}
-
-	
-
-	public boolean addMailBox(String account, String mailBox) throws NoAccountException, AddMailBoxException {
-		// TODO Auto-generated method stub
-		int id = query.getUserIdByAccount(account);
-		
-		
-		if(id == 0)
-			throw new NoAccountException();
-		
-		MailBox mBox = new MailBox();
-		mBox.setUid(id);
-		mBox.setMailBox(mailBox);
-		
-		
-		if(mailBoxManage.add(mBox) == 0)
-			throw new AddMailBoxException();
-		
-		return true;
+		return hAccount;
 	}
 	
+	
+	
+	
+	/**
+	 * 
+	 * @deprecated
+	 * @return string
+	 */
+	private String createHAccount(){
+		String date = new SimpleDateFormat("yyMMdd").format(new Date());
+		
 
+		Calendar cal = Calendar.getInstance();
+		char hour = (char) (cal.get(Calendar.HOUR) + 'A');
+		char minute = (char) ((cal.get(Calendar.MINUTE)% 26) + 'A');
+		char second = (char) ((cal.get(Calendar.SECOND)% 26) + 'A');	
+		return date + hour + minute + second;
+	}
+	
 }

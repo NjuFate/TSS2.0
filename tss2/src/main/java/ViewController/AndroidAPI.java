@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import data.file.FileImpl;
-import data.message.MessageImpl;
+import data.message.InformMessageImpl;
 import data.service.FileService;
 import data.service.MessageService;
 import logic.schedule.ScheduleProvider;
@@ -19,7 +19,7 @@ import po.ScheduleItem;
 @RequestMapping("android.do")
 public class AndroidAPI {
 	private ScheduleProvider scheduleProvider = new ScheduleProvider();
-	private MessageService messageService = new MessageImpl();
+	private MessageService messageService = new InformMessageImpl();
 	private FileService fileService = new FileImpl();
 	/**
 	 * for DaYe Tang

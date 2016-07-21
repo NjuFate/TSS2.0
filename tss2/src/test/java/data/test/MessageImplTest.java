@@ -5,10 +5,10 @@ import java.util.List;
 
 import org.junit.Test;
 
-import data.message.MessageImpl;
+import data.message.InformMessageImpl;
 
 public class MessageImplTest {
-	MessageImpl model = new MessageImpl();
+	InformMessageImpl model = new InformMessageImpl();
 
 	@Test
 	public void test() {
