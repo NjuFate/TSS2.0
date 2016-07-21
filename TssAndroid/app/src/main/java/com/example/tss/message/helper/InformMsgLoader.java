@@ -54,7 +54,7 @@ public class InformMsgLoader extends AsyncTaskLoader<List<InformMessage>> {
 //            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
             read=new InputStreamReader(connection.getInputStream());
             bufferReader=new BufferedReader(read);
-
+            
             //获取服务器返回的字符串
             String str;//读取每一行数据
             StringBuffer buffer=new StringBuffer();//接受全部数据
