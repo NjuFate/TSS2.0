@@ -3,6 +3,7 @@ package com.example.tss.tssandroid;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -15,9 +16,10 @@ import android.view.ViewGroup;
 
 import com.example.tss.course.fragment.FragmentDisplyCourse;
 import com.example.tss.file.fragement.FragmentFileShow;
-import com.example.tss.message.fragment.MsgFragment;
+import com.example.tss.message.activity.ConverListActivity;
 
 import com.example.tss.file.helper.stub;
+import com.hyphenate.easeui.ui.EaseConversationListFragment;
 
 
 /**
@@ -27,6 +29,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
     Fragment contentFra;
     Fragment messageFra;
     public Fragment courseFra;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -59,11 +62,16 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
 
         if (id == R.id.nav_message) {
             // Handle the camera action
-            if(messageFra == null){
-                messageFra = new MsgFragment();
-            }
-            transaction.addToBackStack(null);
-            transaction.replace(R.id.content,messageFra);
+//            if(messageFra == null){
+//                messageFra = new MsgFragment();
+//            }
+//            transaction.addToBackStack(null);
+//            transaction.replace(R.id.content,messageFra);
+
+
+
+
+            startActivity(new Intent(getActivity(), ConverListActivity.class));
 
         } else if (id == R.id.nav_courses) {
             if(courseFra == null){
