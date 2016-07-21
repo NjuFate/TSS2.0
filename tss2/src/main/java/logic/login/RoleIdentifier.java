@@ -6,15 +6,8 @@ import general.Role;
 import model.User;
 
 public class RoleIdentifier {
-	private LoginService loginService;
+	private LoginService loginService = new LoginServiceStub();
 	
-	public RoleIdentifier(LoginService loginService){
-		this.loginService = loginService;
-	}
-	
-	public RoleIdentifier(){
-		loginService = new LoginServiceStub();
-	}
 	
 	public boolean legality(String account,String psw){
 		boolean legality = false;

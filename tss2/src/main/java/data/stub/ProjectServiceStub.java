@@ -35,5 +35,10 @@ public class ProjectServiceStub implements ProjectService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public List<Project> getAllProject() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

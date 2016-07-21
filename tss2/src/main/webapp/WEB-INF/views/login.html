@@ -42,7 +42,7 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="../pages/home" method="get">
+                        <form role="form" action="../pages/home" method="get" id="loginform">
                             <fieldset>
                                 <div class="form-group">
                                     <input id="account" class="form-control" placeholder="E-mail" name="account" type="email" autofocus>
@@ -78,8 +78,8 @@
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="../myJs/cookie.js"></script>
     <script>
-		clearCookie("account");
-		clearCookie("role");
+        var path="../pages/home?"+Math.random();
+		document.getElementById("loginform").setAttribute("action",path);
 	</script>
 
 </body>

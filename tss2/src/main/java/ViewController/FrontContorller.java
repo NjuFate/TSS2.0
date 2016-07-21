@@ -1,6 +1,5 @@
 package ViewController;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -53,11 +52,17 @@ public class FrontContorller {
 		System.out.println("role= "+ role);
 		if(role.equals("teacher")){
 			upanddown.setViewName("teacher_upload");
-		}
-		if(role.equals("student")){
+		}else{
 			upanddown.setViewName("student_download");
 		}
 		return upanddown;
+	}
+	
+	@RequestMapping("/info")
+	public ModelAndView info(){
+		ModelAndView info = new ModelAndView();
+		info.setViewName("InfoCenter");
+		return info;
 	}
 
 	
