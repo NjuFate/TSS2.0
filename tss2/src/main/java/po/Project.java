@@ -2,7 +2,7 @@ package po;
 
 
 public class Project implements BaseId{
-		private Integer id; //唯一标志符
+		private Long id; //唯一标志符
 		private String courseno ;//课程编号
 		private String coursename;//课程名称
 		private String instrutor;//教师
@@ -55,10 +55,10 @@ public class Project implements BaseId{
 		public void setTeaching_assistants(String teaching_assistants) {
 			this.teaching_assistants = teaching_assistants;
 		}
-		public Integer getId() {
+		public Long getId() {
 			return id;
 		}
-		public void setId(int id) {
+		public void setId(long id) {
 			this.id = id;
 		}
 	

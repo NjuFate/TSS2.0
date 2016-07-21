@@ -1,4 +1,5 @@
 var baseUrl = "http://localhost:8080/tss2/data.do?";
+var base = "http://localhost:8080/tss2";
 function createAjaxObj(){
 	var req;
 	if(window.XMLHttpRequest){
@@ -34,8 +35,9 @@ function fillProjectTable(data){
 		var $tr = $("<tr> </tr>");
  	    //alert($table)
  	    //alert($tr)
-	 	$tr.append($("<td><a href='#' onclick='getSourceDoc();'>"+data[i].courseno+"</td>"));
-	 	$tr.append($("<td><a href='#' onclick='getSourceDoc();'>"+data[i].coursename+"</td>"));
+ 	    var url ="../pages/upanddown?"+Math.random();
+	 	$tr.append($("<td><a href="+url+" onclick='getSourceDoc();'>"+data[i].courseno+"</td>"));
+	 	$tr.append($("<td><a href="+url+" onclick='getSourceDoc();'>"+data[i].coursename+"</td>"));
 	 	$tr.append($("<td></td>").text(data[i].instrutor));
      	$tr.append($("<td></td>").text(data[i].semester));
      	$tr.append($("<td></td>").text(data[i].teaching_assistants));
@@ -50,7 +52,7 @@ function getSourceDoc(){
 	var coursename=x[1].innerText;
 	document.cookie = "courseno" + "=" + courseno +";path=/";
 	document.cookie = "coursename" + "=" + coursename +";path=/";
-	window.location.href="../views/teacher_upload.html";
+	//window.location.href="http://localhost:8080/tss2/pages/upanddown";
 }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

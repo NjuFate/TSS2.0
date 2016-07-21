@@ -2,7 +2,7 @@ package po;
 
 
 public class User implements BaseId{
-	private Integer id;// 编号
+	private Long id;// 编号
 	private String account;// 账号
 	private String name; // 名字
 	private Integer age; // 年龄
@@ -55,11 +55,11 @@ public class User implements BaseId{
 		this.age = age;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

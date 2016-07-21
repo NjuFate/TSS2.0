@@ -8,7 +8,7 @@ public class ProjectManage extends ManageService<Project>{
 	public ProjectManage() {
 		// TODO Auto-generated constructor stub
 		super();
-		size = 100;
+		size = 1000;
 		tableName = "project";
 	}
 

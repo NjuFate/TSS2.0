@@ -3,27 +3,27 @@ package po;
 public class UserProject implements BaseId{
 
 	
-	private Integer id;
-	private Integer uid;
-	private Integer pid;
+	private Long id;
+	private Long uid;
+	private Long pid;
 	
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
-	public Integer getUid() {
+	public Long getUid() {
 		return uid;
 	}
-	public void setUid(int uid) {
+	public void setUid(long uid) {
 		this.uid = uid;
 	}
-	public Integer getPid() {
+	public Long getPid() {
 		return pid;
 	}
-	public void setPid(int pid) {
+	public void setPid(long pid) {
 		this.pid = pid;
 	}
 	

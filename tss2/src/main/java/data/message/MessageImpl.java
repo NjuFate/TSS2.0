@@ -25,7 +25,14 @@ public class MessageImpl implements MessageService{
 		query = new ParticularQuery(new JDBCHelper());
 	}
 	
-	
+
+	/**
+	 * 提供一个用户的id和毫秒时间，传回所有receiver是这个用户的、晚于等于这个时间的信息
+	 * @param account
+	 * @param time
+	 * @return List<InformMessage>
+	 * @deprecated
+	 */
 
 	public List<model.InformMessage> getInformMsg(String account, long time) {
 		// TODO Auto-generated method stub
@@ -45,6 +52,9 @@ public class MessageImpl implements MessageService{
 		    	model.InformMessage i = new model.InformMessage(m);
 		    	i.setIconurl(iconurl);
 		    	i.setTitle(title);
+		    	//暂时有问题
+		    	
+		    	i.setReceiver(Integer.valueOf(account));
 		    	mmsgs.add(i);
 		    }
 			return mmsgs;
@@ -56,9 +66,6 @@ public class MessageImpl implements MessageService{
 			e.printStackTrace();
 		}
 		 
-		 
-		 
-		 
 		return null;
 	}
 
@@ -66,7 +73,7 @@ public class MessageImpl implements MessageService{
 		// TODO Auto-generated method stub
 		InformMessage message = new InformMessage(inform);
 		
-	   return messageManage.addByLong(message);
+	   return messageManage.add(message);
 		
 	}
 	

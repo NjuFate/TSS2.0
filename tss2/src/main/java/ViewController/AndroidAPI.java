@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import data.file.FileImpl;
 import data.message.MessageImpl;
+import data.service.FileService;
 import data.service.MessageService;
 import logic.schedule.ScheduleProvider;
+import model.File;
 import po.ScheduleItem;
 
 @Controller
@@ -17,7 +20,7 @@ import po.ScheduleItem;
 public class AndroidAPI {
 	private ScheduleProvider scheduleProvider = new ScheduleProvider();
 	private MessageService messageService = new MessageImpl();
-	
+	private FileService fileService = new FileImpl();
 	/**
 	 * for DaYe Tang
 	 * @param userName
@@ -58,6 +61,11 @@ public class AndroidAPI {
 	
 	
 	/**
-	 * 
+	 * for xia zhiwei
 	 */
+	@RequestMapping(params="method=android_file",method=RequestMethod.GET)
+	public @ResponseBody List<File> getAllFile(){
+		return fileService.getAllFile();
+	}
+	
 }

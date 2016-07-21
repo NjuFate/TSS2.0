@@ -29,4 +29,7 @@ public interface ProjectService {
 	 * @return
 	 */
 	public List<Project> projectListStudent(String account);
+	
+	
+	public  List<Project> getAllProject();
 }

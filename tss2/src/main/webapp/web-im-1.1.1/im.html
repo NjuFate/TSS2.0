@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type='text/javascript' src='strophe.js'></script>
+<script type="text/javascript" src="easemob.im-1.1.1.js"></script>
+<script type="text/javascript" src="easemob.im.shim.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script> 
+
+</head>
+<body>
+<div id="content">
+	消息内容<textarea id="text"></textarea>
+    sendTo <input type="text" id="sendto"/>
+    <button id="send">发送</button>
+</div>
+
+
+<div id="login-box">
+	user<input type="text" id="usename"/>
+	password<input type="password" id="password"/>
+	<input type="button" value="login" id="login" />
+</div>
+
+</body>
+<script>
+
+	
+</script>
+<script>
+$(function(){
+		var conn = null;
+		conn = new Easemob.im.Connection();
+		$('body').on('click','#login',function(){
+			var username = $("#usename").val();
+			var pass = $("#password").val();
+			conn.open({
+				user : username,
+				pwd : pass,
+				appKey : 'njufate#njufate'
+			});
+		});
+		conn.init({
+			onOpened : function(){
+				alert("成功登录");
+				conn.setPresence();
+			},
+			onTextMessage : function(message){
+				console.log(message);
+				var messageContent = message.data;//文本消息体
+				var from = message.from;//消息的发送者
+				alert(message);
+				alert(from);
+				alert("发送消息成功");
+			}
+			
+		});	
+		$("#send").on('click',function(){
+			sendText();
+		});
+		var sendText = function() {
+			var msg = $('textarea').val();
+			var to = $("#sendto").val();
+			var options = {
+				to : to,
+				msg : msg,
+				type : "chat"
+			};
+			conn.sendTextMessage(options);
+		};
+	});
+</script>
+
+</html>

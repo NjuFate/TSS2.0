@@ -3,6 +3,7 @@ package data.service;
 import java.util.List;
 
 import model.File;
+import model.FileExtra;
 
 public interface FileService {
 	/**
@@ -20,7 +21,28 @@ public interface FileService {
 	
 	public List<File> getFileByCourseno(String courseno,String father);
 	
-	public List<File> getAllFile();
+	
+	/**
+	 * 返回文件信息通过id查询
+	 * @return String[path,filename,icon]
+	 */
+	public FileExtra searchByID(long id);
+	
+	/**
+	 * 返回文件信息通过名字查询
+	 * @return List[id,filename,icon]
+	 */
+	public List<FileExtra> searchByName(String name);
+	
+	/**
+	 * 添加文件目录项
+	 * @param file
+	 * @return true or false
+	 */
+	
+	public boolean addFileMessage(File file);
+	
+
 	
 	
 }

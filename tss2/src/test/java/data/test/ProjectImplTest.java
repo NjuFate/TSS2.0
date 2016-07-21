@@ -12,6 +12,7 @@ import data.project.ProjectImpl;
 import model.Project;
 
 public class ProjectImplTest {
+	@SuppressWarnings("deprecation")
 	ProjectImpl Impl = new ProjectImpl();
 
 	@Test

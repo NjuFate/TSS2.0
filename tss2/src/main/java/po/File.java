@@ -2,18 +2,20 @@ package po;
 
 
 public class File implements BaseId{
-	private Integer id;// 数据库id
+	private Long id;// 数据库id
 	private Integer isFolder;
 	private String father;//上级目录，第一级目录下的文件的父目录为课程名
 	private String fileName;//文件名
 	private String updateTime;//跟新时间
-	private String uploadBy;//上传者
+	private String uploadBy;//上传者 帐号
 	private String path;//存储路径
 	
 	private String courseno;//课程编号（这里要确保课程编号的唯一性）
 	//若课程编号无法保证唯一性可以考虑使用课程名+学期
 	private String coursename;
 	private String semester;
+	private String icon = "heheda";
+
 	
 	public File(model.File file){
 		if(file.getIsFolder())
@@ -93,14 +95,22 @@ public class File implements BaseId{
 	public void setSemester(String semester) {
 		this.semester = semester;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		// TODO Auto-generated method stub
 		this.id = id;
 
 	}
-	public Integer getId() {
+	public Long getId() {
 		// TODO Auto-generated method stub
 		return id;
+	}
+	
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
 	}
 	
 	

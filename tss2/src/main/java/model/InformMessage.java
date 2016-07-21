@@ -1,9 +1,8 @@
 package model;
 
-import po.BaseLongId;
 
-public class InformMessage implements BaseLongId{
-	private Long id;// 数据库id
+public class InformMessage{
+	private long id;// 数据库id
 	private String iconurl;    //发送者头像地址
 	private String title;	   //发送者昵称
 	private String content;		//信息内容
@@ -80,7 +79,7 @@ public class InformMessage implements BaseLongId{
 	public void setIfread(int ifread) {
 		this.ifread = ifread;
 	}
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(long id) {

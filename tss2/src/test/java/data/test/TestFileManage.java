@@ -24,14 +24,9 @@ public class TestFileManage {
 	 */
 	@Test
 	public void testadd() throws Exception{
-//		File file = new File();
-//		file.setCourseID("courseid");
-//		file.setPath("path");
-//		file.setFileName("filename");
-//		file.setFatherFile("fatherfile");
-//		file.setUploadUser("uploaduser");
-//		file.setDownNum(12);
-//		dao.add(file);
+		File file = new File();
+		
+		dao.add(file);
 	}
 
 	/**
