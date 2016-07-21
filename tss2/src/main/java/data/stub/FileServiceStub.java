@@ -5,6 +5,7 @@ import java.util.List;
 
 import data.service.FileService;
 import model.File;
+import model.FileExtra;
 
 public class FileServiceStub implements FileService {
 
@@ -65,6 +66,21 @@ public class FileServiceStub implements FileService {
 	public List<File> getAllFile() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public FileExtra searchByID(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<FileExtra> searchByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean addFileMessage(File file) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

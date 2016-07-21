@@ -63,9 +63,9 @@ public class AndroidAPI {
 	/**
 	 * for xia zhiwei
 	 */
-	@RequestMapping(params="method=android_file",method=RequestMethod.GET)
-	public @ResponseBody List<File> getAllFile(){
-		return fileService.getAllFile();
-	}
+//	@RequestMapping(params="method=android_file",method=RequestMethod.GET)
+//	public @ResponseBody List<File> getAllFile(){
+//		return fileService.getAllFile();
+//	}
 	
 }
