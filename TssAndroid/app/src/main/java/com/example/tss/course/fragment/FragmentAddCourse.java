@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.tss.course.widget.wheelview.adapters.ArrayWheelAdapter;
-import com.example.dyp.tssandroid.R;
+import com.example.tss.tssandroid.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,8 +65,7 @@ public class FragmentAddCourse extends Fragment{
                     temp[i] = "到"+(newValue+i+1)+"节";
                 }
                 endWhl.setViewAdapter(new ArrayWheelAdapter<String>(getActivity(),temp));
-                endWhl
-                        .setCurrentItem(0);
+                endWhl.setCurrentItem(0);
             }
         });
 

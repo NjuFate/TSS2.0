@@ -30,7 +30,7 @@ public class FileUtil {
     public static void write(Context context,String msg,String fileName) {
         if (msg == null) return;
         try {
-            FileOutputStream fos = context.openFileOutput("message.txt",
+            FileOutputStream fos = context.openFileOutput(fileName,
                     Context.MODE_PRIVATE);
             fos.write(msg.getBytes());
             fos.close();
