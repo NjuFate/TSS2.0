@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug"><source path="X:\AndroidStudioProjects\easemob-sdk-3.1.4\examples\easeui\build\intermediates\bundles\debug\assets"/></dataSet><dataSet config="main"><source path="X:\AndroidStudioProjects\easemob-sdk-3.1.4\examples\easeui\src\androidTest\assets"/><source path="X:\AndroidStudioProjects\easemob-sdk-3.1.4\examples\easeui\build\generated\assets\shaders\androidTest\debug"/></dataSet></merger>
