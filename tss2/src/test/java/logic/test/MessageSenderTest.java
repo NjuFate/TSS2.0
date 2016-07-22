@@ -22,7 +22,7 @@ public class MessageSenderTest {
 	@Test
 	public void sendMessage(){
 		Message msg = new Message();
-		msg.setMsg("hahahah");
+		msg.setMsg("你好 ");
 		msg.setType("txt");
 		String[] target = {"xiaohong","xiaoming","DYP"};
 		String from = "admin";

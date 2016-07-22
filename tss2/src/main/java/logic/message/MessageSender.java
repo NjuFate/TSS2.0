@@ -54,13 +54,14 @@ public class MessageSender {
 	public String sendMessage(Message msg,String[] target,String from){
 		String url = "https://a1.easemob.com/njufate/njufate/messages";
 		PostMethod post = new PostMethod(url);
-		post.setRequestHeader("Content-Type","application/json");
+		post.setRequestHeader("Content-Type","application/json;charset=UTF-8");
 //		//
 //		String url = "https://a1.easemob.com/njufate/njufate/token";
 //		String client_id = "YXA6S74tkE4lEeaYET-XvTPfjw";
 //		String client_secret = "YXA6AD8gVqnNDtelGKgvNvM4RXFFfag";
 		String token = getToken("https://a1.easemob.com/njufate/njufate/token","YXA6S74tkE4lEeaYET-XvTPfjw","YXA6AD8gVqnNDtelGKgvNvM4RXFFfag");
 		post.setRequestHeader("Authorization","Bearer "+token);
+		
 		//
 		MessageBody msgBody = new MessageBody();
 		msgBody.setMsg(msg);
