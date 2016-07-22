@@ -7,11 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import data.file.AndroidFile;
 import data.file.FileImpl;
 import data.message.InformMessageImpl;
+import data.service.AndroidDownLoadService;
 import data.service.FileService;
 import data.service.MessageService;
 import logic.schedule.ScheduleProvider;
+import model.AndroidProject;
 import model.File;
 import po.ScheduleItem;
 
@@ -21,6 +24,7 @@ public class AndroidAPI {
 	private ScheduleProvider scheduleProvider = new ScheduleProvider();
 	private MessageService messageService = new InformMessageImpl();
 	private FileService fileService = new FileImpl();
+	private AndroidDownLoadService androidDownloadService = new AndroidFile();
 	/**
 	 * for DaYe Tang
 	 * @param userName
@@ -67,5 +71,18 @@ public class AndroidAPI {
 //	public @ResponseBody List<File> getAllFile(){
 //		return fileService.getAllFile();
 //	}
+	/**
+	 * 
+	 * 
+	 */
+	@RequestMapping(params="method=android_file",method=RequestMethod.GET)
+	public @ResponseBody List<File> getCurrentSemesterFile(){
+		return androidDownloadService.getCurrentSemesterFile();
+	}
+	
+	@RequestMapping(params="method=android_source",method=RequestMethod.GET)
+	public @ResponseBody List<AndroidProject> getCurrentSemesterCourse(){
+		return androidDownloadService.getCurrentSemesterCourse();
+	}
 	
 }

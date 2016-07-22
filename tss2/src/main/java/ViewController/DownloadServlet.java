@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DownloadServlet {
 	
 	    @RequestMapping("download")    
-	    public ResponseEntity<byte[]> download(String path) throws IOException {    
+	    public ResponseEntity<byte[]> download(String path,String fileName) throws IOException {    
 	        //String path="E:/GitProject/hello.txt";  
 	        File file=new File(path);  
 	        HttpHeaders headers = new HttpHeaders();    
-	        String fileName="hello.txt";//为了解决中文名称乱码问题  
+	      //  String fileName="hello.txt";//为了解决中文名称乱码问题  
 	        headers.setContentDispositionFormData("attachment", fileName);   
 	        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);   
 	        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),    

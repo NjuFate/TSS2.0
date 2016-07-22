@@ -29,4 +29,9 @@ public class RestAPI {
 		//account 合法性检验：		
 		return fileService.searchByName(key);
 	}
+	
+	@RequestMapping(value="/notification",method=RequestMethod.POST)
+	public @ResponseBody String transferMessage(){
+		return "Success";
+	}
 }

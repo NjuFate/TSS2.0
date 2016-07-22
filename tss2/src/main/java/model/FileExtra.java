@@ -9,8 +9,8 @@ public class FileExtra {
 
 	public FileExtra(FileEx ex) {
 		// TODO Auto-generated constructor stub
-		this.Icon = ex.getIcon();
-		this.Url = ex.getPath();
+		this.Icon = "139.129.54.63/tss2/img/ppt.png";
+		this.Url = "139.129.54.63/tss2/downloadFile/download/?path="+ex.getPath()+"&fileName="+ex.getFileName();
 		this.Title = ex.getFileName();
 		this.Id = ex.getId();
 	
