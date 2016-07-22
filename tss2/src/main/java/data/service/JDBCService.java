@@ -23,7 +23,7 @@ public abstract class JDBCService {
 	 * @return Connection
 	 */
 	public Connection getConnection(){
-		Connection conn =null;
+		Connection conn = null;
 		try {
 			Class.forName(driver).newInstance();
 			conn = DriverManager.getConnection(url, user, password);

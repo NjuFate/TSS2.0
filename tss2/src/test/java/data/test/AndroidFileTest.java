@@ -23,6 +23,11 @@ public class AndroidFileTest {
 	@Test
 	public void testGetCurrentSemesterFile() {
 		List<File>files = file.getCurrentSemesterFile();
+		for(int i = 0; i<3; i++){
+			System.out.println(files.get(i).getFileName() + " " + files.get(i).getIsFolder());
+			
+			
+		}
 		assertEquals(3, files.size());
  	}
 
