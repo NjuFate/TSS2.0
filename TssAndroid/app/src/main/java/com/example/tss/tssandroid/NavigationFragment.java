@@ -3,6 +3,7 @@ package com.example.tss.tssandroid;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +14,16 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.tss.course.fragment.FragmentDisplyCourse;
 import com.example.tss.file.fragement.FragmentFileShow;
+import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
 
 import com.example.tss.file.helper.stub;
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
 
 
@@ -92,7 +97,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            logout();
         }
         transaction.addToBackStack(null);
         transaction.commit();
@@ -101,5 +106,47 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
 
         return true;
 
+    }
+
+
+    void logout() {
+        final ProgressDialog pd = new ProgressDialog(getActivity());
+        String st = getResources().getString(R.string.Are_logged_out);
+        pd.setMessage(st);
+        pd.setCanceledOnTouchOutside(false);
+        pd.show();
+        EMClient.getInstance().logout(true,new EMCallBack() {
+
+            @Override
+            public void onSuccess() {
+                getActivity().runOnUiThread(new Runnable() {
+                    public void run() {
+                        pd.dismiss();
+                        // show login screen
+                        ((MainActivity) getActivity()).finish();
+                        startActivity(new Intent(getActivity(), LoginActivity.class));
+
+                    }
+                });
+            }
+
+            @Override
+            public void onProgress(int progress, String status) {
+
+            }
+
+            @Override
+            public void onError(int code, String message) {
+                getActivity().runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        // TODO Auto-generated method stub
+                        pd.dismiss();
+                        Toast.makeText(getActivity(), "unbind devicetokens failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 }

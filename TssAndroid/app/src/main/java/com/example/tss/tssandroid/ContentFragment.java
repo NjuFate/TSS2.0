@@ -38,70 +38,9 @@ public class ContentFragment extends Fragment {
 
 //        System.out.println("Hello TssAndroid!");
 
-        loginButton = (Button) view.findViewById(R.id.login);
+
         contentView = (TextView) view.findViewById(R.id.maincontent);
-        username = (EditText) view.findViewById(R.id.username);
-        password = (EditText) view.findViewById(R.id.password);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                EMClient.getInstance().login(username.getText().toString(), password.getText().toString(), new EMCallBack() {
-                    @Override
-                    public void onSuccess() {
-                        Looper.prepare();
-                        Toast.makeText(getActivity(), "登录成功", Toast.LENGTH_SHORT).show();
-                        Looper.loop();
-                    }
-
-                    @Override
-                    public void onError(int i, String s) {
-                        Looper.prepare();
-                        Toast.makeText(getActivity(), "登录错误", Toast.LENGTH_SHORT).show();
-                        Looper.loop();
-                    }
-
-                    @Override
-                    public void onProgress(int i, String s) {
-                        Looper.prepare();
-                        Toast.makeText(getActivity(), "登录中", Toast.LENGTH_SHORT).show();
-                        Looper.loop();
-                    }
-                });;
-            }
-        });
-
-
-        msglistener = new EMMessageListener() {
-            @Override
-            public void onMessageReceived(List<EMMessage> list) {
-                for(EMMessage msg:list){
-                    contentView.setText(msg.getBody().toString());
-                }
-            }
-
-            @Override
-            public void onCmdMessageReceived(List<EMMessage> list) {
-
-            }
-
-            @Override
-            public void onMessageReadAckReceived(List<EMMessage> list) {
-
-            }
-
-            @Override
-            public void onMessageDeliveryAckReceived(List<EMMessage> list) {
-
-            }
-
-            @Override
-            public void onMessageChanged(EMMessage emMessage, Object o) {
-
-            }
-        };
-        EMClient.getInstance().chatManager().addMessageListener(msglistener);
 
         return view;
     }
