@@ -21,7 +21,7 @@ import com.example.tss.file.fragement.FragmentFileShow;
 import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
 
-import com.example.tss.file.helper.stub;
+import com.example.tss.file.helper.Stub;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
@@ -86,7 +86,7 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             transaction.replace(R.id.content,courseFra,"disply");
 
         } else if (id == R.id.nav_files) {
-            stub s = new stub();
+            Stub s = new Stub();
             FragmentFileShow fileShow = new FragmentFileShow(s.getMainFile());
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.replace(R.id.content,fileShow);
