@@ -52,7 +52,7 @@
                 android:background="#00000000"
                 android:text="默认名称"
                 android:textColor="@color/colorCourseAddHint"
-                android:gravity="center"/>
+                android:gravity="left|center"/>
         </LinearLayout>
 
         <ImageView
@@ -82,7 +82,7 @@
                 android:background="#00000000"
                 android:text="默认教室"
                 android:textColor="@color/colorCourseAddHint"
-                android:gravity="center"/>
+                android:gravity="left|center"/>
         </LinearLayout>
 
         <ImageView
@@ -112,7 +112,7 @@
                 android:background="#00000000"
                 android:text="默认老师"
                 android:textColor="@color/colorCourseAddHint"
-                android:gravity="center"/>
+                android:gravity="left|center"/>
         </LinearLayout>
 
         <ImageView
@@ -166,7 +166,7 @@
                 android:background="#00000000"
                 android:text="默认节数"
                 android:textColor="@color/colorCourseAddHint"
-                android:gravity="center"/>
+                android:gravity="left|center"/>
         </LinearLayout>
 
         <ImageView
@@ -197,7 +197,7 @@
                 android:background="#00000000"
                 android:text="默认周数"
                 android:textColor="@color/colorCourseAddHint"
-                android:gravity="center"/>
+                android:gravity="left|center"/>
         </LinearLayout>
 
     </LinearLayout>

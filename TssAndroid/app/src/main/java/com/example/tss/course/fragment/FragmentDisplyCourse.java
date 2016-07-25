@@ -63,6 +63,9 @@ public class FragmentDisplyCourse extends Fragment{
     private static final int LOADER_ID = 1;
     private LoaderManager loaderManager;
 
+//    public int startF;
+//    public int endF;
+//    public int weekdayF;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (view == null) {
@@ -167,10 +170,17 @@ public class FragmentDisplyCourse extends Fragment{
                     @Override
                     public void onClick(View v) {
                         FragmentCourseInfo details = new FragmentCourseInfo();
+                        details.end = endF;
+                        details.start = startF;
+                        details.weekday = weekdayF;
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         ft.replace(R.id.content, details);
                         ft.addToBackStack(null);
                         ft.commit();
+//                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+//                                startF+" "+endF+" "+weekdayF, Toast.LENGTH_LONG);
+//                        toast.setGravity(Gravity.CENTER, 0, 0);
+//                        toast.show();
                     }
                 });
             }
@@ -326,15 +336,13 @@ public class FragmentDisplyCourse extends Fragment{
         temp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                                startF+"", Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+//                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+//                                startF+"", Toast.LENGTH_LONG);
+//                        toast.setGravity(Gravity.CENTER, 0, 0);
+//                        toast.show();
             }
         });
-        offset = (offset + 1) % 7;
+        offset = (offset + 1) % 6;
     }
-    void deleteCourse(int weekday,int start,int end){}
-
 }
 
