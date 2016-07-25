@@ -2,13 +2,10 @@ package com.example.tss.course.helper;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.example.tss.course.entity.Course;
 import com.example.tss.course.entity.CourseEntity;
-import com.example.tss.file.helper.File_Helper;
 import com.example.tss.util.fileUtil.FileUtil;
 
 import java.io.BufferedReader;
@@ -18,7 +15,6 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
-import java.util.jar.Pack200;
 
 /**
  * Created by Administrator on 2016/7/21.

@@ -6,13 +6,13 @@ import com.example.tss.file.entity.My_File;
 /**
  * Created by john on 2016/7/15.
  */
-public class File_Helper {
+public class File_Transform_Helper {
 
     private Isolated_File[] files;
 
     private My_File root;
 
-    public File_Helper() {
+    public File_Transform_Helper() {
         root = new My_File(true);
         root.setName("root");
     }
@@ -81,8 +81,9 @@ public class File_Helper {
 
     /**
      * 判断独立文件的father是否已经在课程文件数组中
+     *
      * @param files 课程文件数组
-     * @param file 独立文件
+     * @param file  独立文件
      * @return 是否包含
      */
     private boolean Contain(My_File[] files, Isolated_File file) {
@@ -107,6 +108,7 @@ public class File_Helper {
     /**
      * 判断此名称是否是课程
      * 遍历所有独立文件，如果没有该名称的文件，说明这是课程名
+     *
      * @param name 需要判断的名称
      * @return
      */
@@ -120,11 +122,7 @@ public class File_Helper {
     }
 
     private My_File Search_Father(String father, My_File root) {
-        if (!root.is_Folder()) {
-            return null;
-        } else if (root.getSon_File() == null) {
-            return null;
-        } else {
+        if ((root.is_Folder()) && (root.getSon_Num() != 0)) {
             My_File[] Sons = root.getSon_File();
             for (int i = 0; i < root.getSon_Num(); i++) {
                 if (Sons[i].getName().equals(father)) {
