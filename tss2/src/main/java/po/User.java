@@ -135,9 +135,6 @@ public class User implements BaseId{
 		return age;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
-	}
 
 	public Long getId() {
 		return id;
@@ -179,11 +176,5 @@ public class User implements BaseId{
 		this.nickName = nickName;
 	}
 
-	
-	
-	
-	
-	
-	
 	
 }

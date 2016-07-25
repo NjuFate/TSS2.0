@@ -114,7 +114,10 @@ public class LoginIn implements LoginService{
 
 	
 	
-
+public static void main(String[]args){
+	LoginIn in = new LoginIn();
+	in.roleIdentifier("eee").getAccount();
+}
 
 
 

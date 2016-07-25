@@ -13,7 +13,7 @@ public class User {
 	private String hAccount;//环信帐号
 	private String psw; // 密码
 	private String name; // 名字
-	private int age; // 年龄
+	private Integer age; // 年龄
 
 	private String iconurl;
 	private String nickName;//昵称
@@ -51,6 +51,7 @@ public class User {
 	
 	public User(po.User user){
 	
+		if(user.getMajor()!=null)
 		this.major = Arrays.asList(user.getMajor().split(" "));
 		this.id = user.getId();
 		this.account = user.getAccount();

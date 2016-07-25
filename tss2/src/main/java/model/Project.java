@@ -32,8 +32,10 @@ public class Project {
 		// TODO Auto-generated constructor stub
 		this.courseno = project.getCourseno();
 		this.coursename = project.getCoursename();
+		if(project.getInstrutor()!=null)
 		this.instrutor = Arrays.asList(project.getInstrutor().split(" "));
 		this.semester = project.getSemester();
+		if(project.getTeaching_assistants()!=null)
 		this.teaching_assistants = Arrays.asList(project.getTeaching_assistants().split(" "));
 		
 	}
