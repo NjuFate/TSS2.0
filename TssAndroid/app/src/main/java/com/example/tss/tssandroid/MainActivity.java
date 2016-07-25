@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int HELP = 5;
     private static final int LOGOUT = 6;
 
+    private int fragmentControl = 0;
 
     //save our header or result
     private AccountHeader headerResult = null;
@@ -138,7 +139,14 @@ public class MainActivity extends AppCompatActivity {
                             toolbar.setTitle(((Nameable) drawerItem).getName().getText(MainActivity.this));
                         }
 
-                        transaction.addToBackStack(null);
+                        if(fragmentControl == 0){
+                            transaction.addToBackStack(null);
+                        }else{
+                            fm.popBackStack();
+                            transaction.addToBackStack(null);
+                        }
+                        fragmentControl++;
+
                         transaction.commit();
 
                         return false;
@@ -200,6 +208,9 @@ public class MainActivity extends AppCompatActivity {
         contentFra = new ContentFragment();
         transaction.replace(R.id.content,contentFra);
         transaction.commit();
+//        getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content,contentFra).commit();
+
+
     }
 
     void logout() {
