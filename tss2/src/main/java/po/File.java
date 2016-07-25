@@ -1,5 +1,7 @@
 package po;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class File implements BaseId{
 	private Long id;// 数据库id
@@ -24,15 +26,21 @@ public class File implements BaseId{
 			isFolder = 0;
 		this.father = file.getFather();
 		this.fileName = file.getFileName();
-		this.updateTime = file.getUpdateTime();
 		this.uploadBy = file.getUploadBy();
 		this.path = file.getPath();
 		this.courseno = file.getCourseno();
 		this.coursename = file.getCoursename();
 		this.semester = file.getSemester();
+		this.updateTime = createNowTime();
 		
 	}
 	
+	private String createNowTime() {
+		// TODO Auto-generated method stub
+		String date = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
+		return date;
+	}
+
 	public File() {
 		// TODO Auto-generated constructor stub
 	}

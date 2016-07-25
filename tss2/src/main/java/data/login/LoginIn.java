@@ -112,6 +112,8 @@ public class LoginIn implements LoginService{
 		return Role.valueOf(userRoles.get(0).getRole());
 	}
 
+	
+	
 
 
 
