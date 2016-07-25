@@ -22,9 +22,10 @@ public class UploadServlet {
 		  
 		        String path = request.getContextPath() + "/jsp/";  
 		        String fileName = file.getOriginalFilename();  
-		  
+		        String courseno = "";
+		        String father="";
 		        try {  
-		            String tomcatPath = "E:/GitProject"; //得到保存的路径  
+		            String tomcatPath = "C:/tss2/"+courseno; //得到保存的路径  
 		            FileCopyUtils.copy(file.getBytes(), new File(tomcatPath +"/" +  fileName));//FileCopyUtils来自org.springframework.util.FileCopyUtils  
 		  
 		        } catch (IOException e) {  
