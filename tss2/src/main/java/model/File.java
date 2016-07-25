@@ -2,7 +2,7 @@ package model;
 
 
 public class File {
-	
+
 	private long id;
 	private boolean isFolder;
 	private String father;//上级目录，第一级目录下的文件的父目录为课程名
@@ -10,16 +10,19 @@ public class File {
 	private String updateTime;//跟新时间
 	private String uploadBy;//上传者
 	private String path;//存储路径
-	
+
 	private String courseno;//课程编号（这里要确保课程编号的唯一性）
 	//若课程编号无法保证唯一性可以考虑使用课程名+学期
 	private String coursename;
 	private String semester;
-	
-	
+
+
 	public File(po.File file){
 		this.id = file.getId();
-		this.isFolder = new Boolean("" + file.getIsFolder());
+		if(file.getIsFolder() == 1)
+			this.isFolder = true;
+		else
+			this.isFolder = false;
 		this.father = file.getFather();
 		this.fileName = file.getFileName();
 		this.updateTime = file.getUpdateTime();
@@ -28,14 +31,14 @@ public class File {
 		this.courseno = file.getCourseno();
 		this.coursename = file.getCoursename();
 		this.semester = file.getSemester();
-		
+
 	}
-	
+
 	public File() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+
+
 	public boolean getIsFolder() {
 		return isFolder;
 	}
@@ -72,7 +75,7 @@ public class File {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
+
 	public String getCourseno() {
 		return courseno;
 	}
@@ -101,6 +104,6 @@ public class File {
 	}
 
 
-	
-	
+
+
 }

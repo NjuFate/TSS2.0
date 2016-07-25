@@ -9,6 +9,7 @@ public class My_File {
     private boolean Is_Folder;
     private My_File[] Son_File;
     private int Son_Num;
+    private String path;
 
     public My_File(boolean is_Folder) {
         if (is_Folder) {
@@ -53,5 +54,13 @@ public class My_File {
         New_Son_File[Son_Num] = New_File;
         Son_Num++;
         Son_File = New_Son_File;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

@@ -5,9 +5,11 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,10 +39,11 @@ public class FragmentFileShow extends Fragment {
         for (int i = 0; i < son_num; i++) {
             son = sons[i];
             TextView tv = new TextView(getActivity());
-            tv.setText("  "+son.getName());
+            tv.setText(son.getName());
             tv.setTextSize(24);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.CENTER;
             tv.setLayoutParams(params);
             tv.setHeight(80);
             tv.setTextColor(Color.BLACK);
@@ -66,9 +69,57 @@ public class FragmentFileShow extends Fragment {
                     }
                 });
             }
-            ((ViewGroup) view.findViewById(R.id.File_Main)).addView(tv);
+            LinearLayout ll = new LinearLayout(getActivity());
+            ll.setOrientation(LinearLayout.HORIZONTAL);
+            ImageView iv = this.getIV(son);
+            ll.addView(iv);
+            ll.addView(tv);
+            ((ViewGroup) view.findViewById(R.id.File_Main)).addView(ll);
         }
         return view;
+    }
+
+    private ImageView getIV(My_File mf) {
+        ImageView iv = new ImageView(getActivity());
+        if (mf.is_Folder()) {
+            // 这是一个文件夹
+            iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_folder));
+        } else {
+            String file_name = mf.getName();
+            int location = file_name.lastIndexOf('.');
+            if (location == -1) {
+                // 这是一个未知文件，使用问号图标
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
+            } else {
+                String extension_name = file_name.substring(location + 1);
+                if (extension_name.equals("doc") || extension_name.equals("docx")) {
+                    // 这是一个文档文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_doc));
+                } else if (extension_name.equals("txt")) {
+                    // 这是一个文本文档
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_txt));
+                } else if (extension_name.equals("ppt") || extension_name.equals("pptx")) {
+                    // 这是一个ppt文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_ppt));
+                } else if (extension_name.equals("rar") || extension_name.equals("zip") || extension_name.equals("gz")) {
+                    // 这是一个压缩包
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_zip));
+                } else if (extension_name.equals("wmv") || extension_name.equals("rmvb") || extension_name.equals("mkv")) {
+                    // 这是一个视频文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_video));
+                } else if (extension_name.equals("pdf")) {
+                    // 这还是一个pdf文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_pdf));
+                } else if (extension_name.equals("jpg") || extension_name.equals("png") || extension_name.equals("jpeg")) {
+                    // 这是一个图片文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_picture));
+                } else {
+                    // 这是一个未知文件
+                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
+                }
+            }
+        }
+        return iv;
     }
 
 }

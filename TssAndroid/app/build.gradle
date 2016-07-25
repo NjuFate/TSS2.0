@@ -26,5 +26,8 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.google.code.gson:gson-parent:2.7'
+    compile('com.mikepenz:materialdrawer:5.3.6@aar') {
+        transitive = true
+    }
     compile project(path: ':easeui')
 }
