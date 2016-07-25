@@ -4,6 +4,10 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     },
     {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     },

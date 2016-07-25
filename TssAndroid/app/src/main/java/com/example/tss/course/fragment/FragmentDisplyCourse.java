@@ -123,6 +123,12 @@ public class FragmentDisplyCourse extends Fragment{
         });
     }
     public void initCourseBox(List<CourseEntity> resourse) {
+        String[] weeks = {"第一周","第二周","第三周","第四周","第五周","第六周",
+                            "第七周","第八周","第九周","第十周","第十一周","第十二周","第十三周",
+                            "第十四周","第十五周","第十六周","第十七周"};
+        ((TextView)view.findViewById(R.id.weeks)).setText("第一周");
+
+
         for (CourseEntity entity : resourse) {
             List<CourseTimeEntity> times = entity.getTime();
             int weekday = 0;

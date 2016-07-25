@@ -73,10 +73,10 @@ public class FragmentCourseInfo extends Fragment {
                         for (int i = 1; i <= a.size(); i++) {
                             // 仿佛兮如轻云之闭月，缥缈兮若流风之回雪
                             if(i!=a.size()){
-                                s+=a.get(i)+",";
+                                s+=a.get(i-1)+",";
                             }
                             else{
-                                s+=a.get(i);
+                                s+=a.get(i-1);
                             }
                         }
                     }
