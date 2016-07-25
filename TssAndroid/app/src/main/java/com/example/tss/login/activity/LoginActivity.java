@@ -46,7 +46,7 @@ public class LoginActivity extends FragmentActivity {
         if (EMClient.getInstance().isLoggedInBefore()) {
             autoLogin = true;
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
+            finish();
             return;
         }
 
