@@ -4,6 +4,10 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_bj.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_normal_shape.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_normal_shape.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_selector.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_selector.xml"
     },
@@ -24,12 +28,28 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_recording_hint_bg.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_type_select_btn.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_type_select_btn.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_press_speak_btn.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_press_speak_btn.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_voice_btn.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatting_setmode_voice_btn.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_type_select_btn.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_type_select_btn.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_recording_text_hint_bg.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_location_selector.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_location_selector.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatfrom_bg.xml",
@@ -42,6 +62,18 @@
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_normal_shape.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_normal_shape.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_image_selector.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_image_selector.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem_grey.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem_grey.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_common_tab_bg.xml",
@@ -60,24 +92,64 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_location_selector.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_send_btn_selector.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_send_btn_selector.xml"
+    },
+    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_sidebar_background_pressed.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_edit_text_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_edit_text_bg.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_normal_shape.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_normal_shape.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_pressed_shape.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_pressed_shape.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatto_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatto_bg.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_image_selector.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_image_selector.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_msg_state_failed_resend.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_msg_state_failed_resend.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatfrom_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatfrom_bg.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_sidebar_background_pressed.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_sidebar_background_pressed.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_bj.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_bj.xml"
+    },
+    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_pressed_shape.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_pressed_shape.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_selector.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_blue_selector.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_hint_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_recording_hint_bg.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_timestampe_bg.xml",
@@ -102,6 +174,10 @@
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_takepic_selector.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_takepic_selector.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_selector.xml",
@@ -136,6 +212,10 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_takepic_selector.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_timestampe_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_timestampe_bg.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_msg_state_failed_resend.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_msg_state_failed_resend.xml"
     },
@@ -148,8 +228,16 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chat_send_btn_selector.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_search_clear.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_search_clear.xml"
+    },
+    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem_grey.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_mm_listitem_grey.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_keyboard_btn.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_press_speak_btn.xml",
@@ -160,12 +248,20 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_pressed_shape.xml"
     },
     {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_common_tab_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_common_tab_bg.xml"
+    },
+    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_recording_text_hint_bg.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_edit_text_bg.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_edit_text_bg.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_sidebar_background_pressed.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_sidebar_background_pressed.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_search_clear.xml",
@@ -182,6 +278,10 @@
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_msg_state_failed_resend.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_msg_state_failed_resend.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_recording_text_hint_bg.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_location_selector.xml",
@@ -202,6 +302,10 @@
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_keyboard_btn.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_pressed_shape.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable\\ease_btn_cancel_pressed_shape.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem.xml",
