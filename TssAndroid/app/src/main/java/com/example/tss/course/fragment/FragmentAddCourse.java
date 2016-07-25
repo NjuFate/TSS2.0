@@ -1,7 +1,9 @@
 package com.example.tss.course.fragment;
 
+import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +26,7 @@ import com.example.tss.course.widget.wheelview.WheelView;
 /**
  * Created by Administrator on 2016/7/12.
  */
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class FragmentAddCourse extends Fragment{
     View view;
     @Override
