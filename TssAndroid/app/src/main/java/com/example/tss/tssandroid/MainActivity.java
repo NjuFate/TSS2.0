@@ -5,10 +5,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -17,7 +16,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.tss.course.fragment.FragmentDisplyCourse;
-import com.example.tss.file.fragement.FragmentFileShow;
+
 import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
 import com.hyphenate.EMCallBack;
@@ -35,6 +34,7 @@ import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
+import com.mikepenz.materialize.color.Material;
 import com.mikepenz.materialize.util.UIUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -76,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
         final IProfile profile = new ProfileDrawerItem().withName(user).withEmail("707969656@qq.com").withIcon(R.drawable.profile);
         headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
+                .withTextColor(getResources().getColor(R.color.gay_gray2))
                 .withCompactStyle(true)
-                .withHeaderBackground(R.drawable.header)
+                .withHeaderBackground(R.drawable.drawer_header)
                 .addProfiles(
                         profile,
                         //don't ask but google uses 14dp for the add account icon in gmail but 20dp for the normal icons (like manage account)
@@ -91,16 +92,17 @@ public class MainActivity extends AppCompatActivity {
         result = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withSliderBackgroundColor(getResources().getColor(R.color.gay_gray1))
                 .withAccountHeader(headerResult) //set the AccountHeader we created earlier for the header
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_message).withIcon(R.drawable.ic_menu_camera).withIdentifier(INFORM_MESSAGE),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_course).withIcon(R.drawable.ic_menu_gallery).withIdentifier(COURSE),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_file).withIcon(R.drawable.ic_menu_camera).withIdentifier(FILE),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_message).withIcon(R.drawable.drawer_message).withIdentifier(INFORM_MESSAGE),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_course).withIcon(R.drawable.drawer_course).withIdentifier(COURSE),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_file).withIcon(R.drawable.drawer_download).withIdentifier(FILE),
                         new SectionDrawerItem().withName(R.string.drawer_item_section_header),
 
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_settings).withIcon(R.drawable.ic_menu_camera).withIdentifier(SETTING),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(R.drawable.ic_menu_camera).withIdentifier(HELP),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_logout).withIcon(R.drawable.ic_menu_camera).withIdentifier(LOGOUT)
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_settings).withIcon(R.drawable.drawer_setting).withIdentifier(SETTING),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(R.drawable.drawer_help).withIdentifier(HELP),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_logout).withIcon(R.drawable.drawer_logout).withIdentifier(LOGOUT)
 
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
