@@ -112,7 +112,12 @@ public class LoginIn implements LoginService{
 		return Role.valueOf(userRoles.get(0).getRole());
 	}
 
-
+	
+	
+public static void main(String[]args){
+	LoginIn in = new LoginIn();
+	in.roleIdentifier("eee").getAccount();
+}
 
 
 

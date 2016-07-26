@@ -4,36 +4,16 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_file.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_file.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_commom_back_btn.xml",
@@ -44,60 +24,36 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
     },
     {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_switch_button.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar_with_padding.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar_with_padding.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar_with_padding.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice_call.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice_call.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_message_list.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_bigexpression.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_bigexpression.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video_call.xml",
@@ -108,64 +64,20 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_file.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_commom_back_btn.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_commom_back_btn.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_picture.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_message.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_message.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_file.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_file.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar_with_padding.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar_with_padding.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar_with_padding.xml",
@@ -176,80 +88,48 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_contact_list.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_contact_list.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_contact_list.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_contact_list.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video_call.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video_call.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_alert_dialog.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_alert_dialog.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video_call.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video_call.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_file.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_file.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_file.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_expression.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_expression.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_expression_gridview.xml",
@@ -268,20 +148,8 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_file.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_file.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
@@ -292,44 +160,16 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_bigexpression.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_picture.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_menu_item.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_menu_item.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_switch_button.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_commom_back_btn.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_commom_back_btn.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_switch_button.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice_call.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice_call.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_commom_back_btn.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_commom_back_btn.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
@@ -340,40 +180,20 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_message_list.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video_call.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video_call.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_file.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_file.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_file.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_file.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_primary_menu.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_primary_menu.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_file.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_file.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video.xml",
@@ -384,20 +204,8 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_alert_dialog.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_alert_dialog.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_title_bar.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_title_bar.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_expression_gridview.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_expression_gridview.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar.xml",
@@ -416,8 +224,8 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_expression_gridview.xml",
@@ -428,20 +236,16 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_title_bar.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_bigexpression.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_bigexpression.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_contact_list.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_contact_list.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_chat.xml",
@@ -464,16 +268,8 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
-    },
-    {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
-    },
-    {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_expression.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_expression.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_bigexpression.xml",
@@ -488,12 +284,12 @@
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_message.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_message.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_message.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_message.xml"
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video_call.xml",
@@ -508,16 +304,432 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
     },
     {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_menu_item.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_menu_item.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_file.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar_with_padding.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video_call.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video_call.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_title_bar.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_title_bar.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_file.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_file.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_commom_back_btn.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_commom_back_btn.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_picture.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_message.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_message.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_expression.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_expression.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_search_bar.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_location.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_location.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_contact_list.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_contact_list.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_contact_list.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_contact_list.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_alert_dialog.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_alert_dialog.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video_call.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video_call.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_chat.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_menu_item.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_menu_item.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_message.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_message.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_expression.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_expression.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_file.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_file.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_bigexpression.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_bigexpression.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_picture.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_switch_button.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_switch_button.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_switch_button.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice_call.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice_call.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_message_list.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_showvideo_activity.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_showvideo_activity.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_video.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_video.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_baidumap.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_baidumap.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice_call.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_primary_menu.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_primary_menu.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_file.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_file.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_alert_dialog.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_alert_dialog.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_title_bar.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_title_bar.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_conversation_item.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_conversation_item.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_expression_gridview.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_expression_gridview.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_bigexpression.xml",
+        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_bigexpression.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_big_expression.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_big_expression.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_expression.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_expression.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+    },
+    {
+        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_message.xml",
+        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_message.xml"
+    },
+    {
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_primary_menu.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_primary_menu.xml"
+    },
+    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_chat_input_menu.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_chat_input_menu.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_emojicon_tab_bar.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
     },
     {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video_call.xml",
@@ -540,10 +752,6 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_menu_item.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_menu_item.xml"
-    },
-    {
         "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_alert_dialog.xml",
         "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_alert_dialog.xml"
     },
@@ -552,39 +760,27 @@
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
-    },
-    {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_contact_list.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_contact_list.xml"
-    },
-    {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice.xml"
-    },
-    {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_scroll_tab_item.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_scroll_tab_item.xml"
     },
     {
         "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_menu_item.xml",
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_menu_item.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_location.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_location.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice_call.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_voice_call.xml"
     },
     {
         "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_chat_message_list.xml",
         "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_chat_message_list.xml"
     },
     {
-        "merged": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_activity_show_big_image.xml",
-        "source": "E:\\GitHub\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_activity_show_big_image.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_picture.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_sent_picture.xml"
     },
     {
-        "merged": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_voice.xml",
-        "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice.xml"
+        "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_emojicon.xml",
+        "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_emojicon.xml"
     }
 ]

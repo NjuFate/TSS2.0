@@ -82,39 +82,29 @@ public class FragmentFileShow extends Fragment {
     private ImageView getIV(My_File mf) {
         ImageView iv = new ImageView(getActivity());
         if (mf.is_Folder()) {
-            // 这是一个文件夹
             iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_folder));
         } else {
             String file_name = mf.getName();
             int location = file_name.lastIndexOf('.');
             if (location == -1) {
-                // 这是一个未知文件，使用问号图标
                 iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
             } else {
                 String extension_name = file_name.substring(location + 1);
                 if (extension_name.equals("doc") || extension_name.equals("docx")) {
-                    // 这是一个文档文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_doc));
                 } else if (extension_name.equals("txt")) {
-                    // 这是一个文本文档
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_txt));
                 } else if (extension_name.equals("ppt") || extension_name.equals("pptx")) {
-                    // 这是一个ppt文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_ppt));
                 } else if (extension_name.equals("rar") || extension_name.equals("zip") || extension_name.equals("gz")) {
-                    // 这是一个压缩包
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_zip));
                 } else if (extension_name.equals("wmv") || extension_name.equals("rmvb") || extension_name.equals("mkv")) {
-                    // 这是一个视频文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_video));
                 } else if (extension_name.equals("pdf")) {
-                    // 这还是一个pdf文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_pdf));
                 } else if (extension_name.equals("jpg") || extension_name.equals("png") || extension_name.equals("jpeg")) {
-                    // 这是一个图片文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_picture));
                 } else {
-                    // 这是一个未知文件
                     iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
                 }
             }

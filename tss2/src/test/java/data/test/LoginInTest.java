@@ -27,7 +27,8 @@ public class LoginInTest {
 	@Test
 	public void testRoleIdentifier() {
 		assertEquals(20,in.roleIdentifier("141250052").getAge());
-		assertEquals(20,in.roleIdentifier("160721LTA").getAge());
+		assertEquals("160721LUU",in.roleIdentifier("www@123.com").gethAccount());
+
 
 	}
 

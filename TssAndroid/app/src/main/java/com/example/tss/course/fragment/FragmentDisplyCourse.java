@@ -63,6 +63,9 @@ public class FragmentDisplyCourse extends Fragment{
     private static final int LOADER_ID = 1;
     private LoaderManager loaderManager;
 
+//    public int startF;
+//    public int endF;
+//    public int weekdayF;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (view == null) {
@@ -120,6 +123,12 @@ public class FragmentDisplyCourse extends Fragment{
         });
     }
     public void initCourseBox(List<CourseEntity> resourse) {
+        String[] weeks = {"第一周","第二周","第三周","第四周","第五周","第六周",
+                            "第七周","第八周","第九周","第十周","第十一周","第十二周","第十三周",
+                            "第十四周","第十五周","第十六周","第十七周"};
+        ((TextView)view.findViewById(R.id.weeks)).setText("第一周");
+
+
         for (CourseEntity entity : resourse) {
             List<CourseTimeEntity> times = entity.getTime();
             int weekday = 0;
@@ -167,10 +176,17 @@ public class FragmentDisplyCourse extends Fragment{
                     @Override
                     public void onClick(View v) {
                         FragmentCourseInfo details = new FragmentCourseInfo();
+                        details.end = endF;
+                        details.start = startF;
+                        details.weekday = weekdayF;
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         ft.replace(R.id.content, details);
                         ft.addToBackStack(null);
                         ft.commit();
+//                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+//                                startF+" "+endF+" "+weekdayF, Toast.LENGTH_LONG);
+//                        toast.setGravity(Gravity.CENTER, 0, 0);
+//                        toast.show();
                     }
                 });
             }
@@ -326,15 +342,13 @@ public class FragmentDisplyCourse extends Fragment{
         temp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                                startF+"", Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+//                        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
+//                                startF+"", Toast.LENGTH_LONG);
+//                        toast.setGravity(Gravity.CENTER, 0, 0);
+//                        toast.show();
             }
         });
-        offset = (offset + 1) % 7;
+        offset = (offset + 1) % 6;
     }
-    void deleteCourse(int weekday,int start,int end){}
-
 }
 
