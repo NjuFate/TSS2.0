@@ -12,16 +12,33 @@ $(function(){
 		
 		conn.init({
 			onOpened : function(){
-				alert("成功登录");
+				//alert("成功登录");
 				conn.setPresence();
+				document.getElementById("infoIcon").setAttribute("class","fa fa-envelope fa-fw");
 			},
 			onTextMessage : function(message){
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var time = h+":"+m;
+				
 				console.log(message);
 				var messageContent = message.data;//文本消息体
 				var from = message.from;//消息的发送者
-				alert(message);
-				alert(from);
-				alert("成功收到消息");
+				document.getElementById("infoIcon").setAttribute("class","fa fa-envelope-o fa-fw");
+				var $messageLabel = $("#message");
+				$messageLabel.append('<li>'+
+                            '<a href="#">'+
+                                '<div>'+
+                                    '<strong>'+from+'</strong>'+
+                                    '<span class="pull-right text-muted">'+
+                                        '<em>'+time+'</em>'+
+                                    '</span>'+
+                                '</div>'+
+                                '<div>'+messageContent+'</div>'+
+                            '</a>'+
+                        '</li>'+
+                        '<li class="divider"></li>');
 			}
 			
 		});	

@@ -20,6 +20,9 @@ public class FileSaver {
 		//file.setUpdateTime(updateTime);
 		String account = CookieHelper.getCookieByName("account", request);
 		file.setUploadBy(account);
+		System.out.println("path = "+ path);
+		
+		file.setPath(path);
 		fileService.addFileMessage(file);
 		
 		return true;

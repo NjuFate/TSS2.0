@@ -51,7 +51,7 @@ public class MessageSender {
 	}
 	
 	
-	public String sendMessage(Message msg,String[] target,String from){
+	public  String sendMessage(Message msg,String[] target,String from){
 		String url = "https://a1.easemob.com/njufate/njufate/messages";
 		PostMethod post = new PostMethod(url);
 		post.setRequestHeader("Content-Type","application/json;charset=UTF-8");
