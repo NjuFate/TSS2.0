@@ -378,10 +378,11 @@
                             Wiki Linking
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
+                        <div id = "Wiki_Linking" class="panel-body">
                             <div class="alert alert-success alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 软件工程发展进程 <a href="www.baidu.com"  target="_blank"  class="alert-link">Alert Link</a>.
+                                <button onclick="myFunction()">点击这里</button>
                             </div>
                             <div class="alert alert-info alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -458,6 +459,34 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+     <script>
+     function myFunction(){
+     var div = document.createElement('div');
+     var button = document.createElement('button');
+     var a = document.createElement('a')
+     
+     
+     button.setAttribute('class','close');
+     button.setAttribute('type', 'button');
+     button.setAttribute('data-dismiss','alert');
+     button.setAttribute('aria-hidden', 'true');
+     
+     
+     a.setAttribute('href','#');
+     a.setAttribute('class','alert-link');
+     
+     div.setAttribute('class','alert alert-success alert-dismissable')
+     div.setAttribute('innerHTML', "fuck you");
+     div.appendChild(button);
+     div.appendChild(a);
+     var element = document.getElementById('Wiki_Linking');
+     element.appendChild(div); 
+     alert("fuck you");
+     }
+     
+     </script>
+
+
 
 </body>
 
