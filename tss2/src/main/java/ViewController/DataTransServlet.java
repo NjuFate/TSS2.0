@@ -48,6 +48,9 @@ public class DataTransServlet {
 	@RequestMapping(params="method=projectList",method=RequestMethod.GET)
 	public @ResponseBody List<Project> projectList(String account) throws Exception {
 		//account 合法性检验：
+		if(account!=null){
+		account = account.substring(1,account.length()-1);}
+		System.out.println(account);
 		if(account==null||account.equals("")){
 			//todo;
 		}

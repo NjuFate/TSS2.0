@@ -8,7 +8,7 @@ function createAjaxObj(){
 	}
 	return req;
 }
-function getDocTable(deal,courseno,father){
+function getDocTable(deal,courseno,father,deal2){
 	var req = createAjaxObj();
 	req.open("get",baseUrl+"method=fileList&courseno="+courseno+"&father="+father,true);
 	req.setRequestHeader("accept","application/json");
@@ -17,6 +17,7 @@ function getDocTable(deal,courseno,father){
 			//alert(req.responseText);
 			eval("var result="+req.responseText);
 			deal(result);
+			deal2(courseno,father);
 		}else{
 			//alert(req.readyState);
 			//alert(req.status);
@@ -29,7 +30,7 @@ function openFolder(index){
 	var courseno = getCookie("courseno");
 	var x=document.getElementById('doclist-table').rows[index].cells;
 	var father= x[0].innerText;
-	getDocTable(fillDocTable,courseno,father);
+	getDocTable(fillDocTable,courseno,father,recordCoursenoAndFather);
 }
 
 function test(){
@@ -66,7 +67,17 @@ function getCookie(cname){
 	return "";
 }
 
+function recordCoursenoAndFather(courseno,father){
+	document.getElementById('disabled_courseno').setAttribute("placeholder",courseno);
+	document.getElementById('disabled_folder').setAttribute("placeholder",father);
+	document.cookie = "courseno" + "=" + courseno +";path=/";
+	//alert("get");
+	document.cookie = "father" + "=" + father +";path=/";
+	//alert("get");
+	//alert(document.cookie);
+}
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 var courseno = getCookie("courseno");
 var coursename = getCookie("coursename");
-getDocTable(fillDocTable,courseno,coursename);
+getDocTable(fillDocTable,courseno,coursename,recordCoursenoAndFather);

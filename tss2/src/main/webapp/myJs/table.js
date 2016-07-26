@@ -49,9 +49,9 @@ function fillProjectTable(data){
 function getSourceDoc(){
 	var x=document.getElementById('course-table').rows[index].cells;
 	var courseno= x[0].innerText;
-	var coursename=x[1].innerText;
+	var coursename=x[0].innerText;
 	document.cookie = "courseno" + "=" + courseno +";path=/";
-	document.cookie = "coursename" + "=" + coursename +";path=/";
+	document.cookie = "coursename" + "=" + courseno +";path=/";
 	//window.location.href="http://localhost:8080/tss2/pages/upanddown";
 }
 

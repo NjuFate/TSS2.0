@@ -2,8 +2,8 @@ package logic.project;
 
 import java.util.List;
 
+import data.project.ProjectImpl;
 import data.service.ProjectService;
-import data.stub.ProjectServiceStub;
 import model.Project;
 
 /**
@@ -13,7 +13,7 @@ import model.Project;
  */
 public class ProjectProvider {
 
-	private ProjectService projectService = new ProjectServiceStub();
+	private ProjectService projectService = new ProjectImpl();
 	
 	public ProjectProvider(){
 		

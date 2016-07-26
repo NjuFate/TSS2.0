@@ -2,12 +2,12 @@ package logic.file;
 
 import java.util.List;
 
+import data.file.FileImpl;
 import data.service.FileService;
-import data.stub.FileServiceStub;
 import model.File;
 
 public class FileProvider {
-	private FileService fileService = new FileServiceStub();
+	private FileService fileService = new FileImpl();
 	public FileProvider(){
 		//实例化 fileService
 	}

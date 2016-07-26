@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import general.CookieHelper;
 import general.Role;
+import logic.login.Association;
 import logic.login.RoleIdentifier;
 
 /**
@@ -21,6 +22,9 @@ import logic.login.RoleIdentifier;
 @RequestMapping("/pages")
 public class LoginServlet {
 	private RoleIdentifier roleIdentifier = new RoleIdentifier();
+	private Association association = new Association();
+	
+	
 	
 	public void setRoleIdentifier(RoleIdentifier roleIdentifier){
 		this.roleIdentifier = roleIdentifier;
@@ -37,6 +41,10 @@ public class LoginServlet {
 			return mav;
 		}else{
 			//密码账号对应
+			//发放环信账号：
+			association.loginAssociation(account, response);
+				
+			//
 			ModelAndView mav = new ModelAndView();
 			mav.setViewName("index");
 			CookieHelper.addNewCookie("account", account, response);
