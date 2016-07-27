@@ -82,7 +82,7 @@ public class MessageService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        EMClient.getInstance().chatManager().removeMessageListener(msgListener);
+//        EMClient.getInstance().chatManager().removeMessageListener(msgListener);
     }
 
     private PendingIntent openConversationList(){

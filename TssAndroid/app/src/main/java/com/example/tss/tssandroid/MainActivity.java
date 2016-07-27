@@ -148,17 +148,24 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if (drawerItem instanceof Nameable && drawerItem.getIdentifier()!=1) {
-                            toolbar.setTitle(((Nameable) drawerItem).getName().getText(MainActivity.this));
+                        if (drawerItem instanceof Nameable ) {
+                            if(drawerItem.getIdentifier()!=1){
+                                toolbar.setTitle(((Nameable) drawerItem).getName().getText(MainActivity.this));
+                            }else{
+                                toolbar.setTitle("TssAndroid");
+                            }
+
                         }
 
                         if(fragmentControl == 0){
                             transaction.addToBackStack(null);
-                        }else{
+                        }else if(drawerItem.getIdentifier()!=1){
                             fm.popBackStack();
                             transaction.addToBackStack(null);
+                        }else{
+                            fm.popBackStack();
                         }
-                        fragmentControl++;
+                        fragmentControl = 1;
 
                         transaction.commit();
 
@@ -183,7 +190,10 @@ public class MainActivity extends AppCompatActivity {
 //        if (drawer.isDrawerOpen(GravityCompat.START)) {
 //            drawer.closeDrawer(GravityCompat.START);
 //        } else {
+
             super.onBackPressed();
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("TssAndroid");
 //        }
     }
 
@@ -226,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
 //        getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content,contentFra).commit();
 
-
+//
     }
 
     void logout() {

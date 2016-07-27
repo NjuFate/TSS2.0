@@ -20,6 +20,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
     <string name="drawer_item_message">消息</string>
     <string name="drawer_item_course">课程表</string>
     <string name="drawer_item_file">文件下载</string>
