@@ -17,13 +17,17 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.tss.course.fragment.FragmentDisplyCourse;
+import com.example.tss.file.entity.Course_Info;
 import com.example.tss.file.fragement.FragmentFileShow;
+import com.example.tss.file.helper.File_Net_Helper;
 import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
+
+import java.util.List;
 
 
 /**
@@ -85,11 +89,20 @@ public class NavigationFragment extends Fragment implements NavigationView.OnNav
             transaction.replace(R.id.content,courseFra,"disply");
 
         } else if (id == R.id.nav_files) {
-            FragmentFileShow fileShow = new FragmentFileShow(null);
-            FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.content,fileShow);
-            ft.addToBackStack(null);
-            ft.commit();
+
+
+//            File_Net_Helper.getFileInfo();
+//            File_Net_Helper.getCourseInfo();
+//            List<Course_Info> courses = File_Net_Helper.Course_Infos;
+//            String[] course_name = new String[courses.size()];
+//            for (int i = 0; i < courses.size(); i++) {
+//                course_name[i] = courses.get(i).getCoursename();
+//            }
+//            FragmentFileShow fileShow = new FragmentFileShow(course_name, "root");
+//            FragmentTransaction ft = getFragmentManager().beginTransaction();
+//            ft.replace(R.id.content, fileShow);
+//            ft.addToBackStack(null);
+//            ft.commit();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

@@ -21,6 +21,10 @@ import android.widget.Toast;
 
 import com.example.tss.course.fragment.FragmentDisplyCourse;
 
+import com.example.tss.file.entity.Course_Info;
+import com.example.tss.file.entity.Isolated_File;
+import com.example.tss.file.fragement.FragmentFileShow;
+import com.example.tss.file.helper.File_Net_Helper;
 import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
 import com.example.tss.tssandroid.service.MessageService;
@@ -41,6 +45,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.materialize.color.Material;
 import com.mikepenz.materialize.util.UIUtils;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PROFILE_SETTING = 1;
@@ -129,11 +135,24 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 transaction.replace(R.id.content,courseFra,"disply");
                             }else if(identifier == FILE){
-//                                if(fileFra == null){
-//                                    stub s = new stub();
-//                                    fileFra = new FragmentFileShow(s.getMainFile());
-//                                }
-//                                transaction.replace(R.id.content,fileFra);
+                                if(File_Net_Helper.Course_Infos.size()==0) {
+                                    File_Net_Helper.getCourseInfo();
+                                }
+                                if(File_Net_Helper.files.size()==0) {
+                                    File_Net_Helper.getFileInfo();
+                                }
+                                List<Course_Info> courses = File_Net_Helper.Course_Infos;
+                                String[] course_name = new String[courses.size()];
+                                for (int i = 0; i < courses.size(); i++) {
+                                    course_name[i] = courses.get(i).getCoursename();
+                                }
+
+                                FragmentFileShow fileShow = new FragmentFileShow(course_name, "root");
+
+                                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                                ft.replace(R.id.content, fileShow);
+                                ft.addToBackStack(null);
+                                ft.commit();
                             }else if(identifier == SETTING){
 //                                if(contentFra == null){
 //                                    contentFra = new ContentFragment();

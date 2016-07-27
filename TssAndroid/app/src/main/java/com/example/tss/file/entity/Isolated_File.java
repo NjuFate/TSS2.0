@@ -5,6 +5,7 @@ package com.example.tss.file.entity;
  */
 public class Isolated_File {
 
+    private int id;
     private boolean isFolder;
     private String father;
     private String fileName;

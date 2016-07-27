@@ -12,8 +12,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.tss.file.entity.My_File;
+import java.net.URL;
+
+import com.example.tss.file.helper.File_Download_Helper;
+import com.example.tss.file.helper.File_Search_Helper;
 import com.example.tss.tssandroid.R;
 
 /**
@@ -22,24 +26,25 @@ import com.example.tss.tssandroid.R;
 @SuppressLint("ValidFragment")
 public class FragmentFileShow extends Fragment {
 
-    private My_File mf = null;
-    private My_File[] sons = null;
-    private int son_num = 0;
-    private My_File son;
+    private String[] names;
 
-    public FragmentFileShow(My_File my_file) {
-        mf = my_file;
-        sons = my_file.getSon_File();
-        son_num = my_file.getSon_Num();
+    private int num;
+
+    private String coursename;
+
+    public FragmentFileShow(String[] ns, String cn) {
+        names = ns;
+        num = names.length;
+        coursename = cn;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_file, container, false);
-        for (int i = 0; i < son_num; i++) {
-            son = sons[i];
+        for (int i = 0; i < num; i++) {
+            final String name = names[i];
             TextView tv = new TextView(getActivity());
-            tv.setText(son.getName());
+            tv.setText(" "+name);
             tv.setTextSize(24);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -47,14 +52,34 @@ public class FragmentFileShow extends Fragment {
             tv.setLayoutParams(params);
             tv.setHeight(80);
             tv.setTextColor(Color.BLACK);
-            if (son.is_Folder()) {
-                tv.setOnClickListener(new View.OnClickListener() {
+            final File_Search_Helper search_helper = new File_Search_Helper();
+            if (search_helper.is_course(name)) {
 
-                    private My_File son_file = son;
+                final String[] son_names = search_helper.getSonname(name, name);
+//                Toast t = Toast.makeText(getActivity().getApplicationContext(),son_names[0],Toast.LENGTH_SHORT);
+//                t.show();
+                tv.setOnClickListener(new View.OnClickListener() {
+                    private String[] temp_son_names = son_names;
+                    private String temp_course = name;
 
                     @Override
                     public void onClick(View v) {
-                        FragmentFileShow fileShow = new FragmentFileShow(son_file);
+                        FragmentFileShow fileShow = new FragmentFileShow(temp_son_names, temp_course);
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        ft.replace(R.id.content, fileShow);
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                });
+            } else if (search_helper.is_folder(name, coursename)) {
+                final String[] son_names = search_helper.getSonname(name, coursename);
+                tv.setOnClickListener(new View.OnClickListener() {
+                    private String[] temp_son_names = son_names;
+                    private String temp_course = coursename;
+
+                    @Override
+                    public void onClick(View v) {
+                        FragmentFileShow fileShow = new FragmentFileShow(temp_son_names, temp_course);
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         ft.replace(R.id.content, fileShow);
                         ft.addToBackStack(null);
@@ -63,15 +88,25 @@ public class FragmentFileShow extends Fragment {
                 });
             } else {
                 tv.setOnClickListener(new View.OnClickListener() {
+                    private String temp_name = name;
+                    private String temp_course = coursename;
+                    String path = "http://139.129.54.63/tss2/downloadFile/download/?path=" + search_helper.getPath(name, coursename);
+
                     @Override
                     public void onClick(View v) {
+                        try {
+                            URL url = new URL(path);
+                            File_Download_Helper download_helper = new File_Download_Helper(url,name,getActivity());
 
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 });
             }
             LinearLayout ll = new LinearLayout(getActivity());
             ll.setOrientation(LinearLayout.HORIZONTAL);
-            ImageView iv = this.getIV(son);
+            ImageView iv = this.getIV(name);
             ll.addView(iv);
             ll.addView(tv);
             ((ViewGroup) view.findViewById(R.id.File_Main)).addView(ll);
@@ -79,34 +114,34 @@ public class FragmentFileShow extends Fragment {
         return view;
     }
 
-    private ImageView getIV(My_File mf) {
+    private ImageView getIV(String name) {
         ImageView iv = new ImageView(getActivity());
-        if (mf.is_Folder()) {
+        int location = name.lastIndexOf('.');
+        File_Search_Helper search_helper = new File_Search_Helper();
+        boolean is_folder = search_helper.is_folder(name, coursename);
+        boolean is_course = search_helper.is_course(name);
+        if(is_folder||is_course) {
             iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_folder));
+        }else if (location == -1) {
+            iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
         } else {
-            String file_name = mf.getName();
-            int location = file_name.lastIndexOf('.');
-            if (location == -1) {
-                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
+            String extension_name = name.substring(location + 1);
+            if (extension_name.equals("doc") || extension_name.equals("docx")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_doc));
+            } else if (extension_name.equals("txt")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_txt));
+            } else if (extension_name.equals("ppt") || extension_name.equals("pptx")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_ppt));
+            } else if (extension_name.equals("rar") || extension_name.equals("zip") || extension_name.equals("gz")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_zip));
+            } else if (extension_name.equals("wmv") || extension_name.equals("rmvb") || extension_name.equals("mkv")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_video));
+            } else if (extension_name.equals("pdf")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_pdf));
+            } else if (extension_name.equals("jpg") || extension_name.equals("png") || extension_name.equals("jpeg")) {
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_picture));
             } else {
-                String extension_name = file_name.substring(location + 1);
-                if (extension_name.equals("doc") || extension_name.equals("docx")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_doc));
-                } else if (extension_name.equals("txt")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_txt));
-                } else if (extension_name.equals("ppt") || extension_name.equals("pptx")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_ppt));
-                } else if (extension_name.equals("rar") || extension_name.equals("zip") || extension_name.equals("gz")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_zip));
-                } else if (extension_name.equals("wmv") || extension_name.equals("rmvb") || extension_name.equals("mkv")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_video));
-                } else if (extension_name.equals("pdf")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_pdf));
-                } else if (extension_name.equals("jpg") || extension_name.equals("png") || extension_name.equals("jpeg")) {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_picture));
-                } else {
-                    iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
-                }
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.picture_unknown));
             }
         }
         return iv;
