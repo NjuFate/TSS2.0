@@ -1,5 +1,5 @@
-var baseUrl = "http://localhost:8080/tss2/data.do?";
-var base = "http://localhost:8080/tss2";
+var baseUrl = "http://139.129.54.63/tss2/data.do?";
+var base = "http://139.129.54.63/tss2";
 function createAjaxObj(){
 	var req;
 	if(window.XMLHttpRequest){

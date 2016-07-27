@@ -1,6 +1,6 @@
-var linkUrl = "http://localhost:8888/tss2/api/relation?pptId=";
-var wikiUrl = "http://localhost:8888/tss2/api/entry?wikiId=";
-var questionUrl = "http://localhost:8888/tss2/api/question?qId=";
+var linkUrl = "http://139.129.54.63/tss2/api/relation?pptId=";
+var wikiUrl = "http://139.129.54.63/tss2/api/entry?wikiId=";
+var questionUrl = "http://139.129.54.63/tss2/api/question?qId=";
 var divClass = new Array("alert alert-success alert-dismissable","alert alert-info alert-dismissable","alert alert-warning alert-dismissable","alert alert-danger alert-dismissable");
 
 //function Get(){	
@@ -106,7 +106,7 @@ function addQuestionNode(title, url){
 	var $div = $("<div> </div>").addClass(divClass[Math.floor(Math.random()*4)]);
 	$div.append('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+
 			title + " " +
-			'<a href="' + url + '" target="_blank" class="alert-link">link-to-it'+
+			'<a href="http://' + url + '" target="_blank" class="alert-link">link-to-it'+
 	'</a>');
 	$info.append($div);
 }

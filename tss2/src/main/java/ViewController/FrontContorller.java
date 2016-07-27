@@ -79,7 +79,7 @@ public class FrontContorller {
 	@RequestMapping("/ppt_info")
 	public ModelAndView ppt_info(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("examplefor3");
+		mav.setViewName("link");
 		return mav;
 	}
 	
