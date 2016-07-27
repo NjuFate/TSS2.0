@@ -16,6 +16,7 @@ import data.file.FileImpl;
 import data.service.FileService;
 import logic.message.MessageReciver;
 import logic.message.MessageSender;
+import logic.project.AssociateSource;
 import model.FileExtra;
 import model.json.Info;
 import model.json.Message;
@@ -26,6 +27,7 @@ import model.json.Message;
 public class RestAPI {
 	FileService fileService = new FileImpl();
 	MessageSender messageSender = new MessageSender(); 
+	AssociateSource associateSource = new AssociateSource();
 	@RequestMapping("/ppt")
 	public @ResponseBody FileExtra ppt(String id) throws Exception {
 		long longid = Long.valueOf(id);
@@ -52,10 +54,6 @@ public class RestAPI {
 		}
 		;
 		
-		//JSONObject obj = new JSONObject().fromObject(contentStr);
-       // Info jb = (Info)JSONObject.toBean(obj,Info.class);//将建json对象转换为Person对象  
-		//System.out.println(is);
-		//System.out.println(jb.getSource());
 		Info info = MessageReciver.getInfoFromStr(contentStr);
 		Message message  = new Message();
 		message.setMsg(info.getMessage());
@@ -64,6 +62,10 @@ public class RestAPI {
 		messageSender.sendMessage(message, account, info.getSource());
 		//System.out.println(info.getMessage());
 		
+	}
+	@RequestMapping(value="/relation",method={RequestMethod.GET})
+	public @ResponseBody String getRelatedID(String pptId){
+		return associateSource.getAssociatedId(pptId);
 	}
 	
 }

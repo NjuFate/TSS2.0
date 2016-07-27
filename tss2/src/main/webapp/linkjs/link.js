@@ -132,8 +132,8 @@ function createAjaxObj(){
 
 function getProjectTable(){
 	var req = createAjaxObj();
-	req.open("get","http://139.129.54.63/tss2/api/ppt?id=16072000000?callback=?",true);
-	req.setRequestHeader("accept","application/json");
+	req.open("get","http://139.129.54.63/tss2/api/ppt?id=16072000000",true);
+	req.setRequestHeader("Access-Control-Allow-Origin", "*");
 	req.onreadystatechange = function(){
 		if(req.readyState==4 && req.status==200){
 			//alert(req.responseText);
