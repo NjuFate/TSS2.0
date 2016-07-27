@@ -39,11 +39,17 @@ public class AndroidFile implements AndroidDownLoadService{
 
 
 
+	
+	public List<File> getCurrentSemesterFile(){
+		
+		return null;
+	}
 
 
-	public List<File> getCurrentSemesterFile() {
+	private List<File> getFileByCourseno() {
+		
 		// TODO Auto-generated method stub
-		String sql = "select * from file where semester='" + getCurrentSemester()+"'";
+		String sql = "select * from file where courseno='" + getCurrentSemester()+"'";
 		try {
 			List<po.File>files = fileManage.executeQuery(sql, new po.File());
 			List<File> rFiles = new ArrayList<File>();

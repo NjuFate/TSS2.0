@@ -4,10 +4,10 @@
 
 
 
-function addPPTNotification(t){
+function addPPTNotification(){
 	
 	var $info = $("#time-lines");
-	var $li = $("<li> </li>")
+	var $li = $("<li> </li>").addClass("timeline-inverted");
 	$li.append('<div class="timeline-badge"><i class="fa fa-check"></i>'+
             '</div>' +
             '<div class="timeline-panel">'+
