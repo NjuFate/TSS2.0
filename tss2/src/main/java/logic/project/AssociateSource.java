@@ -10,12 +10,13 @@ import net.sf.json.JSONObject;
 
 public class AssociateSource {
 	public String getAssociatedId(String pptId){
-		String url = "http://110.173.17.140:8080/api/relation/ppt/16072000000";
+		String url = "http://110.173.17.140:8080/api/relation/ppt/"+pptId;
 		return getResponse(url);
 	}
 	
 	public String getWikiInfo(String wikiId){
-		return null;
+		String url = "http://121.42.184.4:8080/api/entry/"+wikiId;
+		return getResponse(url);
 	}
 	
 	public String getQuestionInfo(String qid){

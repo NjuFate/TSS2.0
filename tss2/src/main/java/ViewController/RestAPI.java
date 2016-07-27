@@ -67,5 +67,9 @@ public class RestAPI {
 	public @ResponseBody String getRelatedID(String pptId){
 		return associateSource.getAssociatedId(pptId);
 	}
+	@RequestMapping(value="/entry",method={RequestMethod.GET})
+	public @ResponseBody String getWikiInfo(String wikiId){
+		return associateSource.getWikiInfo(wikiId);
+	}
 	
 }
