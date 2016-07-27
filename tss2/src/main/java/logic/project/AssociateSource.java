@@ -20,7 +20,8 @@ public class AssociateSource {
 	}
 	
 	public String getQuestionInfo(String qid){
-		return null;
+		String url ="http://110.173.17.140:8080/api/question?id="+qid;
+		return getResponse(url);
 	}
 	
 	public String getResponse(String url){

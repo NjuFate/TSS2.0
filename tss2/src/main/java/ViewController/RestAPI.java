@@ -71,5 +71,9 @@ public class RestAPI {
 	public @ResponseBody String getWikiInfo(String wikiId){
 		return associateSource.getWikiInfo(wikiId);
 	}
+	@RequestMapping(value="/question",method={RequestMethod.GET})
+	public @ResponseBody String getQuestion(String qId){
+		return associateSource.getQuestionInfo(qId); 
+	}
 	
 }
