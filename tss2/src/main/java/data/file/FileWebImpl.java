@@ -1,5 +1,6 @@
 package data.file;
 
+import java.util.Collections;
 import java.util.List;
 
 import data.manage.FileManage;
@@ -25,11 +26,23 @@ public class FileWebImpl implements FileWebService{
 			if(fileJsons ==null||fileJsons.isEmpty())
 				throw new Exception();
 			
-			return fileJsons;
+		   Collections.sort(fileJsons);
+		   
+		   return fileJsons;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		return null;
 	}
 
+	
+	
+	public static void main(String[]args){
+		FileWebService service = new FileWebImpl();
+		List<FileJson> fileJsons = service.getAllFile();
+		for(FileJson fileJson : fileJsons){
+			System.out.println(fileJson.getUpdateTime());
+		}
+		
+	}
 }

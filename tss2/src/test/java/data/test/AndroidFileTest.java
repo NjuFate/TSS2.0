@@ -28,6 +28,7 @@ public class AndroidFileTest {
 			
 			
 		}
+		System.out.println(files.size());
 		assertEquals(3, files.size());
  	}
 
