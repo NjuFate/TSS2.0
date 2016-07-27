@@ -43,10 +43,7 @@ public class FragmentCourseInfo extends Fragment {
 //        int end = displyFragment.endF;
 //        int weekday = displyFragment.weekdayF;
 
-        Toast toast = Toast.makeText(getActivity().getApplicationContext(),
-                start+" "+end+" "+weekday, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+
 
         List<CourseEntity> resourse = CourseJsonHelper.analyse(FileUtil.read(getActivity(),"courseData.txt"));
         for(CourseEntity entity:resourse){

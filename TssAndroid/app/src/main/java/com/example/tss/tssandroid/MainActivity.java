@@ -3,12 +3,16 @@ package com.example.tss.tssandroid;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +23,7 @@ import com.example.tss.course.fragment.FragmentDisplyCourse;
 
 import com.example.tss.login.activity.LoginActivity;
 import com.example.tss.message.activity.ConverListActivity;
+import com.example.tss.tssandroid.service.MessageService;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private AccountHeader headerResult = null;
     private Drawer result = null;
     private String user;
+    private Context mContext;
     Fragment contentFra;
     Fragment messageFra;
     Fragment fileFra;
@@ -60,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         setContentView(R.layout.activity_main);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -128,10 +135,14 @@ public class MainActivity extends AppCompatActivity {
 //                                }
 //                                transaction.replace(R.id.content,fileFra);
                             }else if(identifier == SETTING){
-                                if(contentFra == null){
-                                    contentFra = new ContentFragment();
-                                }
-                                transaction.replace(R.id.content,contentFra);
+//                                if(contentFra == null){
+//                                    contentFra = new ContentFragment();
+//                                }
+//                                transaction.replace(R.id.content,contentFra);
+
+
+                            }else if(identifier == HELP){
+
                             }else if(identifier == LOGOUT){
                                 logout();
                             }
@@ -161,6 +172,9 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             result.setSelection(5, false);
         }
+
+        Intent startService = new Intent(this, MessageService.class);
+        startService(startService);
     }
 
     @Override
