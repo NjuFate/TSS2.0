@@ -76,6 +76,11 @@ public class FrontContorller {
 		mav.setViewName("ppt_notification");
 		return mav;
 	}
-
+	@RequestMapping("/ppt_info")
+	public ModelAndView ppt_info(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("examplefor3");
+		return mav;
+	}
 	
 }

@@ -52,6 +52,7 @@ function fillDocTable(data){
  	    }
 	 	$tr.append($("<td></td>").text(data[i].updateTime));
 	 	$tr.append($("<td></td>").text(data[i].uploadBy));
+	 	$tr.append($("<td> <a id=index href='../pages/ppt_info'> click me</td>"));
      	$table.append($tr);
 	 }
 		
