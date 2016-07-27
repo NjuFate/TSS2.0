@@ -1,10 +1,13 @@
 package com.example.tss.message.activity;
 
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.tss.tssandroid.R;
+import com.example.tss.tssandroid.service.MessageService;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseConversationListFragment;
@@ -29,6 +32,9 @@ public class ConverListActivity extends AppCompatActivity {
 
 
         getSupportFragmentManager().beginTransaction().add(R.id.container,conversationListFragment).commit();
+
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.cancel(MessageService.INFORM_MESSAGE);
     }
 
 
