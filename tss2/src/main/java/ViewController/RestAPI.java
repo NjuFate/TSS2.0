@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import data.file.FileImpl;
+import data.file.FileWebImpl;
 import data.service.FileService;
+import data.service.FileWebService;
 import logic.message.MessageReciver;
 import logic.message.MessageSender;
 import logic.project.AssociateSource;
 import model.FileExtra;
+import model.FileJson;
 import model.json.Info;
 import model.json.Message;
 
@@ -28,6 +31,7 @@ public class RestAPI {
 	FileService fileService = new FileImpl();
 	MessageSender messageSender = new MessageSender(); 
 	AssociateSource associateSource = new AssociateSource();
+	FileWebService fileWebService = new FileWebImpl(); 
 	@RequestMapping("/ppt")
 	public @ResponseBody FileExtra ppt(String id) throws Exception {
 		long longid = Long.valueOf(id);
@@ -74,6 +78,11 @@ public class RestAPI {
 	@RequestMapping(value="/question",method={RequestMethod.GET})
 	public @ResponseBody String getQuestion(String qId){
 		return associateSource.getQuestionInfo(qId); 
+	}
+	
+	@RequestMapping(value="/pptTimeLine",method={RequestMethod.GET})
+	public @ResponseBody List<FileJson> pptTimeLine(){
+		return fileWebService.getAllFile();
 	}
 	
 }
