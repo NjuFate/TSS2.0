@@ -64,6 +64,18 @@ public class FrontContorller {
 		info.setViewName("InfoCenter");
 		return info;
 	}
+	@RequestMapping("/assigment")
+	public ModelAndView assigment(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("homework_release");
+		return mav;
+	}
+	@RequestMapping("/ppt_notification")
+	public ModelAndView ppt_notification(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("ppt_notification");
+		return mav;
+	}
 
 	
 }
