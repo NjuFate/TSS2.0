@@ -146,13 +146,10 @@ public class MainActivity extends AppCompatActivity {
                                 for (int i = 0; i < courses.size(); i++) {
                                     course_name[i] = courses.get(i).getCoursename();
                                 }
+                                if(fileFra == null)
+                                fileFra = new FragmentFileShow(course_name, "root");
 
-                                FragmentFileShow fileShow = new FragmentFileShow(course_name, "root");
-
-                                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                                ft.replace(R.id.content, fileShow);
-                                ft.addToBackStack(null);
-                                ft.commit();
+                                transaction.replace(R.id.content,fileFra);
                             }else if(identifier == SETTING){
 //                                if(contentFra == null){
 //                                    contentFra = new ContentFragment();
