@@ -21,7 +21,7 @@ public class File_Download_Helper {
     private URL murl;
     private String mname;
     private Context mcontext;
-    public File_Download_Helper(URL url, String name, Context context) {
+    public File_Download_Helper(URL url, String name, final Context context) {
         murl = url;
         mname = name;
         mcontext = context;
@@ -40,7 +40,6 @@ public class File_Download_Helper {
                     conn.setRequestMethod("GET");
                     InputStream input=conn.getInputStream();
                     if(file.exists()){
-                        System.out.println("exits");
                         return;
                     }else{
                         String dir=SDCard+"/"+path;
@@ -58,14 +57,18 @@ public class File_Download_Helper {
                     e.printStackTrace();
                 }finally{
                     try {
-                        output.close();
+//                        output.close();
                         System.out.println("success");
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         System.out.println("fail");
                         e.printStackTrace();
                     }
                 }
             }
         }).start();
+        String SDCard=Environment.getExternalStorageDirectory()+"";
+        String pathName=SDCard+"/TssAndroid/"+mname;//文件存储路径
+        Toast t = Toast.makeText(mcontext.getApplicationContext(),name+" 下载至 "+pathName,Toast.LENGTH_LONG);
+        t.show();
     }
 }
