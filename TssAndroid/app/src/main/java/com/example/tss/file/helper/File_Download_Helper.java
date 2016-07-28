@@ -28,7 +28,7 @@ public class File_Download_Helper {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String path="File";
+                String path="TssAndroid";
                 String fileName=mname;
                 OutputStream output=null;
                 try {
@@ -48,7 +48,7 @@ public class File_Download_Helper {
                         file.createNewFile();//新建文件
                         output=new FileOutputStream(file);
                         //读取大文件
-                        byte[] buffer=new byte[4*1024];
+                        byte[] buffer=new byte[1024];
                         while(input.read(buffer)!=-1){
                             output.write(buffer);
                         }

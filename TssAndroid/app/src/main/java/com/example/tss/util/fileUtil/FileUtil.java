@@ -12,6 +12,7 @@ public class FileUtil {
     public static String read(Context context,String fileName) {
         try {
             FileInputStream inStream = context.openFileInput(fileName);
+            
             byte[] buffer = new byte[1024];
             int hasRead = 0;
             StringBuilder sb = new StringBuilder();

@@ -48,12 +48,12 @@
         "source": "F:\\Git\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\head_in.xml"
     },
     {
-        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\head_out.xml",
-        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\head_out.xml"
-    },
-    {
         "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\push_bottom_out.xml",
         "source": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\push_bottom_out.xml"
+    },
+    {
+        "merged": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\head_out.xml",
+        "source": "X:\\AndroidStudioProjects\\easemob-sdk-3.1.4\\examples\\easeui\\build\\intermediates\\bundles\\debug\\res\\anim\\head_out.xml"
     },
     {
         "merged": "E:\\GitHub\\commit\\TSS2.0\\TssAndroid\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\head_out.xml",
